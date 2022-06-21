@@ -163,21 +163,11 @@ private:
     float auxiliar1 = 0;
     float auxiliar2 = 0;
 	 
-  	 //printf("*** Recibimos coordenadas (%d,%d), (%d,%d), (%d,%d), (%d,%d)\n", 
- 	 //	puntos[0].getX(), puntos[0].getY(), puntos[1].getX(), puntos[1].getY(),
- 	 //	puntos[2].getX(), puntos[2].getY(), puntos[3].getX(), puntos[3].getY());
-
     if (puntos[0].getX() == puntos[1].getX()
 		  && puntos[2].getX() == puntos[3].getX() 
 	 	  && puntos[0].getY() == puntos[2].getY() 
 	     && puntos[1].getY() == puntos[3].getY()) {
-	 			// Orden de los puntos
-	 			// p1.........p3
-	 			//  .         .
-	 			//  .         .
-	 			// p0.........p2
-				//printf("*** Orden de los puntos p0, p1, p3, p2\n");
-            valido = true;
+			  valido = true;
             auxiliar1 = puntos[1].getY() - puntos[0].getY();
             auxiliar2 = puntos[3].getX() - puntos[1].getX();
 				Coordenada tem = puntos[3];
@@ -189,13 +179,7 @@ private:
 		  && puntos[2].getX() == puntos[3].getX() 
 	 	  && puntos[0].getY() == puntos[3].getY()
 	     && puntos[1].getY() == puntos[2].getY()) {
-	 		 // Orden de los los puntos
-	 		 // p1.........p2
-	 		 //  .         .
-	 		 //  .         .
-			 // p0.........p3
-			 //printf("*** Orden de los puntos p0, p1, p2, p3\n");
-          valido = true;
+			  valido = true;
           auxiliar1 = puntos[1].getY() - puntos[0].getY();
           auxiliar2 = puntos[2].getX() - puntos[1].getX();
     }
@@ -204,13 +188,7 @@ private:
 		  && puntos[1].getX() == puntos[3].getX()
 		  && puntos[0].getY() == puntos[1].getY()
 		  && puntos[2].getY() == puntos[3].getY()) {
-	 			// Orden de los puntos
-	 			// p2.........p3
-	 			//  .         .
-	 			//  .         .
-	 			// p0.........p1
-				//printf("*** Orden de los puntos p0, p2, p3, p1\n");
-            valido = true;
+			  valido = true;
             auxiliar1 = puntos[2].getY() - puntos[0].getY();
             auxiliar2 = puntos[3].getX() - puntos[2].getX();
 				Coordenada tem = puntos[1];
@@ -222,13 +200,7 @@ private:
 		  && puntos[1].getX() == puntos[3].getX()
 		  && puntos[0].getY() == puntos[3].getY()
 		  && puntos[2].getY() == puntos[1].getY()) {
-	 			// Orden de los puntos
-	 			// p2.........p1
-	 			//  .         .
-	 			//  .         .
-	 			// p0.........p3
-				//printf("*** Orden de los puntos p0, p2, p1, p3\n");
-            valido = true;
+			  valido = true;
             auxiliar1 = puntos[2].getY() - puntos[0].getY();
             auxiliar2 = puntos[1].getX() - puntos[2].getX();
 				Coordenada tem = puntos[1];
@@ -239,13 +211,7 @@ private:
 		  && puntos[1].getX() == puntos[2].getX()
 		  && puntos[0].getY() == puntos[1].getY()
 		  && puntos[3].getY() == puntos[2].getY()) {
-	 			// Orden de los puntos
-	 			// p3.........p2
-	 			//  .         .
-	 			//  .         .
-	 			// p0.........p1
-				//printf("*** Orden de los puntos p0, p3, p2, p1\n");
-            valido = true;
+			  valido = true;
             auxiliar1 = puntos[3].getY() - puntos[0].getY();
             auxiliar2 = puntos[2].getX() - puntos[3].getX();
 				Coordenada tem = puntos[1];
@@ -256,13 +222,7 @@ private:
 		  && puntos[1].getX() == puntos[2].getX()
 		  && puntos[0].getY() == puntos[2].getY()
 		  && puntos[1].getY() == puntos[3].getY()) {
-	 			// Orden de los puntos
-	 			// p3.........p1
-	 			//  .         .
-	 			//  .         .
-	 			// p0.........p2
-				//printf("*** Orden de los puntos p0, p3, p1, p2\n");
-            valido = true;
+			  valido = true;
             auxiliar1 = puntos[3].getY() - puntos[0].getY();
             auxiliar2 = puntos[3].getX() - puntos[1].getX();
 				Coordenada tem = puntos[1];
@@ -271,15 +231,6 @@ private:
 				puntos[2]=tem;
     }
 
-	 // Orden final de los puntos
-	 // p1.........p2
-	 //  .         .
-	 //  .         .
-	 // p0.........p3
-  	 //printf("*** Ordenamos coordenadas (%d,%d), (%d,%d), (%d,%d), (%d,%d)\n", 
- 	//		puntos[0].getX(), puntos[0].getY(), puntos[1].getX(), puntos[1].getY(),
- 	//		puntos[2].getX(), puntos[2].getY(), puntos[3].getX(), puntos[3].getY());
-			
     if (auxiliar1 < 0) {
       auxiliar1 = -auxiliar1;
     }
@@ -380,10 +331,7 @@ public:
   }
   
   void dibujar(){
-    // imprimir por pantalla el rectangulo dentro del cuadrante
-    //printf("Dibujar el cuadrante %d con maxX=%d, maxY=%d, cajaX=%d, cajaY=%d, intervalo=%d\n", 
-  	 //	cuadrante.getNumCuadrante(), cuadrante.getMaxX(), cuadrante.getMaxY(),cuadrante.getCajaX(), cuadrante.getCajaY(), cuadrante.getIntervalo());
-  	 printf("Dibujo del rectangulo con las coordenadas (%d,%d), (%d,%d), (%d,%d), (%d,%d)\n", 
+	  printf("Dibujo del rectangulo con las coordenadas (%d,%d), (%d,%d), (%d,%d), (%d,%d)\n", 
  			puntos[0].getX(), puntos[0].getY(), puntos[1].getX(), puntos[1].getY(),
  			puntos[2].getX(), puntos[2].getY(), puntos[3].getX(), puntos[3].getY());
 	
@@ -392,11 +340,6 @@ public:
 	char fillChar='*';
 	char lineChar='.';
 	
-	// Orden de los puntos
-	// p1.........p2
-	//  .         .
-	//  .         .
-	// p0.........p3	
    for (int y = cuadrante.getCajaY(); y >= 0; --y) {
 	  if(y % cuadrante.getIntervalo() == 0) {
 		  printf("%2d-|",y);
@@ -458,12 +401,6 @@ public:
 int main() {
 
   int x0,y0,x1,y1,x2,y2,x3,y3;
-  //Rectangulo rectangulo(Coordenada(3,2), Coordenada(5,-6), Coordenada(7,6), Coordenada(7,2));	
-  //Rectangulo rectangulo(Coordenada(3,2), Coordenada(3,6), Coordenada(7,6), Coordenada(7,2));
-  //Rectangulo rectangulo(Coordenada(0,2), Coordenada(0,6), Coordenada(7,6), Coordenada(7,2));
-  //Rectangulo rectangulo(Coordenada(2,0), Coordenada(7,0), Coordenada(2,6), Coordenada(7,6));
-  //Rectangulo rectangulo(Coordenada(12,12), Coordenada(18,12), Coordenada(18,20), Coordenada(12,20));
-  
   printf("Ingrese coordenada 1 (x y): "); scanf("%d %d",&x0, &y0);
   printf("Ingrese coordenada 2 (x y): "); scanf("%d %d",&x1, &y1); 
   printf("Ingrese coordenada 3 (x y): "); scanf("%d %d",&x2, &y2);
