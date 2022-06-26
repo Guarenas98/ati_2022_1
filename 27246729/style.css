@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    margin-left: 2em;
+    margin-top: 1em;
+    width: 70vw;
+    height: 40vh;
+}
+
+img{
+    height: 40vh;
+    border-radius: 25% 0px 0px 0px;
+}
+
+#info{
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 8px 8px 8px rgb(99, 99, 99);
+    border-color: black;
+    width: 100%;    
+    padding: 0.5em;
+    margin-left: 0.5em;
+}
+
+h1{
+    color: orange;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30pt;
+    margin-bottom: 0.125em;
+    margin-top: 0.125em;
+}
+
+a{
+    color: orange;
+    
+    text-decoration: none;
+}
+a:active{
+    color: red;
+}
+a:focus{
+    color: red;
+}
+
+table{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: -1em;
+    border-spacing: 1em 0em ;
+}
