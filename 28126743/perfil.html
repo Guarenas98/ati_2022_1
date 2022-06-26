@@ -4,54 +4,86 @@
         <meta charset="utf-8">
         <title>Daniela Ruggiero </title>
         <link rel="icon" type="image/x-icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico">
+        <style>
+            h1 {
+                font-size: 48px;
+                color: #7b1182;
+            }
 
+            #descrip {
+                font-family: Verdana;
+                font-style: italic;
+            }
+
+            img{
+                width:24.5%;
+                height:25%;
+                float: left;
+                padding-right:1%;
+                border-top-left-radius: 50px;
+            }
+
+            #perfil{
+                width:70%;
+                height: 70%;
+                border: black;
+                border-style: solid;
+                display: inline-block;
+                box-shadow:10px 5px 5px rgb(125, 122, 122);
+                padding-left: 0.5%;
+            }
+
+            a:link{
+                color: orange;
+            }
+
+            a:focus{ 
+                color: red;
+            }
+
+        </style>
     </head>
     <body>
         <main>
-            <table>
-                <tr>
-                    <td>
-                        <img src="28126743.jpg" alt="Foto de perfil" width="100%">
-                    </td>
-                    
-                    <td>
-                        <h1>
-                            <font size="10" color="#7b1182">Daniela Ruggiero</font>
-                        </h1>
-                        <p>
-                            <font face="Verdana">
-                                <i>Soy estudiante de Computación de la UCV y actualmente me encuentro cursando el sexto semestre. Me gustan muchos los idiomas y escuchar música. Además de mis actividades en la Universidad, estoy completando mis estudios académicos en música en el Conservatorio Pedro Nolasco Colón, en donde actualmente continúo mi formación como pianista.</i>
-                            </font>
-                        </p>
-                        
-                        <table>
-                            <tr>
-                                <td>Mi color favorito es:</td>
-                                <td>Azul</td>
-                            </tr>
-                            <tr>
-                                <td>Mi libro favorito es:</td>
-                                <td>La Ladrona de Libros</td>
-                            </tr>
-                            <tr>
-                                <td>Estilo de música preferida es: </td>
-                                <td>Alternativa</td>
-                            </tr>
-                            <tr>
-                                <td>Mis Video juegos favoritos son:</td>
-                                <td>Super Mario Bros</td>
-                            </tr>
-                            <tr>
-                                <td><b>Lenguajes aprendidos:</b></td>
-                                <td><b>C/C++, Python</b></td>
-                            </tr>
-                        </table>
-                        <footer>
-                            <p>Si necesitan comunicarse conmigo me pueden escribir a: <a href="mailto:Chachy.drs@gmail.com">Chachy.drs@gmail.com</a></p>
-                        </footer>
-                    </td>
-                </tr>
-            </table>
+            <section>
+                <section id="foto">
+                    <img src="28126743.jpg" alt="Foto de perfil">
+                </section>
+                
+                <section id="perfil">
+                    <h1> Daniela Ruggiero </h1>
+                    <p id="descrip">
+                        Soy estudiante de Computación de la UCV y actualmente me encuentro cursando el sexto semestre. Me gustan muchos los idiomas y escuchar música. Además de mis actividades en la Universidad, estoy completando mis estudios académicos en música en el Conservatorio Pedro Nolasco Colón, en donde actualmente continúo mi formación como pianista.    
+                    </p>
+                
+                    <table>
+                        <tr>
+                            <td>Mi color favorito es:</td>
+                            <td>Azul</td>
+                        </tr>
+                        <tr>
+                            <td>Mi libro favorito es:</td>
+                            <td>La Ladrona de Libros</td>
+                        </tr>
+                        <tr>
+                            <td>Estilo de música preferida es: </td>
+                            <td>Alternativa</td>
+                        </tr>
+                        <tr>
+                            <td>Mis Video juegos favoritos son:</td>
+                            <td>Super Mario Bros</td>
+                        </tr>
+                        <tr>
+                            <td><b>Lenguajes aprendidos:</b></td>
+                            <td><b>C/C++, Python</b></td>
+                        </tr>
+                    </table>
+                    <footer>
+                        <p>Si necesitan comunicarse conmigo me pueden escribir a: <a href="mailto:Chachy.drs@gmail.com">Chachy.drs@gmail.com</a></p>
+                    </footer>
+                </section> 
+            </section>
+            
         </main>
     </body>
 </html> 
