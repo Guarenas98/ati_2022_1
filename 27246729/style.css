@@ -40,6 +40,9 @@ a:active{
 a:focus{
     color: red;
 }
+a:visited{
+    color: red;
+}
 
 table{
     margin-top: 1em;
