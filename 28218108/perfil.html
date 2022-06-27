@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <link rel="icon" href=http://www.ciens.ucv.ve/portalasig2/favicon.ico>
     <title>Jose Miguel Valera</title>
+    <style>
+        body {
+            font-family:verdana;
+        }
+
+        H1,a{
+            color:teal;
+        }
+
+        a:hover{
+            color:red;
+        }
+
+        img {
+            height: 470px;
+            border-top-left-radius: 100px ;
+        }
+
+        table{
+            border-spacing:0px;
+        }
+        #image{
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+        }
+
+        #content{
+            border:solid 2px;
+            height:469px;
+            width: 60%;
+            box-shadow: 5px 5px gray;
+        }
+
+    </style>
+
 </head>
-<body style="font-family:verdana;">
+<body>
     <table>
         <tr>
-            <td><img src=28218108.jpeg width="375"></td>
-            <td><h1 style="color:teal;">Jose Miguel Valera</h1>
-            <table width="800">
+            <td id="image"><img src=28218108.jpeg></td>
+            <td>
+            <table id="content">
+                <tr><td><h1>Jose Miguel Valera</h1></td></tr>
                 <tr>
                     <td> <i>Soy estudiante de 6to semestre de computacion en la Universidad Central de Venezuela, me entusiasma el desarrollo web y aspiro algun dia ser desarrollador full stack, actualmente poseo una certificacion en java y estoy realizando un curso de desarrollo web.</i></td>
                 </tr>
@@ -18,7 +55,7 @@
                 
                 <tr>
                     <td>
-                <table width="600">
+                <table>
                     <tr>
                         <td> <p>Mi color favorito es:</p></td>
                         <td><p>Morado</p></td>
