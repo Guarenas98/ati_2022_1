@@ -1,0 +1,38 @@
+.divFoto, .divPerfil{
+    float:left;
+}
+.divPerfil{
+    width: 60%; 
+    padding: 20px;
+
+    border-style: solid;
+    box-shadow: 10px 15px rgb(142, 155, 155);
+}
+#fotoPerfil{
+    padding-right: 50px;
+    border-radius: 50px 0 0 0;
+}
+#lenguajes{
+    font-weight: bold;
+}
+h1{
+    color:blue; 
+    font-family:verdana; 
+    font-size: 40px;
+}
+p{
+    font-family:Verdana;
+    font-style: italic;
+}
+li{
+    margin: 5px 0;
+}
+ul{
+    list-style-type:none;
+}
+a:link{
+    color: orange;
+}
+a:focus, a:visited {
+    color: red;
+}
