@@ -1,0 +1,48 @@
+
+h1 {
+    font-size: 48px;
+    color: #7b1182;
+    padding-top: 3%; 
+    padding-bottom: 3%;
+    font-family: 'Times New Roman';
+}
+
+#descrip {
+    font-family: Verdana;
+    font-style: italic;
+    padding-top: 1%; 
+    padding-bottom: 2%;
+    font-size: 16px;
+}
+
+img {
+    width:300px;
+    height:350px;
+    float: left;
+    padding-right:1%;
+    padding-top: 1%; 
+    border-top-left-radius: 50px;
+}
+
+#perfil{
+    width:900px;
+    height: 350px;
+    border: black;
+    border-style: solid;
+    display: inline-block;
+    box-shadow:10px 5px 5px rgb(125, 122, 122);
+    padding-left: 0.5%;
+}
+
+#mail{
+    padding-top: 1%;
+}
+a:link{
+    color: orange;
+}
+
+a:focus{ 
+    color: red;
+}
+
+        
