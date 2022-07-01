@@ -390,7 +390,7 @@ public:
 	char periChar='*';
 	char backChar=' ';
 	char fillChar='*';
-	char lineChar='.';
+	char lineChar='*';
 	
 	// Orden de los puntos
 	// p1.........p2
@@ -443,7 +443,7 @@ public:
 	  	  	  printf("--");
 	  	  }			
 	}
-	printf("\n    0");
+	printf("\n Hola 25641163");
 	for (int x = 1; x <= cuadrante.getCajaX(); ++x) {
 	  	  if(x % cuadrante.getIntervalo() == 0) {
 	  		  printf("%2d",x);

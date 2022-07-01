@@ -58,7 +58,7 @@ int main() {
 	Circulo c(2); //circulo de radio 10, centrado en el orgien, uso constructor Circulo(float r)
 	c.show();
    
-   printf("¿El punto pertenece? ");
+   printf("¿El punto pertenece: ");
 	if(c.pertenece(p)){
 	    printf("si\n");
 	} else {
