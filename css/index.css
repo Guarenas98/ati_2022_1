@@ -1,0 +1,80 @@
+* {
+  margin: 0px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+body {
+  position: relative;
+}
+.navbar {
+  display: flex;
+  background-color: #86b1ef;
+  color: white;
+  padding: 0 20px 0 20px;
+}
+.navbar-list {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+}
+.logo {
+  font-size: 30px;
+  padding-right: 10px;
+}
+.saludo {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  padding: 20px 50px 20px 50px;
+  font-size: 20px;
+}
+.busqueda {
+  padding-left: 10px;
+}
+.section-list {
+  display: grid;
+  list-style: none;
+  padding: 50px 50px 70px 50px;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto auto;
+}
+
+.student {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f4f6;
+  color: #5384c8;
+  width: 180px;
+  height: 150px;
+  box-shadow: 2px 2px gray;
+  padding: 10px 10px 10px 10px;
+  margin: 0px 0px 0px 0px;
+  transition: transform 0.2s;
+}
+.student:hover {
+  background-color: #99c5dd;
+  transform: scale(1.5);
+  transform: rotate(10deg);
+}
+.avatar-list {
+  width: 80px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  display: flex;
+  position: fixed;
+  background-color: #86b1ef;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
