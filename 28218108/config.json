@@ -1,0 +1,10 @@
+{   
+    "Bienvenida":"Hola, [nombre]",
+    "inserte-color":"Mi color favorito es:[color]",
+    "inserte-libro":"Mi libro favorito es:[libro]",
+    "inserte-musica":"Estilo de música preferida es:[musica]",
+    "inserte-videojuego":"Mis Video juegos favoritos son:[video_juego]",
+    "inserte-lenguajes":"Lenguajes aprendidos:[lenguajes]",
+    "como_comunicarse":"Si necesitan comunicarse conmigo me pueden escribir a:[email]",
+    "footer":"Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados"
+}
