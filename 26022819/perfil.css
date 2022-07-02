@@ -1,0 +1,35 @@
+h1 {
+  color: darkred;
+  font-size: 50px;
+  margin-top: 0px;
+}
+img {
+  height: 400px;
+  border-top-left-radius: 40%;
+  margin-right: 10px;
+}
+nav ul {
+  margin: 0px;
+}
+a:link {
+  color: orange;
+}
+a:focus,
+a:visited {
+  color: red;
+}
+.profile {
+  border: 1px solid black;
+  padding: 0 20px 0 20px;
+  box-shadow: 10px 10px 5px gray;
+}
+.description {
+  font-family: Verdana;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.lenguages {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
