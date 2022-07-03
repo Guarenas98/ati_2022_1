@@ -1,0 +1,11 @@
+{
+  "title": "[nombre]",
+  "saludo": "Hola, [nombre]",
+  "descripcion": "[descripcion]",
+  "color_favorito": "Mi color favorito: [color_favorito]",
+  "libro_favorito": "Mi libro favorito: [libro_favorito]",
+  "musica_favorita": "Mi estilo de musica favorito: [musica_favorita]",
+  "video_juego_favorito": "Mi video juego favorito: [video_juego_favorito]",
+  "lenguajes_aprendidos": "Lenguajes aprendidos: [lenguajes_aprendidos]",
+  "como_comunicarse": "Si necesitan comunicarse conmigo me pueden escribir a: [email]"
+}
