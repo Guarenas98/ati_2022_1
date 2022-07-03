@@ -4,28 +4,75 @@
         <meta charset="UTF-8"/>
         <link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico">
         <title>Alejandro Graterol</title>
+        <style type="text/css">
+            h1 { 
+              font-size: 100; 
+              color: blue;
+              font-family: Times New Roman;
+            }
+            .intro {
+                font-family: Times New Roman;
+                font-style: italic;
+                font-size: 5;
+            }
+            .neg {
+                font-family: Times New Roman;
+                font-weight: bold;
+            }
+            img {
+                width: 25%;
+                height: 50%;
+                border-top-left-radius: 25%;
+                margin-right: 10px;
+            }
+            .perfil{
+                border: 1px black;
+                border-style: solid;
+                padding: 1em;
+                box-shadow: 10px 10px 5px black;
+            }
+            a {
+                color: orange;
+            }
+            a:visited {
+                color: red;
+            }
+        </style>
     </head>
     <body>
-        <p align="right"> 
-            <img src="26473471.jpg" alt="Alejandro Graterol" align="left" width="25%" >
-            <font size=100 color="blue" face="Times New Roman">
-                <h1>Alejandro Graterol</h1>
-            </font> 
-            <font face="Times New Roman" size=5>
-                <p> <i> Soy studiante de la Facultad de Ciencias de la Universidad Central de Venezuela.
-                    Con interes en la especialidad de bases de datos.
-                    Soy practicante de artes marciales chinas para la asociación Venezolana de Wushu,
-                    también soy escritor de ciencia ficción con esperanza en publicar alguno de mis libros y practico arte 3D orientada a videojuegos como hobby, pero espero poder hacerlo profesionalmente.
-                </i> </p>
-                <p> <b> Mi color favorito es: </b>    Verde </p>
-                <p><b> Mi libro favorito es: </b>    Fuerza Sigma</p>       
-                <p> <b> Estilo de musica preferida: </b>    Rock </p>
-                <p><b> Mis video juegos favorito son: </b>    Assassin's Creed </p>
-                <p><b> Lenguajes aprendidos: </b>    C, C++, Python </p>
-                <p>Si necesitan comunicarse conmigo me pueden escribir a: 
-                    <a href="mailto:alejandro.graterol98gmail.com?subject=subject text"> alejandro.graterol98gmail.com </a>
-                </p>
-            </font>
-        </p>
+        <img src="26473471.jpg" alt="Alejandro Graterol" align="left">
+        <article class="perfil">    
+            <h1>Alejandro Graterol</h1> 
+            <p class="intro"> Soy studiante de la Facultad de Ciencias de la Universidad Central de Venezuela.
+                Con interes en la especialidad de bases de datos.
+                Soy practicante de artes marciales chinas para la asociación Venezolana de Wushu,
+                también soy escritor de ciencia ficción con esperanza en publicar alguno de mis libros y practico arte 3D orientada a videojuegos como hobby, pero espero poder hacerlo profesionalmente.
+            </p>
+            <table>
+                <tr>
+                    <td class="neg">Mi color favorito es:</td> 
+                    <td>Verde</td>
+                </tr> 
+                <tr>
+                    <td class="neg">Mi libro favorito es:</td> 
+                    <td>Fuerza Sigma</td>
+                </tr>       
+                <tr>
+                    <td class="neg">Estilo de musica preferida:</td> 
+                    <td>Rock</td> 
+                </tr>
+                <tr>
+                    <td class="neg">Mis video juegos favorito son:</td> 
+                    <td>Assassin's Creed</td>
+                </tr> 
+                <tr>
+                    <td class="neg">Lenguajes aprendidos:</td> 
+                    <td>C, C++, Python</td>
+                </tr> 
+            </table>
+            <p>Si necesitan comunicarse conmigo me pueden escribir a: 
+                <a href="mailto:alejandro.graterol98gmail.com?subject=subject text"> alejandro.graterol98gmail.com </a>
+            </p>
+        </article>
     </body>
 </html>
