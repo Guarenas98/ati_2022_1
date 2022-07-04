@@ -1,0 +1,26 @@
+{
+    "nombre": "Gabriel Belisario",
+    "descripción": "Soy estudiante del 6to semestre (aproximadamente) de Ciencias de la Computación en la Universidad Central de Venezuela. Me gustaría graduarme con mención en Computación Gráfica. Actualmente, trabajo dando clases particulares online de programación y matemáticas.",
+    "color": "verde",
+    "libro": "Fantasmas de Chuck Palahniuk",
+    "música": "Miscelánea",
+    "video_juego": [
+        "Minesweeper"
+    ],
+    "lenguajes": [
+        "C/C++", 
+        "Java",
+        "Haskell",
+        "C#",
+        "Python",
+        "JavaScript"
+    ],
+    "email": "gabrielbelisariof@gmail.com",
+    "CI": "27246729",
+    "genero": "masculino",
+    "fecha_nacimiento":{
+        "día": 16,
+        "mes": 6,
+        "año": 2000
+    }
+}

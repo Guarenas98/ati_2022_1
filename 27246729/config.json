@@ -1,0 +1,11 @@
+{
+    "saludo": "Hola, [nombre]",
+    "inicio": "Inicio",
+    "color_favorito": "Mi color favorito es: [color]",
+    "libro_favorito": "Mi libro favorito es: [libro]",
+    "música_prefereida": "Mi música preferida es: [música]",
+    "video_juego_favorito": "Mi video juegos favoritos: [video_juego]",
+    "lenguajes": "Lenguajes aprendidos: [lenguajes]",
+    "como_comunicarse": "Si necesitan comunicarse conmigo me pueden escribir a: [email]",
+    "copyright": "Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados"
+}
