@@ -17,6 +17,7 @@ header {
 nav ul {
   list-style-type: none;
   margin: 10px;
+  margin-top: 0;
   padding: 0;
   overflow: hidden;
 }
@@ -91,3 +92,16 @@ footer {
   font-size: 9pt;
 }
 
+.busqueda input[type=button] {
+    padding: 6px;
+    background: #f5f7f9;
+    border: none;
+    cursor: pointer;
+      color: #86b1ef;
+}
+
+.busqueda input[type=text] {
+  padding: 6px;
+  border: none;
+  margin-right: 10px;
+}
