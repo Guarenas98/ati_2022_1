@@ -1,0 +1,43 @@
+section ul li { 
+   display:inline; 
+   float:left; 
+   width:170px; 
+   height:170px;
+   background-color:#f5f7f9; 
+   padding:20px; 
+   margin:10px; 
+   text-align: center; 
+   border-right: #a5a7aa solid 1px; 
+   border-bottom: #a5a7aa solid 1px; 
+	overflow: hidden; 
+}
+
+section ul li img {
+	width:140px; 
+   height:140px;	
+	object-fit: contain;
+}
+
+section ul li:hover {
+    background-color:#99c5dd;
+    transform:scale(1.05) rotate(5deg);
+}
+		
+section ul li a {
+	font-family:arial;
+	font-size:10pt;
+	color: #86b1ef;
+ 	text-decoration:none;
+}
+
+section ul li a:link, section ul li a:visited {
+	 color: #68a0d9;
+}
+
+section ul li a:hover { 
+	color: #68a0d8;
+}
+
+.clear{
+       clear:both;
+}
