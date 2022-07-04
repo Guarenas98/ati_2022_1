@@ -1,0 +1,46 @@
+h1 {
+	color: #F7C160;
+}
+
+#parrafo {
+	font-family: "Arial";
+	font-style: italic;
+}
+
+#lenguajes {
+	font-weight: bold;
+}
+
+img {
+	border-radius: 90px 0px 0px 0px;
+	margin-right: 8px;
+}
+
+#bordes1 {
+	border: 5px;
+	border-right-style: outset;
+	border-bottom-style: outset;
+}
+
+#bordes2 {
+	border: 1px solid;
+	padding-left: 8px;
+	height: 250px;
+}
+
+a { 
+	text-decoration: none;
+	color: orange; 
+}
+
+a:focus { 
+	color: red; 
+}
+
+a:visited { 
+	color: red; 
+}
+
+nav ul {
+	margin-top: 0;
+}
