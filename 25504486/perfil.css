@@ -1,0 +1,35 @@
+h1{
+    color:blue;
+  font-size: 50px;   
+  
+}
+.texto{
+
+    font-family: Georgia;
+}
+
+#foto{
+    border-top-left-radius: 30%;
+    width: 300px;
+    height: 360px;
+}
+
+a:link{
+    color:orange
+}
+
+a:hover{
+    color: blue;
+}
+
+a:visited{
+    color: red;
+}
+
+#info{
+
+    border-style: solid;
+    box-shadow: 10px 10px 5px 0px rgba(0,0, 0,0.75);
+    vertical-align: top; 
+    vertical-align: text-top;        
+} 
