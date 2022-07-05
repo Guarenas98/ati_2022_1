@@ -401,15 +401,7 @@ public:
 int main() {
 
   int x0,y0,x1,y1,x2,y2,x3,y3;
-<<<<<<< HEAD
-  //Rectangulo rectangulo(Coordenada(3,2), Coordenada(5,-6), Coordenada(7,6), Coordenada(7,2));	
-  //Rectangulo rectangulo(Coordenada(3,2), Coordenada(3,6), Coordenada(7,6), Coordenada(7,2));
-  //Rectangulo rectangulo(Coordenada(0,2), Coordenada(0,6), Coordenada(7,6), Coordenada(7,2));
-  //Rectangulo rectangulo(Coordenada(2,0), Coordenada(7,0), Coordenada(2,6), Coordenada(7,6));
-  //Rectangulo rectangulo(Coordenada(12,12), Coordenada(18,12), Coordenada(18,20), Coordenada(12,20));
   printf("Hola 26619394");
-=======
->>>>>>> origin/reto3-profesores
   printf("Ingrese coordenada 1 (x y): "); scanf("%d %d",&x0, &y0);
   printf("Ingrese coordenada 2 (x y): "); scanf("%d %d",&x1, &y1); 
   printf("Ingrese coordenada 3 (x y): "); scanf("%d %d",&x2, &y2);

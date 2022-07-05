@@ -58,11 +58,7 @@ int main() {
 	Circulo c(2); //circulo de radio 10, centrado en el orgien, uso constructor Circulo(float r)
 	c.show();
    
-<<<<<<< HEAD
-   printf("El punto pertenece: ");
-=======
    //printf("¿El punto pertenece? ");
->>>>>>> origin/reto3-profesores
 	if(c.pertenece(p)){
 	   cout << "El punto pertenece al círculo\n" << endl;
 	} else {
