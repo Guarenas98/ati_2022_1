@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    border-width: 0px;
+    overflow: hidden;
+    background-color: rgba(33, 150, 243, 0.5);
+    text-align: center;
+    display: grid;
+    grid: 70px / auto auto auto;
+    grid-gap: 5px;
+    padding: 0px;
+    
+    
+   
+}
+  
+header li {
+    
+    float: left;
+    text-align: center;
+    text-align: center;
+    padding: 20px 0;
+    
+    
+    
+    
+}
+  
+header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+  
+header li a:hover {
+    background-color: #111111;
+}
+
+.logo {
+    float: left;
+    padding: 15px;
+    font-size: 30px;
+
+    border-right-style: solid;
+    border-right-color: white;
+    border-right-width: 1px;
+    
+
+}
+.logo small{
+    font-size: 20px;
+}
+
+.saludo{
+    padding: 25px;
+    text-align: center;
+    font-size: medium;
+
+    border-right-style: solid;
+    border-right-color: white;
+    border-right-width: 1px;
+}
+
+
+
+.busqueda {
+    float: right;
+    margin-right: 15px;
+
+}
+
+.busqueda input[type=button] {
+    padding: 6px;
+    background: #f5f7f9;
+    border: none;
+    cursor: pointer;
+     color: #86b1ef;
+}
+
+.busqueda input[type=text] {
+  padding: 6px;
+  border: none;
+  margin-right: 10px;
+}
+
+
+
+section ul {
+    list-style-type: none;
+    margin: 5px;
+    border-width: 0px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    display: grid;
+    grid: auto / auto auto auto;
+    grid-gap: 10px;
+    padding: 0px;
+    
+}
+
+
+
+footer {   
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background-color: rgba(33, 150, 243, 0.5);
+    text-align: center;
+    padding: 10px;
+ }
