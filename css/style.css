@@ -7,7 +7,7 @@ header ul {
     margin: 0;
     border-width: 0px;
     overflow: hidden;
-    background-color: rgba(33, 150, 243, 0.5);
+    background-color: #86b1ef;
     text-align: center;
     display: grid;
     grid: 70px / auto auto auto;
@@ -96,25 +96,56 @@ section ul {
     margin: 5px;
     border-width: 0px;
     overflow: hidden;
-    background-color: #2196F3;
     text-align: center;
-    display: grid;
-    grid: auto / auto auto auto;
-    grid-gap: 20px;
     padding: 10px;
     
 }
 
 section li {
-    background-color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    
+
     text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
+    padding: 10px 0;
+    margin: 5px;
+    
     
 }
 
+section li p{
+    margin: 5px;
+    
+}
+
+.bloc{
+    width:200px;
+    height:200px;
+    margin: 5px;
+    background: #f5f7f9;
+    box-shadow: 2px 2px #888888;
+
+}
+
+.bloc:hover{
+    
+    background-color: #86b1ef;
+    transform: rotate(5deg);
+
+}
 
 
+img{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+
+    padding: 10px;
+    padding-left: 10%;
+    width:75%;
+    height:75%;
+
+}
 
 footer {   
     position:fixed;
@@ -122,7 +153,7 @@ footer {
     bottom:0px;
     height:30px;
     width:100%;
-    background-color: rgba(33, 150, 243, 0.5);
+    background-color: #86b1ef;
     text-align: center;
     padding: 10px;
  }
