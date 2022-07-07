@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+}
+
+.containerHeader {
+    width: 100%;
+}
+
+.containerNav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2em;
+}
+
+.containerNav section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #99c5dd;
+    padding: 15px;
+}
+
+.saludo {
+    font-size: 1em;
+    margin: 0;
+    color: white;
+    font-weight: bolder;
+}
+
+.logo {
+    font-size: 2em;
+    margin: 0;
+    color: white;
+    font-weight: bolder;
+}
+
+.containerNav section span {
+    font-size: 0.6em;
+    font-weight: normal;
+}
+
+/* *********** containerMain *********** */
+.containerMain {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 3em;
+}
+
+.containerPerfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #F1F7FA;
+    padding: 1em 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+.containerPerfil:hover {
+    background: #99c5dd;
+    transform: rotate(4deg);
+}
+
+
+.containerPerfil img {
+    width: 30%;
+    height: 100%;
+}
+
+.containerPerfil a {
+    text-decoration: none;
+    color: #5694AD;
+   /* color:#114154; */
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+/* *********** containerMain *********** */
+
+
+/* *********** footer *********** */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #99c5dd;
+    padding: 20px 0;
+}
+
+.footer p {
+    font-weight: bolder;
+}
+
+/* *********** footer *********** */
+
+/* 
+.ContainerNav section:hover {
+    border: 2px yellow solid;
+} */
