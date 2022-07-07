@@ -132,7 +132,7 @@ section li p{
 
 .bloc:hover{
     
-    background-color: #86b1ef;
+    background-color: #a2c4da;
     transform: rotate(5deg);
 
 }
@@ -158,7 +158,7 @@ footer {
     height:30px;
     width:100%;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #86b1ef;
+    background-color: #8fb1ea;
     text-align: center;
     padding: 10px;
  }
