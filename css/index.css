@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    border-width: 0px;
+    overflow: hidden;
+    background-color: #86b1ef;
+    text-align: center;
+    display: grid;
+    grid: 70px / auto auto auto;
+    grid-gap: 5px;
+    padding: 0px;
+}
+  
+header li {
+    
+    float: left;
+    text-align: center;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+  
+header li a:hover {
+    background-color: #111111;
+}
+
+.logo {
+    float: left;
+    padding: 15px;
+    font-size: 30px;
+    border-right-style: solid;
+    border-right-color: white;
+    border-right-width: 1px;
+}
+.logo small{
+    font-size: 20px;
+}
+
+.saludo{
+    padding: 25px;
+    text-align: center;
+    font-size: medium;
+    border-right-style: solid;
+    border-right-color: white;
+    border-right-width: 1px;
+}
+
+.busqueda {
+    float: right;
+    margin-right: 15px;
+    color:gray;
+}
+
+section ul {
+    list-style-type: none;
+    margin: 5px;
+    border-width: 0px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+section li {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    margin: 5px; 
+}
+
+section li p{
+    margin: 5px;
+    color: #86b1ef;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+section li a{
+    text-decoration: none;
+    color: #86b1ef;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bloc{
+    width:220px;
+    height:220px;
+    margin: 5px;
+    background: #f5f7f9;
+    box-shadow: 2px 2px #888888;
+}
+
+.bloc:hover{
+    background-color: #99c5dd;
+    transform: rotate(5deg) scale(1.1); 
+}
+
+img{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    padding-left: 10%;
+    width:75%;
+    height:75%;
+}
+
+footer {   
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #8fb1ea;
+    text-align: center;
+    padding: 5px;
+    padding-top: 10px;
+ }
