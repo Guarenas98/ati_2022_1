@@ -100,7 +100,6 @@ section li a{
     box-shadow: 2px 2px #888888;
 }
 
-
 .bloc:hover{
     background-color: #99c5dd;
     transform: rotate(5deg) scale(1.1); 
