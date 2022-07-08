@@ -1,0 +1,15 @@
+{
+
+	
+	"Bienvenida" : "Hola, [nombre]",
+	"Busqueda" : "Inicio",
+	"nombre" : "",
+	"descripcion" : "",
+	"color" : "Mi Color favorito es: ",
+	"libro" : "Mi Libro favorito es: ",
+	"musica" :  "Mis Estilos de Musica preferida son: ",
+	"video_juego" : "Mis Video juegos Favoritos son:",
+	"lenguajes" : "Lenguajes Aprendidios:",
+	"contacto" : "Si necesitan comunicarse conmigo me pueden escribir a: [email] "
+
+}
