@@ -1,0 +1,15 @@
+{	
+    
+    "nombre": "Ioannis Morakis" ,
+    "descripción": "Soy Estudiante del octavo semestre de Computación de la UCV. Me desempeño en el área de ingenieria de software y  actualmente estoy estudiando en la Escuela de Computación de la UCV. Además soy políglota, hablo cuatro idiomas Ingles Español, Italiano y Griego ",
+    "color" : "Verde",
+    "libro" : "Spiderwick",
+    "música" : "Rock",
+    "video_juego" : ["Fallot: New Vegas", "Assassin's Creed IV: Black Flag", "Bioshock Infinite"],
+    "lenguajes" : ["c++", "c", "python", "java", "sql", "pascal"],
+    "email" : "m.yannis22@gmail.com",
+    "CI" : 24105182,
+    "género" : "masculino",
+    "fecha_nacimiento" : "22/09/1995"
+	
+}
