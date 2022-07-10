@@ -4,52 +4,34 @@
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/style.css"  type="text/css">
+		<link rel="stylesheet" href="css/index.css"  type="text/css">
 
-		<title>ATI[UCV] 2022-1</title>
+		<script type="text/javascript" src="conf/configES.json"></script>
+		<script type="text/javascript" src="datos/index.json"></script>
+		<title id="titulo"></title>
 	</head>
 	<body>
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, Jose Miguel Valera</li>
-					<li class="busqueda"><input type="text" placeholder="Search.."><input value="Buscar" type="button"/></li>
+					<li id="logo"> </li>
+					<li id="saludo"></li>
+					<li id="busqueda"><input id="text" type="text" placeholder="Search.."><input id="boton" value="Buscar" type="button" /></li>
 				</ul>	
 			</nav> 
 	    </header>
 
 	    <section>
-			<ul>
-                <li><div> <img src="28218108/28218108.jpeg" height="40px" width="50px"><a href="">Miguel Valera</a></div></li>
+			<ul id="list">
 
-                <li><img src="28218108/avatar-colored-d.png" height="40px" width="50px"><a href="">Arnoldo Ramirez</a></li>
-
-                <li><img src="28218108/avatar-rogemon.png" height="40px" width="50px"><a href="">Juanito Alimaña</a></li>
-
-                <li><img src="28218108/avatar_dribbble-02.jpg" height="40px"  width="50px"><a href="">Daniela Ruggiero</a></li>
-
-                <li><img src="28218108/Captura de pantalla 2022-07-02 200212.jpg" height="40px" width="50px"><a href="">Gabriel Carrizo</a></li>
-
-                <li><img src="28218108/Captura de pantalla 2022-07-02 200235.jpg" height="40px" width="50px"><a href="">Gabriel Belisario</a></li>
-
-                <li><img src="28218108/Captura de pantalla 2022-07-02 200317.jpg" height="40px" width="50px"><a href="">Pablo Rivas</a></li>
-
-                <li><img src="28218108/danavatar.png" height="40px" width="50px"><a href="">Roxana Machado</a></li>
-
-                <li><img src="28218108/mascot.gif" height="40px" width="50px"><a href="">Javier Jerez</a></li>
-
-                <li><img src="28218108/mike-dribs.png" height="40px" width="50px"><a href="">Alejandro Garcia</a></li>
-
-                <li><img src="28218108/yala.png" height="40px" width="50px"><a href="">Anastasia Soto</a></li>
-
-                <li><img src="28218108/red-five-dribs.png" height="40px" width="50px"><a href="">Nelson Casanova</a></li>
-
-            </ul>
-			 
+			</ul> 
+			<p id="mensaje" style="display:none"></p>
 	    </section>
 
 	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
+	        
 	    </footer>
+		<script src="js/index.js"></script>
 	</body>
 </html>
