@@ -1,0 +1,29 @@
+h1 { 
+  font-size: 100; 
+  color: blue;
+}
+.intro {
+    font-style: italic;
+    font-size: 5;
+}
+.neg {
+    font-weight: bold;
+}
+img {
+    width: 25%;
+    height: 50%;
+    border-top-left-radius: 25%;
+    margin-right: 10px;
+}
+.perfil{
+    border: 1px black;
+    border-style: solid;
+    padding: 1em;
+    box-shadow: 10px 10px 5px black;
+}
+a {
+    color: orange;
+}
+a:visited {
+    color: red;
+}
