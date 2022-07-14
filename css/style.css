@@ -16,7 +16,7 @@ header {
 
 nav ul {
   list-style-type: none;
-  margin: 10px;
+  margin: 0px;
   padding: 0;
   overflow: hidden;
 }
@@ -89,6 +89,16 @@ footer {
   text-align: center;
   height: 20px;	
   font-size: 9pt;
+}
+
+.msg_error {
+  color: #86b1ef;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 2rem;
 }
 
 .busqueda input[type=button] {
