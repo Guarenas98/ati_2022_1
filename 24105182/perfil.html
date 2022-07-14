@@ -6,43 +6,44 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
+		<script type="text/javascript" src="perfil.json"></script>
+		<script type="text/javascript" src="config.json"></script>
+        <script type="text/javascript" src="perfil.js"></script>
 		<title>Ioannis Morakis</title>
 	</head>
-	<body>
+	<body onload="load();">
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, Ioannis Morakis</li>
-					<li class="busqueda"><a href="index.html">Inicio</a></li>
+					<li class="logo" id="logo"></li>
+					<li class="saludo" id="saludo"></li>
+					<li class="busqueda" id="busqueda"><a href="index.html" id="inicio">Inicio</a></li>
 				</ul>	
-			</nav> 
+			</nav>
+			
 	    </header>
-	    <section>
+	    <section >
 	       
-			<img src="imagen.png" alt="imagen" >
+			<img src="" alt="imagen"  id="imagen">
 			<div>
-				<h1 >Ioannis Morakis</h1>
-				<p class= "italic">
-					Soy Estudiante del octavo semestre de Computación de la UCV. 
-					Me desempeño en el área de ingenieria de software y 
-					actualmente estoy estudiando en la Escuela de Computación de la UCV. 
-					Además soy políglota, hablo cuatro idiomas Ingles Español, Italiano y Griego 
-				</p>
-				<p>Mi color favorito es: Verde </p>
-				<p>Mi libro favorito es: Spiderwick</p>
-				<p>Estilo de música preferida es: Rock</p>
-				<p>Mis Video juegos favoritos son: Fallot: New Vegas, Assassin's Creed IV: Black Flag y Bioshock Infinite </p>
-				<p class="bold">Lenguajes aprendidos: c++, c, python, java, sql, pascal </p>
-				<p>Si necesitan comunicarse conmigo me pueden escribir a: 
-					<a href="m.yannis22@gmail.com">m.yannis22@gmail.com</a>
-				</p> 
+				<h1 id="nombre"></h1>
+				<p class= "italic" id="descripción"></p>
+				<p id="color"></p>
+				<p id="libro"></p>
+				<p id="música"></p>
+				<p id="video_juego"></p>
+				<p class="bold" id="lenguajes"> </p>
+				<p id="como_comunicarse"></p> 
+				<a href="" id="email"></a>
+				
+
+
 			</div>
-		
+			
+			
 			 
 	    </section>
-	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
+	    <footer id="copyRight">
 	    </footer>
 	</body>
 </html>

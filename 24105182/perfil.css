@@ -28,6 +28,11 @@ p{
     left: -43%;
 }
 
+section a{
+    position: relative;
+    left: -43%;
+}
+
 p.italic {
     font-style: italic;
 }
