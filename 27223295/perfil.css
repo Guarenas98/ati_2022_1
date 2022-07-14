@@ -1,17 +1,26 @@
-h1 {
+.titulo-perfil {
 		color: #fcba03;
+	  font-size: 150%;
+	  margin-bottom: 7px;
 	}
+
+.content-perfil {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
 #fotoperfil {
 		width: 200px; 
 		height: 250px;
-		float: left;
+		/*float: left;*/
 
 		/*curvar borde izquierdo de la imagen*/
 		border-radius: 60px 0px 0px 0px ;
 }
 
 #caja-perfil { /*borde y sombra a caja de perfil*/
-	float: left;
+	/*float: left;*/
 	width: 60%;
 	border: 2px solid black;
 	box-shadow: 5px 5px gray;
