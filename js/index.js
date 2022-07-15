@@ -16,6 +16,8 @@ listado.forEach(estudiante => {
     students_ul.lastChild.innerHTML = "<img src=\""+estudiante.imagen+"\"> <a href=\"\">"+estudiante.nombre+"</a> "
 });
 
+document.getElementsByTagName("form")[0].addEventListener("submit", e => e.preventDefault());
+
 searchbar_items[0].addEventListener(
     "change",
     input =>{ 
