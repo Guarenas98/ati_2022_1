@@ -6,15 +6,17 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
-		<title>Victor Tafuri</title>
+		<script type="text/javascript" src ="config.json"></script>
+		<script type="text/javascript" src ="perfil.json"></script>
+		<script type="text/javascript" src ="codigo.js"></script>
 	</head>
-	<body>
+	<body onload="llenar()">
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola,Victor Tafuri</li>
-					<li class="busqueda"><a href="index.html">Inicio</a></li>
+					<li class="logo" id = 'logo'> </li>
+					<li class="saludo" id = 'saludo'></li>
+					<li class="busqueda" id = 'busqueda'></li>
 				</ul>	
 			</nav> 
 	    </header>
@@ -23,34 +25,33 @@
 			<table>
 				<tr>
 					<td> 
-						<img id="foto" src="25504486.jpg">
+						<img id="imagen">
 					</td>
-					<td id="info">
-						<h1>Victor Tafuri</h1>
-						<p class="texto">
-							<i>Soy estudiante de 7mo Semestre de computacion, auxiliar docente del laboratorio de postgrado,
-							Jugador de Rugby del equipo de la Universidad Central de Venezuela UCVRFC, apasionado a los videojuegos y el deporte.
-							Trabajo en la empresa Disglobal como supervisor del area de Desarrollo y Soporte Tecnico
-							</i>
-						</p>
+					<td class="info">
+						<h1 id="h_1"></h1>
+						<p id="texto"></p>
 						<br>
-						<p>     
-						Mi color favorito es:       Azul<br>
-						Mi libro favorito es:       Tormenta de Espadas<br>
-						Estilo de música preferida es:     Rock, Rap, Reggaeton<br>
-						Mis Video juegos favoritos son:    The last of Us, Call of Duty, Clash of Clans<br>
-						<strong>Lenguajes aprendidos:      C, C++, Java</strong> <br>
-						</p>
+						<table id ="tabla1">
+							
+							<tr><td id = "colorf"></td><td id = "color"></td></tr> 
+							<tr><td id = "librof"></td><td id = "libro"></td></tr> 
+							<tr><td id = "musicaf"></td><td id = "musica"></td></tr> 
+							<tr><td id = "videojuegof"></td><td id = "videojuego"></td></tr>
+							<tr><td ><b id = "lenguajesf" ></b></td><td><b id = "lenguajes">></b></td></tr>  
+							<br> 
+							<tr><td id = "correo"></td></tr >
+								
+						</table>
 						
-						<p>Si necesitan comunicarse conmigo me pueden escribir a: <a href="mailto:victortafuri2@gmail.com">victortafuri2gmail.com</a> <br></p>
+						
 	
 					</td>   
 				</tr>
 			</table>
 			 
 	    </section>
-	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
+	    <footer id="footer">
+	        
 	    </footer>
 	</body>
 </html>

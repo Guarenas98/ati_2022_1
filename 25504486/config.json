@@ -1,0 +1,15 @@
+let config = {
+	"sitio": ["ATI","[UCV]","2022-I"],
+	"home": "Inicio",
+	"saludo": "Hola, Victor Tafuri",
+	"Busqueda" : "Inicio",
+	"copyRight":"Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados",
+	"nombre":"",
+	"descripcion":"",
+	"colorf":"Mi color favorito es:",
+	"librof":"Mi libro favorito es:",
+	"musicaf":"Mi estilo de música preferida:",
+	"video_juegof":"Vídeo juegos favoritos:",
+	"lenguajesf":"Lenguajes aprendidos:",
+	"email":"Si necesitan comunicarse conmigo me pueden escribir a [email]"
+}

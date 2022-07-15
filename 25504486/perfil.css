@@ -1,14 +1,14 @@
-h1{
+#h_1{
     color:blue;
   font-size: 50px;   
   
 }
-.texto{
+#texto{
 
     font-family: Georgia;
 }
 
-#foto{
+#imagen{
     border-top-left-radius: 30%;
     width: 300px;
     height: 360px;
@@ -26,10 +26,15 @@ a:visited{
     color: red;
 }
 
-#info{
+.info{
 
     border-style: solid;
     box-shadow: 10px 10px 5px 0px rgba(0,0, 0,0.75);
     vertical-align: top; 
     vertical-align: text-top;        
 } 
+
+#tabla1{
+    border-spacing: 2px; 
+    
+}
