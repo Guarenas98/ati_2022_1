@@ -6,37 +6,24 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
-		<title>ATI[UCV] 2022-1</title>
+		<script src="conf/configES.json"></script>
+		<script src="datos/index.json"></script>
+		<script src="js/index.js"></script>
+		<title></title>
 	</head>
-	<body>
+	<body onload="inicio(); cargarListado()">
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, Daniela Ruggiero</li>
-					<li class="busqueda"><form> <input type="text"  placeholder="Nombre..."><input type="button" value="Buscar"></form></li>
+					<li class="logo"><small></small></li>
+					<li class="saludo"></li>
+					<li class="busqueda"><form> <input name="nombre" type="text" onkeyup="buscarEstudiante()"><input name="buscar" type="button" onclick="buscarEstudiante()"></form></li>
 				</ul>	
 			</nav> 
 	    </header>
 	    <section>
-			<ul>
-                <li><img src="28126743/28126743.jpg" height="70" width="70"><a href="#">Daniela Ruggiero</a></li>
-                <li><img src="dummy6/dummy.jpg" height="70" width="70"><a href="#">Juan Antonio Perez</a></li>
-                <li><img src="dummy3/dummy.jpg" height="70" width="70"><a href="#">Maritza Rodriguez</a></li>
-                <li><img src="dummy1/dummy.jpg" height="70" width="70"><a href="#">Emilia Casado</a></li>
-                <li><img src="dummy4/dummy.jpg" height="70" width="70"><a href="#">Enrique Colina</a></li>
-                <li><img src="dummy2/dummy.jpg" height="70" width="70"><a href="#">Maria Elena Pinto</a></li>
-                <li><img src="dummy5/dummy.jpg" height="70" width="70"><a href="#">Ronald Gutierrez</a></li>
-
-				<li><img src="dummy6/dummy.jpg" height="70" width="70"><a href="#">Juan Antonio Perez</a></li>
-				<li><img src="dummy3/dummy.jpg" height="70" width="70"><a href="#">Maritza Rodriguez</a></li>
-				<li><img src="dummy1/dummy.jpg" height="70" width="70"><a href="#">Emilia Casado</a></li>
-				<li><img src="dummy4/dummy.jpg" height="70" width="70"><a href="#">Enrique Colina</a></li>
-				<li><img src="dummy2/dummy.jpg" height="70" width="70"><a href="#">Maria Elena Pinto</a></li>
-            </ul>
+			<ul id="listado"> </ul>
 	    </section>
-	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
-	    </footer>
-	</body>
+	    <footer> </footer>
+	</body>	
 </html>
