@@ -9,7 +9,7 @@ const filterList = (filter) => {
     
     if(filteredListado.length === 0)
     {
-        document.getElementsByTagName("ul")[1].innerHTML = config.error_busqueda + filter
+        document.getElementsByTagName("ul")[1].innerHTML = config.error_busqueda.replace("[query]", filter)
     }
     else
     {
