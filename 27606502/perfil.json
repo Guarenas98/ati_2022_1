@@ -1,13 +1,14 @@
-{
-	"nombre": "Hadaya Hadaya",
-	"descripción": "Soy estudiante de Ciencias de la Computación en la Universidad Central de Venezuela.",
-	"color": "Naranja",
-	"libro": "Canción de Hielo y Fuego",
-	"música": ["Rock", "Metal"],
-	"video_juego": "Call of Duty Mobile",
-	"lenguajes": ["C++", "C", "javascript"],
-	"email": "hadaya456@gmail.com",
-	"CI": "27606502",
+let perfil = {	
+	"nombre":"Hadaya Hadaya",
+	"descripcion":"Soy estudiante de Ciencias de la Computación en la Universidad Central de Venezuela. Actualmente curso el sexto semestre de la carrera.",
+	"color":"Naranja",
+	"libro":"Cancion de Hielo y Fuego",
+	"musica":["Rock", "Metal"],
+	"video_juego": ["Call of Duty Mobile"],
+	"lenguajes":["C++", "C", "javascript"],
+	"email":"hadaya456@gmail.com",
+	"ci":"27606502",
 	"genero": "masculino",
-	"fecha_nacimiento": "12/09/2000"
+	"fecha_nacimiento":"12/09/2000",
+	"imagen": "27606502.jpg"
 }

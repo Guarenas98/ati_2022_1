@@ -6,15 +6,19 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
-		<title>Hadaya Hadaya</title>
+		<script type="text/javascript" src="config.json"></script>
+		<script type="text/javascript" src="perfil.json"></script>
+
+
 	</head>
-	<body>
+	<body onload="cargar()">
+
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, Hadaya Hadaya</li>
-					<li class="busqueda"><a href="index.html">Inicio</a></li>
+					<li class="logo" id="sitio"></li>
+					<li class="saludo" id="saludo"></li>
+					<li class="busqueda" id="home"></li>
 				</ul>	
 			</nav> 
 	    </header>
@@ -23,35 +27,55 @@
 		<table>
 			<tr>
 				<td>
-					<img src="27606502.jpg" height="300" weight="300">
+					<img id="imagen" height="300" weight="300">
 				</td>
 
 				<td>
 					<div id="bordes1">
 						<div id="bordes2">
-							<h1>Hadaya Hadaya Nemr</h1>
-							<p id="parrafo">Soy estudiante de Ciencias de la Computación en la Universidad Central de Venezuela.
-							Actualmente curso el sexto semestre de la carrera.</p>
+							<h1 id="nombre"></h1>
+							<p id="parrafo"></p>
 							
-							<p>Mi color favorito es: Naranja</p>
-							<p>Mi libro favorito es: Canción de Hielo y Fuego</p>
-							<p>Estilo de música preferida es: Rock y Metal</p>
-							<p>Video juegos favoritos: Call of Duty Mobile</p>
-							<p id="lenguajes">Lenguajes aprendidos: C++, C, javascript</p>
+							<p id="color"></p>
+							<p id="libro"></p>
+							<p id="musica"></p>
+							<p id="videojuegos"></p>
+							<p id="lenguajes"></p>
 
 							<br>
 
-							<p>Si necesitan comunicarse conmigo me pueden escribir a: <a href="mailto:hadaya456@gmail.com">hadaya456@gmail.com</a></p>
+							<p id="email">Si necesitan comunicarse conmigo me pueden escribir a: <a href="mailto:hadaya456@gmail.com">hadaya456@gmail.com</a></p>
 
 						</div>
 					</div>
 				</td>
 			</tr>
 		</table>
-			 
 	    </section>
-	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
-	    </footer>
+
+	    <footer id="footer"></footer>
+
 	</body>
+
+	<script>
+		function cargar() {
+			document.title = perfil.nombre;
+			document.getElementsByClassName("nombre").innerHTML = perfil.nombre;
+			document.getElementById("sitio").innerHTML = config.sitio[0] + "<small>" + config.sitio[0] + "</small>" + config.sitio[2];
+			document.getElementById("nombre").innerHTML = perfil.nombre;
+			document.getElementById("saludo").innerHTML = config.saludo + ", " + perfil.nombre;
+			document.getElementById("home").innerHTML = "<a href='index.html' >" + config.home + "</a>"; 
+			document.getElementById("imagen").src = perfil.imagen;
+			document.getElementById("parrafo").innerHTML = perfil.descripcion;
+			document.getElementById("color").innerHTML = config.color + ": " + perfil.color;
+			document.getElementById("libro").innerHTML = config.libro + ": " + perfil.libro;
+			document.getElementById("musica").innerHTML = config.musica + ": " + perfil.musica;
+			document.getElementById("videojuegos").innerHTML = config.video_juego + ": " + perfil.video_juego;
+			document.getElementById("lenguajes").innerHTML = config.lenguajes + ": " + perfil.lenguajes[0] + ", " + perfil.lenguajes[1] + ", " + perfil.lenguajes[2] + "."; 
+			document.getElementById("email").innerHTML = config.email.replace("[email]","<a href='mailto:'" + perfil.email + ">" + perfil.email + "</a>");
+			document.getElementById("footer").innerHTML = config.copyRight;
+
+		}
+	</script>
+
 </html>
