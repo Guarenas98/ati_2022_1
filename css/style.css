@@ -58,6 +58,20 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
   float: right;
 }
 
+.busqueda input[type=button] {
+    padding: 6px;
+    background: #f5f7f9;
+    border: none;
+    cursor: pointer;
+	 color: #86b1ef;
+}
+
+.busqueda input[type=text] {
+  padding: 6px;
+  border: none;
+  margin-right: 10px;
+}
+
 section { 
   width: 95%;
   margin-top:10px;
@@ -75,17 +89,4 @@ footer {
   text-align: center;
   height: 20px;	
   font-size: 9pt;
-}
-.busqueda input[type=button] {
-  padding: 6px;
-  background: #f5f7f9;
-  border: none;
-  cursor: pointer;
-   color: #86b1ef;
-}
-
-.busqueda input[type=text] {
-padding: 6px;
-border: none;
-margin-right: 10px;
 }
