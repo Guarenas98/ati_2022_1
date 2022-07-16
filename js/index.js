@@ -1,6 +1,6 @@
 document.getElementsByTagName("footer")[0].innerText = config.copyRight;
 
-document.title = config.sitio[0] +config.sitio[1]+ config.sitio[1]; 
+document.title = config.sitio[0] +config.sitio[1]+ config.sitio[2]; 
 
 document.getElementsByClassName("logo")[0].innerHTML = config.sitio[0] + "<small>" + config.sitio[1] + "</small> "+config.sitio[2];
 
