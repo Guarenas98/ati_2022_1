@@ -28,6 +28,7 @@ section ul li a {
 	font-size:10pt;
 	color: #86b1ef;
  	text-decoration:none;
+    display: inline-block;
 }
 
 section ul li a:link, section ul li a:visited {
@@ -36,6 +37,10 @@ section ul li a:link, section ul li a:visited {
 
 section ul li a:hover { 
 	color: #68a0d8;
+}
+
+nav ul {
+  margin-top: 0px;
 }
 
 .clear{
