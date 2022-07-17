@@ -3,7 +3,7 @@ nav, .logo, .saludo, .busqueda {
 	font-family: "Arial";
 	box-sizing: border-box;
 	margin: 0;
-	padding: 15px;
+	padding: 0px;
 	color: white;
 	height: 150%;
 }
@@ -24,6 +24,7 @@ body {
 
 nav {
 	padding: 0;
+	height: 45px;
 }
 
 li {
@@ -52,6 +53,8 @@ img {
 a {
 	text-decoration: none;
 	color: #639dd7;
+	text-align: center;
+	margin-top: 5px;
 }
 
 td {
@@ -63,9 +66,8 @@ table {
 }
 
 #acomodarBorde{
-	height: 64px;
+	height: 62px;
 	align-items: center;
-	padding-top: 20px;
 }
 
 #buscar{
@@ -88,6 +90,7 @@ table {
 
 .saludo {
 	text-align: center;
+	padding-top: 0;
 }
 
 .busqueda {
@@ -101,7 +104,6 @@ table {
 	grid-column-gap: 15px;
 	margin-left: 20px;
 	margin-bottom: 20px;
-
 	transition: transform 0.5s ease-out 25ms;
 }
 
@@ -115,4 +117,11 @@ table {
 	background-color: #99c5dd;
 	height: 155px;
 	width: 155px;
+}
+
+#mensaje {
+	color: #639dd7;
+	font-size: 22px;
+	text-align: center;
+	margin-top: 65px;
 }

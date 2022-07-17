@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -7,229 +6,30 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
-		<title>ATI[UCV] 2022-1</title>
+		<script type="text/javascript" src="./conf/configES.json"></script>
+		<script type="text/javascript" src="./datos/index.json"></script>
+		<script type="text/javascript" src= "./js/index.js"></script>
 	</head>
-	<body>
+	<body onload="inicio()">
 	    <header>
 			<nav>
 				<ul class="formulario">
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo" id="acomodarBorde">Hola, Hadaya Hadaya</li>
-					<li class="busqueda">
-						<input type="text" name="Nombre" placeholder="Nombre...">
-						<input id="buscar" type="submit" name="Buscar" value="Buscar">
+					<li class="logo" id=logo></li>
+					<li class="saludo" id="acomodarBorde"></li>
+					<li class="busqueda" id="busqueda">
+						<input id="entrada" type="text" name="Nombre" onkeyup="buscar()">
+						<input id="buscar" type="submit" name="Buscar">
 					</li>
 				</ul>	
 			</nav> 
 	    </header>
 
 		<section>
-			<ul>
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./27606502/27606502.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Hadaya Hadaya</a>
-							</td>
-						</tr>
-					</table>
-				</li>
-
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./dummy1/dummy.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Emilio Perez</a>
-							</td>
-						</tr>
-					</table>
-					
-					
-				</li>
-
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./dummy2/dummy.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Enrique Arteaga</a>
-							</td>
-						</tr>
-					</table>
-					
-					
-				</li>
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./dummy3/dummy.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Jose Ferandez</a>
-							</td>
-						</tr>
-					</table>
-					
-					
-				</li>
-
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./dummy4/dummy.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Carla Ocanto</a>
-							</td>
-						</tr>
-					</table>
-					
-					
-				</li>
-
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./dummy5/dummy.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Josefina Pinto</a>
-							</td>
-						</tr>
-					</table>
-					
-					
-				</li>
-
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./dummy6/dummy.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Luis Herrera</a>
-							</td>
-						</tr>
-					</table>
-					
-					
-				</li>
-
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./dummy4/dummy.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Jose Ramoz</a>
-							</td>
-						</tr>
-					</table>
-					
-					
-				</li>
-
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./dummy5/dummy.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Gerardo Franco</a>
-							</td>
-						</tr>
-					</table>
-					
-					
-				</li>
-
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./dummy6/dummy.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Luis Guerrero</a>
-							</td>
-						</tr>
-					</table>
-					
-					
-				</li>
-
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./dummy1/dummy.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Yugi Perez</a>
-							</td>
-						</tr>
-					</table>
-				</li>
-
-				<li class="box" class="card">
-					<table>
-						<tr>
-							<td>
-								<img src="./dummy2/dummy.jpg" height="140" weight="140">
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">Enrique Perez</a>
-							</td>
-						</tr>
-					</table>
-				</li>			
-			</ul>
-
+			<ul id="listado"></ul>
 		</section>
 	
-	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
-	    </footer>
+	    <footer id="footer"></footer>
+
 	</body>
+
 </html>
-=======
-<!DOCTYPE HTML>
->>>>>>> origin/reto9
