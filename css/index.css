@@ -1,4 +1,27 @@
-section ul li { 
+
+.imagen {
+	width:140px; 
+   height:140px;	
+	object-fit: contain;
+}
+
+		
+
+.clear{
+       clear:both;
+}
+.nombre {
+    font-family:arial;
+    font-size:12pt;
+    color: #86b1ef;
+    text-decoration:none;
+    font-weight: bold;
+}
+.nombre: hover{
+    color: #68a0d8;
+}
+
+.persona {
    display:inline; 
    float:left; 
    width:170px; 
@@ -9,35 +32,14 @@ section ul li {
    text-align: center; 
    border-right: #a5a7aa solid 1px; 
    border-bottom: #a5a7aa solid 1px; 
-	overflow: hidden; 
+   box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.5);
+    overflow: hidden; 
+
+
 }
 
-section ul li img {
-	width:140px; 
-   height:140px;	
-	object-fit: contain;
-}
-
-section ul li:hover {
+.persona:hover {
     background-color:#99c5dd;
     transform:scale(1.05) rotate(5deg);
-}
-		
-section ul li a {
-	font-family:arial;
-	font-size:10pt;
-	color: #86b1ef;
- 	text-decoration:none;
-}
-
-section ul li a:link, section ul li a:visited {
-	 color: #68a0d9;
-}
-
-section ul li a:hover { 
-	color: #68a0d8;
-}
-
-.clear{
-       clear:both;
+    transition-duration: .5s;
 }
