@@ -1,0 +1,39 @@
+img {
+	border-top-left-radius: 150px;
+	float: left;
+	width: 500px;
+	height: 600px;
+}
+h1{
+	color: #015301;
+	font-size: 32pt;
+}
+h3{
+	font-size: 12pt;
+	margin-top: 10px;
+	margin-bottom: 20px;
+
+}
+#descripcion{
+	font-family: sans-serif;
+	font-style: italic;
+}
+#lenguajes{
+	font-weight: bold;
+}
+#perfil{
+	margin-left: 510px;
+	border-style: solid;
+	border-color: black;
+	box-shadow: 10px 10px 10px #444444;
+	width: 600px;
+	height: 600px;
+	font-size: 12pt;
+
+}
+a:link{
+	color: orange;
+}
+a:visited{
+	color: red;
+}
