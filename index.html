@@ -10,103 +10,29 @@
     />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="css/index.css" type="text/css" />
-    <title>ATI[UCV] 2022-1</title>
+    <script type="text/javascript" src="./conf/configES.json"></script>
+    <script type="text/javascript" src="datos/index.json"></script>
+    <script src="js/index.js"></script>
+    <title></title>
   </head>
-  <body>
+  <body onload="inicio()">
     <header>
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-
-          <li class="saludo">Hola, Valentina</li>
+      <nav>
+        <ul>
+          <li class="logo"></li>
+          <li class="saludo"></li>
           <li class="busqueda">
             <form>
-              <input type="text" placeholder="Nombre..." />
-              <button type="button">Buscar</button>
+              <input type="text" class="nombre" id="nombre"/>
+              <input type="button" class="buscar" onclick="searchStudent()"></input>
             </form>
           </li>
         </ul>
       </nav>
     </header>
     <section>
-      <ul class="section-list">
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="26022819.png" />
-            <p>Valentina Contreras</p>
-          </div>
-        </li>
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="/dummy1/dummy.jpg" />
-            <p>Sofia Reyes</p>
-          </div>
-        </li>
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="/dummy2/dummy.jpg" />
-            <p>Selena Gomez</p>
-          </div>
-        </li>
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="/dummy3/dummy.jpg" />
-            <p>Ellen Smith</p>
-          </div>
-        </li>
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="/dummy4/dummy.jpg" />
-            <p>Kanye Willy</p>
-          </div>
-        </li>
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="/dummy5/dummy.jpg" />
-            <p>Alberto Torres</p>
-          </div>
-        </li>
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="/dummy6/dummy.jpg" />
-            <p>Julian Díaz</p>
-          </div>
-        </li>
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="/dummy1/dummy.jpg" />
-            <p>Sofia Reyes</p>
-          </div>
-        </li>
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="/dummy2/dummy.jpg" />
-            <p>Selena Gomez</p>
-          </div>
-        </li>
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="/dummy3/dummy.jpg" />
-            <p>Ellen Smith</p>
-          </div>
-        </li>
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="/dummy4/dummy.jpg" />
-            <p>Kanye Willy</p>
-          </div>
-        </li>
-        <li>
-          <div class="student">
-            <img class="avatar-list" src="/dummy5/dummy.jpg" />
-            <p>Alberto Torres</p>
-          </div>
-        </li>
-      </ul>
+      <ul id="listado" class="section-list"></ul>
     </section>
-    <footer class="footer">
-      Copyright © 2022 Escuela de computación - ATI. Todos los derechos
-      reservados
-    </footer>
+    <footer></footer>
   </body>
 </html>
