@@ -1,0 +1,39 @@
+.dFoto, .dPerfil{
+    float:left;
+}
+#imagenPerfil {
+    height: 330px; width: 350px;
+    padding-right: 50px;
+    border-radius: 50px 0 0 0; 
+}
+.dPerfil{
+    width: 60%; 
+    padding: 20px;
+
+    border-style: solid;
+    box-shadow: 10px 15px #E1F2E5;
+}
+.lenguaje{
+    font-weight: bold;
+}
+.list1{
+    list-style-type:none;
+}
+#Tva{
+    font-size: 40px; color: teal; font-family: cursive; 
+}
+#perfil{
+    font-style: italic; font-family: cursive; 
+}
+#comu{
+    font-family: cursive;
+}
+li{
+    font-family: cursive;
+}
+a:link{
+    color: orange;
+}
+a:focus, a:visited{
+    color: red;
+}
