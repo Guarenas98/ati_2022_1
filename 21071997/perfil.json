@@ -1,0 +1,13 @@
+{
+    "nombre": "Luz Rico",
+    "descripcion": "Soy estudiante del 8vo semestre de Computación de la UCV especializándome en el área de Aplicaciones con Tecnología Internet. También soy maquilladora profesional certificada internacionalmente. Apasionada por los videojuegos y los logros de la plataforma steam.",
+    "color": "Fucsia",
+    "libro": "El Psicoanalista",
+    "musica": ["Pop", "romántica", "reggaeton"],
+    "video_juego": ["Dead by Daylight", "Fall Guys", "7 days to die"],
+    "lenguajes": ["c", "c++", "java", "php"],
+    "email": "luzrico15@gmail.com",
+    "CI": "21071997",
+    "genero": "femenino",
+    "fecha_nacimiento": "10/07/1992"
+}
