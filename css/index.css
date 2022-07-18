@@ -19,15 +19,16 @@ section ul li img {
 }
 
 section ul li:hover {
-    background-color:#99c5dd;
-    transform:scale(1.05) rotate(5deg);
+   background-color:#99c5dd;
+   transform:scale(1.05) rotate(5deg);
 }
-		
+
 section ul li a {
 	font-family:arial;
 	font-size:10pt;
 	color: #86b1ef;
  	text-decoration:none;
+   display: block;
 }
 
 section ul li a:link, section ul li a:visited {
