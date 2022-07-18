@@ -1,17 +1,21 @@
 * {
-	margin: 0;
-	padding: 0;
-	font-family: Verdana, Arial, helvetica, sans-serif;
-	font-size: 11pt;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Arial, helvetica, sans-serif;
+  font-size: 11pt;
 }
 
-html,body { width: 100%; height: 100%; }
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 
 header {
-   height: 62px;
-	top: 0;
-   position: relative;
-	background-color:#86b1ef;			
+  height: 62px;
+  top: 0;
+  position: relative;
+  background-color: #86b1ef;
 }
 
 nav ul {
@@ -33,20 +37,22 @@ nav ul li:last-child {
   border-right: none;
 }
 
-nav ul li a, nav ul li a:link, nav ul li a:visited {
-	 color: white;
-	 text-decoration:none;
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited {
+  color: white;
+  text-decoration: none;
 }
-			
+
 .logo {
-	margin-left: 2px;
-	font-size: 27pt;
-   font-family: helvetica;
-	width: 30%;
+  margin-left: 2px;
+  font-size: 27pt;
+  font-family: helvetica;
+  width: 30%;
 }
 
 .logo small {
-	font-size: 14pt;
+  font-size: 14pt;
 }
 
 .saludo {
@@ -54,26 +60,31 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
   text-align: center;
 }
 
-.busqueda {
+.inicio {
   float: right;
 }
+.descripcion,
+.color,
+.lenguajes,
+.email {
+  margin-top: 10px;
+}
 
-section { 
+section {
   width: 95%;
-  margin-top:10px;
-  margin-bottom:80px;
+  margin-top: 10px;
+  margin-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
 }
-			
+
 footer {
   width: 100%;
-  position: fixed;	
+  position: fixed;
   bottom: 0;
   padding: 1rem;
   background-color: #86b1ef;
   text-align: center;
-  height: 20px;	
+  height: 20px;
   font-size: 9pt;
 }
-

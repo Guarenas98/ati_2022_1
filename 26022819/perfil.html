@@ -8,17 +8,22 @@
       href="http://www.ciens.ucv.ve/portalasig2/favicon.ico"
       type="image/x-icon"
     />
+    <!-- css -->
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
     <link rel="stylesheet" href="perfil.css" type="text/css" />
-    <title>Valentina</title>
+    <!-- scripts -->
+    <script src="config.json"></script>
+    <script src="perfil.json"></script>
+    <script src="perfil.js"></script>
+    <title></title>
   </head>
-  <body>
+  <body onload="inicio()">
     <header>
       <nav>
         <ul>
-          <li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-          <li class="saludo">Hola, Valentina</li>
-          <li class="busqueda"><a href="index.html">Inicio</a></li>
+          <li class="logo"><small></small></li>
+          <li class="saludo"></li>
+          <li class="inicio"></li>
         </ul>
       </nav>
     </header>
@@ -26,39 +31,21 @@
       <table>
         <tr>
           <td>
-            <img src="26022819.jpg" alt="Foto de Valentina" />
+            <img class="foto" alt="Foto de Valentina" />
           </td>
-          <td class="profile">
-            <h1>Valentina Contreras</h1>
-            <p class="description">
-              Soy estudiante del 8vo semestre de la carrera de Lic. en
-              Computación en la Universidad Central de Venezuela. Actualmente
-              trabajo como desarrollador Front-end y en mis tiempos libres me
-              dedico a aprender nuevas tecnologías relacionadas con el área,
-              además de accesibilidad y experiencia de usuario.
-            </p>
-            <p>
-              Mi color favorito: Morado<br />
-              libro favorito: 100 años de soledad<br />
-              Mi estilo de musica favorito: Todos<br />
-              Mi video juego favorito: Counter-Strike<br />
-            </p>
-            <p class="lenguages">
-              Lenguajes aprendidos: JavaScript, TypeScript, React
-            </p>
-            <p>
-              Si necesitan comunicarse conmigo me pueden escribir a:
-              <a href="mailto: valexcontreras@gmail.com?subject=Reto 4"
-                >valexcontreras@gmail.com</a
-              >
-            </p>
+          <td>
+            <h1 class="nombre"></h1>
+            <p class="descripcion"></p>
+            <p class="color"></p>
+            <p class="libro"></p>
+            <p class="musica"></p>
+            <p class="video_juego"></p>
+            <p class="lenguajes"></p>
+            <p class="email"></p>
           </td>
         </tr>
       </table>
     </section>
-    <footer>
-      Copyright © 2022 Escuela de computación - ATI. Todos los derechos
-      reservados
-    </footer>
+    <footer></footer>
   </body>
 </html>
