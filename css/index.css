@@ -43,3 +43,23 @@
     transform:scale(1.05) rotate(5deg);
     transition-duration: .5s;
 }
+#searchBar{
+    padding: 6px;
+    background: #f5f7f9;
+    border: none;
+    cursor: pointer;
+    color: #86b1ef;
+
+}
+#searchSubmit{
+  padding: 6px;
+  border: none;
+  margin-right: 10px;
+ color: #86b1ef;
+}
+h1{
+    color: #86b1ef;
+    font-size:20pt;
+    text-align: center;
+    padding: 20pt;
+}
