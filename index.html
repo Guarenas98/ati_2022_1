@@ -3,12 +3,14 @@
 	<head>
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
 		<script type="text/javascript" src="./conf/configES.json"></script>
 		<script type="text/javascript" src="./datos/index.json"></script>
 		<script type="text/javascript" src= "./js/index.js"></script>
+		
 	</head>
 	<body onload="inicio()">
 	    <header>
@@ -18,17 +20,21 @@
 					<li class="saludo" id="acomodarBorde"></li>
 					<li class="busqueda" id="busqueda">
 						<input id="entrada" type="text" name="Nombre" onkeyup="buscar()">
-						<input id="buscar" type="submit" name="Buscar">
+						<input id="buscar" type="button" value="Buscar"  class="btn btn-primary">
 					</li>
 				</ul>	
 			</nav> 
 	    </header>
 
 		<section>
-			<ul id="listado"></ul>
+			<div class="container">
+  			<div id="listado"></div>
+  	  </div>
 		</section>
 	
-	    <footer id="footer"></footer>
+	  <footer id="footer"></footer>
+		<script src="js/jquery-3.6.0.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 
 	</body>
 
