@@ -1,0 +1,23 @@
+{
+    "color_favorito": "Mi color favorito es",
+    
+    "libro_favorito" : "Mi libro favorito es" ,
+    
+    "musica_favorito" : "Mi estilo de musica preferida" ,
+    
+    "juegos_favorito" : "Video juegos favoritos" ,
+    
+    "lenguajes_apendido" : "Lenguajes aprendido" ,
+    
+    "framework_aprendido" : "Framework aprendido" ,
+   
+    "como_comunicarse": "Si necesitas comunicarse conmigo me pueden escribir a mi correo [email]",
+
+    "footer_content": "Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados.",
+
+    "materia": "ATI",
+
+    "semestre" : "2022-1",
+    
+    "universidad": "UCV"
+}
