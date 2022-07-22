@@ -4,59 +4,41 @@
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+		<!--custom styles-->
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
-		<title>ATI[UCV] 2022-1</title>
+		<!--get JSON files-->
+		<script type="text/javascript" src="./conf/configPT.json"></script>
+		<script type="text/javascript" src="./datos/index.json"></script>
+		<title id="titulo-pestania"></title>
 	</head>
 	<body>
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, Carlos Castillo</li>
+					<li class="logo" id="sitio"></li>
+					<li class="saludo" id="saludo"></li>
 					<li class="busqueda">
 					<form>
-						<input type="text" name="nombre..." placeholder="nombre...">
-						<input type="button" name="submit" value="buscar">
+						<input id="input-texto-nombre" type="text" name="nombre..." placeholder="nombre...">
+						<input id="boton-buscar" type="button" name="submit" value="buscar">
 					</form>
 					</li>
-				</ul>	
-			</nav> 
+				</ul>
+			</nav>
 	    </header>
 	    <section>
-	       <ul>
-	       	<li>
-				<img src="27223295/27223295.jpg">
-				<a href="">Carlos Castillo</a>
-			</li>
-			<li>
-				<img src="dummy1/dummy.jpg">
-				<a href="">Juana Arango Perez</a>
-			</li>
-			<li>
-				<img src="dummy2/dummy.jpg">
-				<a href="">Maritza Rodriguez</a>
-			</li>
-			<li>
-				<img src="dummy3/dummy.jpg">
-				<a href="">Emilia Casado</a>
-			</li>
-			<li>
-				<img src="dummy4/dummy.jpg">
-				<a href="">Enrique Colina</a>
-			</li>
-			<li>
-				<img src="dummy5/dummy.jpg">
-				<a href="">Ronald Rodriguez</a>
-			</li>
-			<li>
-				<img src="dummy6/dummy.jpg">
-				<a href="">Maria Colina</a>
-			</li>
-		</ul>			 			 
+				<div id="plantilla-estudiante" style="display: none;">
+					<li>
+						<img class="foto-estudiante" src="" alt="foto" />
+						<a class="nombre-estudiante" href=""></a>
+					</li>
+				</div>
+	       <ul id="lista-estudiantes">
+						<!--aqui van instancias de la plantilla-->
+				</ul>
 	    </section>
-	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
-	    </footer>
+	    <footer id="copyright"></footer>
+	 <script type="text/javascript" src="./js/index.js"></script>
 	</body>
 </html>
