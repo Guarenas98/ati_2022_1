@@ -6,35 +6,31 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
-		<title>ATI[UCV] 2022-1</title>
+		<script src="conf/configES.json"></script>
+		<script src="datos/index.json"></script>
+		<script src="js/index.js"></script>
+		<title></title>
 	</head>
-	<body>
+	<body onload="inicio()">
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, Valeria Acuña</li>
-					<li class="busqueda"><form><input type="text" placeholder="Nombre..."> <input type="button" value="Buscar"></form></li>
+					<li class="logo"><small></small></li>
+					<li class="saludo"></li>
+					<li class="busqueda">
+						<form>
+							<input name="nombre" type="text" onkeyup="buscarEstudiante()"> 
+							<input name="buscar" type="button" onclick="buscarEstudiante()">
+						</form>
+					</li>
 				</ul>	
 			</nav> 
 	    </header>
-	    <section class="parrilla">
-			<ul>
-				<li class="item"><img src="26915574/26915574.jpg" height="90" width="90"><a href="#">Valeria Acuña</a></li>
-				<li class="item"><img src="dummy1/dummy.jpg" height="90" width="90"><a href="#">Juana Méndez</a></li>
-				<li class="item"><img src="dummy2/dummy.jpg" height="90" width="90"><a href="#">Arianna Arteca</a></li>
-				<li class="item"><img src="dummy3/dummy.jpg" height="90" width="90"><a href="#">Karen Gil</a></li>
-				<li class="item"><img src="dummy4/dummy.jpg" height="90" width="90"><a href="#">Beny Carrera</a></li>
-				<li class="item"><img src="dummy5/dummy.jpg" height="90" width="90"><a href="#">Diego Rueda</a></li>
-				<li class="item"><img src="dummy6/dummy.jpg" height="90" width="90"><a href="#">Gregorio Carreño</a></li>
-
-				<li class="item"><img src="dummy1/dummy.jpg" height="90" width="90"><a href="#">Sofía Arcos</a></li>
-				<li class="item"><img src="dummy4/dummy.jpg" height="90" width="90"><a href="#">Juan Castillo</a></li>
-				<li class="item"><img src="dummy2/dummy.jpg" height="90" width="90"><a href="#">Zuleidy Padilla</a></li>
-			</ul> 
+	    <section >
+			<ul id="listado"> </ul> 
 	    </section>
 	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
+	    
 	    </footer>
 	</body>
 </html>
