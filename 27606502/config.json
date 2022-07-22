@@ -1,5 +1,5 @@
 let config = {
-	"sitio": ["ATI","[UCV]","2020-U"],
+	"sitio": ["ATI","[UCV]","1-2022"],
 	"home": "Inicio",
 	"saludo": "Hola",
 	"copyRight":"Copyright © 2020 Escuela de computación - ATI. Todos los derechos reservados",

@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
 		<script type="text/javascript" src="config.json"></script>
 		<script type="text/javascript" src="perfil.json"></script>
+		<script type="text/javascript" src="index.js"></script>
 
 
 	</head>
@@ -22,60 +23,38 @@
 				</ul>	
 			</nav> 
 	    </header>
+
 	    <section>
-	       
-		<table>
-			<tr>
-				<td>
-					<img id="imagen" height="300" weight="300">
-				</td>
+			<table>
+				<tr>
+					<td>
+						<img id="imagen" height="300" weight="300">
+					</td>
 
-				<td>
-					<div id="bordes1">
-						<div id="bordes2">
-							<h1 id="nombre"></h1>
-							<p id="parrafo"></p>
-							
-							<p id="color"></p>
-							<p id="libro"></p>
-							<p id="musica"></p>
-							<p id="videojuegos"></p>
-							<p id="lenguajes"></p>
+					<td>
+						<div id="bordes1">
+							<div id="bordes2">
+								<h1 id="nombre"></h1>
+								<p id="parrafo"></p>
+								
+								<p id="color"></p>
+								<p id="libro"></p>
+								<p id="musica"></p>
+								<p id="videojuegos"></p>
+								<p id="lenguajes"></p>
 
-							<br>
+								<br>
 
-							<p id="email">Si necesitan comunicarse conmigo me pueden escribir a: <a href="mailto:hadaya456@gmail.com">hadaya456@gmail.com</a></p>
+								<p id="email"></p>
 
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
-		</table>
+					</td>
+				</tr>
+			</table>
 	    </section>
 
 	    <footer id="footer"></footer>
 
 	</body>
-
-	<script>
-		function cargar() {
-			document.title = perfil.nombre;
-			document.getElementsByClassName("nombre").innerHTML = perfil.nombre;
-			document.getElementById("sitio").innerHTML = config.sitio[0] + "<small>" + config.sitio[0] + "</small>" + config.sitio[2];
-			document.getElementById("nombre").innerHTML = perfil.nombre;
-			document.getElementById("saludo").innerHTML = config.saludo + ", " + perfil.nombre;
-			document.getElementById("home").innerHTML = "<a href='index.html' >" + config.home + "</a>"; 
-			document.getElementById("imagen").src = perfil.imagen;
-			document.getElementById("parrafo").innerHTML = perfil.descripcion;
-			document.getElementById("color").innerHTML = config.color + ": " + perfil.color;
-			document.getElementById("libro").innerHTML = config.libro + ": " + perfil.libro;
-			document.getElementById("musica").innerHTML = config.musica + ": " + perfil.musica;
-			document.getElementById("videojuegos").innerHTML = config.video_juego + ": " + perfil.video_juego;
-			document.getElementById("lenguajes").innerHTML = config.lenguajes + ": " + perfil.lenguajes[0] + ", " + perfil.lenguajes[1] + ", " + perfil.lenguajes[2] + "."; 
-			document.getElementById("email").innerHTML = config.email.replace("[email]","<a href='mailto:'" + perfil.email + ">" + perfil.email + "</a>");
-			document.getElementById("footer").innerHTML = config.copyRight;
-
-		}
-	</script>
-
 </html>
