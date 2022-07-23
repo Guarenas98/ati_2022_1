@@ -1,34 +1,31 @@
-.dFoto, .dPerfil{
-    float:left;
+h1 {
+    font-size: 40px; 
+    color: teal; 
+    font-family: cursive;
 }
-#imagenPerfil {
-    height: 330px; width: 350px;
-    padding-right: 50px;
-    border-radius: 50px 0 0 0; 
-}
-.dPerfil{
-    width: 60%; 
-    padding: 20px;
 
+#dPerfil {
+    font-style: italic; font-family: cursive;
+    font-size: 16px;
+}
+
+img {
+    float: left;
+    height: 340px; width: 330px;
+    padding-right: 35px;
+    padding-top: 1%;
+    border-radius: 50px 0 0 0;
+}
+
+#perfil{
+    width: 60%; height: 300px;
+    padding: 20px;
+    float: left;
     border-style: solid;
     box-shadow: 10px 15px #E1F2E5;
 }
-.lenguaje{
-    font-weight: bold;
-}
-.list1{
-    list-style-type:none;
-}
-#Tva{
-    font-size: 40px; color: teal; font-family: cursive; 
-}
-#perfil{
-    font-style: italic; font-family: cursive; 
-}
-#comu{
-    font-family: cursive;
-}
-li{
+
+#mail{
     font-family: cursive;
 }
 a:link{

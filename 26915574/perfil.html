@@ -6,49 +6,56 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
-		<title>Valeria Acuña</title>
+		<script src="config.json"></script>
+		<script src="perfil.json"></script>
+		<script src="perfil.js"></script>
+		<title></title>
 	</head>
-	<body>
+	<body onload="inicio()">
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, Valeria Acuña</li>
-					<li class="busqueda"><a href="index.html">Inicio</a></li>
+					<li class="logo"></li>
+					<li class="saludo"></li>
+					<li class="busqueda"></li>
 				</ul>	
 			</nav> 
 	    </header>
-	    <section>	       
-			<div class="dFoto"> 
-				<img src="26915574.jpg"  alt="imagen perfil" id="imagenPerfil">
-			</div>        
-			<div class="dPerfil">
-				
-				<h1 id="Tva">Valeria Acuña</h1>
-				<p id="perfil"> Soy bachiller en ciencias, actual estudiante de la Universidad
-					Central de Venezuela en la facultad de ciencias, cursando el 6to 
-					semestre de la Licenciatura de Computación. Me gusta el área de sistemas 
-					de información y bases de dato. Practique fútbol desde mis 11 años jugué 
-					en las categorias menores de la UCV hasta la categoria libre. Actualmente 
-					juego futbol sala con el equipo de ciencias y representando a la UCV.
-					Otra de mis pasiones es el arte culinaria y me gustaria en un futuro estudiarla.
-				</p>
-				<ul class="list1">    
-					<li> Mi color favorito es: Verde </li> 
-					<li> Mi libro favorito es: Nada que perder </li>       
-					<li> Estilo de musica preferida: Cualquiera </li>
-					<li> Mis video juegos favorito son: Call of Duty </li>
-					<li class=" lenguaje"> Lenguajes aprendidos: Java, Python, C, C++ </li>
-				</ul> 
-				<div>
-					<p id="comu">Si necesitan comunicarse conmigo me pueden escribir a: 
-						<a href="mailto:valeriaa.2608gmail.com?subject=subject text"> valeriaa.2608@gmail.com </a>
-					</p>
-				</div>
-			</div>			 
+	    <section>
+			<section id="dFoto">	</section>
+			
+			<section id="perfil">
+				<h1> </h1>
+				<p id="dPerfil"></p>
+
+				<section id="listaC">
+					<table>
+						<tr>
+							<td id="color"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td id="libro"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td id="musica"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td id="juego"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td id = "lenguajes"></td>
+							<td></td>
+						</tr>
+					</table>
+					<p id="mail"></p>
+				</section>	
+			</section> 
+			
 	    </section>
-	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
-	    </footer>
+	    <footer></footer>
 	</body>
 </html>
