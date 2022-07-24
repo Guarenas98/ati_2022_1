@@ -35,3 +35,11 @@ a:visited{
 .introduccion, .biografia, #comunicacion-email, #nombre {
 	margin: 5px;
 }
+.foto-estudiante{
+	width: 300px;
+	height: 300px;
+}
+.contenedor-info-estudiante {
+	display: flex;
+   justify-content: center;
+}
