@@ -18,13 +18,25 @@ function inicio() {
 
   for (let i = 0; i < listado.length; i++) {
     listStudent +=
-      "<li class='student'> <img src=" +
+      "<li class='student carousel-item'> <img class='d-block col-3 img-fluid' src=" +
       listado[i].imagen +
       "> <p>" +
       listado[i].nombre +
       "</p> </li>";
   }
-  document.getElementById("listado").innerHTML = listStudent;
+
+  const inicio =
+    " <div class='container text-center my-3'> <div class='row mx-auto my-auto'><div id='recipeCarousel' class='carousel slide w-100' data-ride='carousel'><div class='carousel-inner w-100' role='listbox'>";
+
+  const arraytest =
+    "<div class='carousel-item active'> <img class='d-block col-3 img-fluid' src='https://cdn.shopify.com/s/files/1/2304/9095/files/NMSDC.png?10873'></div> <div class='carousel-item'> <img class='d-block col-3 img-fluid' src='https://cdn.shopify.com/s/files/1/2304/9095/files/DBE-ACDBE-logo.png?10873'> </div> <div class='carousel-item'> <img class='d-block col-3 img-fluid' src='https://cdn.shopify.com/s/files/1/2304/9095/files/MBE_LOGO.png?10873'></div><div class='carousel-item'><img class='d-block col-3 img-fluid' src='https://cdn.shopify.com/s/files/1/2304/9095/files/2018_WBENC_logo_text_gray.png?10873'></div><div class='carousel-item'><img class='d-block col-3 img-fluid' src='http://novel-mg.com/assets/cert_logo.png'></div><div class='carousel-item'><img class='d-block col-3 img-fluid' src='https://www.kriaanet.com/wp-content/uploads/2019/02/300ppi-feat-logo_feat_logo-EDWOSB.png'>  </div>";
+
+  const fin = "</div></div></div>";
+
+  document.getElementById("listado").innerHTML = `${inicio}${arraytest}${fin}`;
+  document.getElementById(
+    "imgT"
+  ).innerHTML = `<img class='d-block col-3 img-fluid' src='https://cdn.shopify.com/s/files/1/2304/9095/files/NMSDC.png?10873'>`;
 }
 
 function searchStudent() {
