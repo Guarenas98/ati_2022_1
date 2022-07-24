@@ -1,10 +1,10 @@
 function cargarListadoEstudiantes(listado) {
 	/*recorre el listado en JSON y carga los datos de estudiantes en HTML*/
 	if(listado.length <= 0) {return;}
-	var listaEstudiantes = document.querySelector("#lista-estudiantes");
-	var itemContenedor = document.getElementById("plantilla-estudiante").querySelector("li");
-	var foto = itemContenedor.querySelector(".foto-estudiante");
-	var nombre = itemContenedor.querySelector(".nombre-estudiante");
+	let listaEstudiantes = document.querySelector("#lista-estudiantes");
+	let itemContenedor = document.getElementById("plantilla-estudiante").querySelector("li");
+	let foto = itemContenedor.querySelector(".foto-estudiante");
+	let nombre = itemContenedor.querySelector(".nombre-estudiante");
 	listaEstudiantes.innerHTML = "";
 	for(let estudiante of listado) {
 		foto.src = estudiante.imagen;
@@ -19,12 +19,12 @@ function cargarListadoEstudiantes(listado) {
 
 function cargarTextoInterfaz(config) {
 	/*carga el texto de la pagina sujeta a i18n con configuracion de json config*/
-	var sitio = document.querySelector("#sitio");
-	var saludo = document.querySelector("#saludo");
-	var inputTextoNombre = document.querySelector("#input-texto-nombre");
-	var botonBuscar = document.querySelector("#boton-buscar");
-	var copyritht = document.querySelector("#copyright");
-	var tituloPestania = document.querySelector("#titulo-pestania");
+	let sitio = document.querySelector("#sitio");
+	let saludo = document.querySelector("#saludo");
+	let inputTextoNombre = document.querySelector("#input-texto-nombre");
+	let botonBuscar = document.querySelector("#boton-buscar");
+	let copyritht = document.querySelector("#copyright");
+	let tituloPestania = document.querySelector("#titulo-pestania");
 	/*acceder a configuracion de json y asignar texto*/
 	nombreSesionActual = "Carlos Castillo";
 	tituloPestania.innerHTML = `${config.sitio[0]}${config.sitio[1]} ${config.sitio[2]}`;
@@ -35,10 +35,10 @@ function cargarTextoInterfaz(config) {
 	copyritht.innerHTML = `${config.copyRight}`;
 }
 
-var msjNoEncontrado = config["msj_no_encontrado"];
+let msjNoEncontrado = config["msj_no_encontrado"];
 function busquedaEstudiante(event)
 {
-	var nombre = document.querySelector("#input-texto-nombre").value;
+	let nombre = document.querySelector("#input-texto-nombre").value;
 	if(nombre.length <= 0) {  //mostrar toda la lista
 		cargarListadoEstudiantes(listado);
 	}
