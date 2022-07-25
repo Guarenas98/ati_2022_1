@@ -31,6 +31,9 @@ h3{
 	font-size: 12pt;
 
 }
+#emailLink, #emailText{
+	display: inline;
+}
 a:link{
 	color: orange;
 }

@@ -1,0 +1,13 @@
+let config = {
+	
+	"sitio": ["ATI","[UCV]","2020-U"],
+	"saludo":"Hola, [nombre]",
+	"busqueda":"Inicio",
+	"color_text":"Mi color favorito es: [color]",
+	"libro_text":"Mi manga favorito es: [libro]",
+	"musica_text":"Estilo de musica preferida: [musica]",
+	"video_juego_text":"Video juego favorito: [video_juego]",
+	"lenguajes_text":"Lenguajes aprendidos: [lenguajes]",
+	"email_text":"Si necesitan comunicarse conmigo me puedes escribir a: [email]",
+	"footer":"Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados"
+}

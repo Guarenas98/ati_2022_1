@@ -6,15 +6,18 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
-		<title>David Sanchez</title>
+		<script src="config.json"></script>
+		<script src="perfil.json"></script>
+		
+		<title id="title"></title>
 	</head>
 	<body>
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, David Sanchez</li>
-					<li class="busqueda"><a href="index.html">Inicio</a></li>
+					<li class="logo" id="logo"></li>
+					<li class="saludo" id="saludo"></li>
+					<li class="busqueda" id="busqueda"></li>
 				</ul>	
 			</nav> 
 	    </header>
@@ -22,21 +25,23 @@
 	       
 			<img src="26573559.jpg" alt="David Sanchez" >
 			<div id="perfil">
-				<h1 >David Sanchez</h1>
-				<h3 id="descripcion" >
-						Soy estudiante de computacion de la universidad central de venezuela. Me desempeño en el area de administracion de redes y sistemas linux. Actualmente soy preparador de comunicacion de datos. Hablo 2 lenguajes español e ingles pero estoy aprendiendo japones y lo puedo hablar a un nivel conversacional. Me gustan los videojuegos, el manga y el anime. Uno de mis sueños es ir a japon. Ademas de estudiar computacion me gusta viajar por venezuela, ir a rios, montañas, cascadas, playas y ver lo hermoso de la naturaleza.
-				</h3>
-				<p>Mi color favorito es: verde</p>
-				<p>Mi manga favorito es: one piece</p>
-				<p>Estilo de musica preferida: rock</p>
-				<p id="lenguajes">Lenguajes aprendidos: java,C,C++,python</p>
-				<p>Si necesitan comunicarse conmigo me puedes escribir a: <a href = "mailto: luigisperstar7@gmail.com">luigisperstar7@gmail.com</a></p>
+				<h1 id="fullName" ></h1>
+				<h3 id="descripcion" ></h3>
+				<p id="textColor"></p>
+				<p id="textBook"></p>
+				<p id="textMusic"></p>
+				<p id="textVideoGame"></p>
+				<p id="lenguajes"></p>
+				<p id = "emailText" >
+					<p id='emailLink'>
+					<a href = "mailto: luigisperstar7@gmail.com"></a>
+					</p>
+				</p>
 				
 			</div>
 			 
 	    </section>
-	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
-	    </footer>
+	    <footer id= "pie"></footer>
 	</body>
+	<script src="perfil.js"></script>
 </html>
