@@ -38,10 +38,10 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
 	 text-decoration:none;
 }
 			
-.logo {
+.logo,#conf_sitio1,#conf_sitio3 {
 	margin-left: 2px;
 	font-size: 27pt;
-   font-family: helvetica;
+  font-family: helvetica;
 	width: 30%;
 }
 
@@ -103,4 +103,11 @@ footer {
 padding: 6px;
 border: none;
 margin-right: 10px;
+}
+
+.error {
+  margin-top: 80px;
+  text-align: center;
+  color: #86b1ef;
+  font-size: x-large;
 }
