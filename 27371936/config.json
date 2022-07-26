@@ -1,0 +1,15 @@
+{
+    "title": "[nombre]",
+    "materia": "ATI",
+    "universidad": "[UCV]",
+    "semestre": "2022-1",
+    "saludoC": "Hola, [nombre]",
+    "inicio": "Incio", 
+    "colorC": "Mi color favorito es: [color]",
+    "libroC": "Mi libro favorito es: [libro]", 
+    "musicaC": "Mi estilo de música preferida: [musica]",
+    "juegosC": "Videos juegos favoritos: [video_juego]",
+    "lenguajesC": "Lenguajes aprendidos: [lenguajes]",
+    "como_comunicarse": "Si necesitan comunicarse conmigo me pueden escribir a: [email]", 
+    "footer": "Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados"
+}

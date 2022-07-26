@@ -1,0 +1,13 @@
+{
+  "nombre": "Ariana Medina",
+  "descripcion": "Soy estudiante de Computación de la Universidad Central de Venezuela, actualmente estoy cursando el 7mo semestre de la carrera y trabajo como Frontend desde casa. Me gusta leer, tomar fotos y coleccionar cactus y suculentas",
+  "color": "Morado",
+  "libro": "Bajo la misma estrella",
+  "musica": "Pop",
+  "video_juego": "Cualquier puzzle",
+  "lenguajes": ["javascript", "python", "c++"],
+  "email": "medina2.ariana9@gmail.com",
+  "ci": 27371936,
+  "genero": "femenino",
+  "fecha_nacimiento": "02/02/1999"
+}
