@@ -30,6 +30,9 @@ li{
 ul{
     list-style-type:none;
 }
+span.small {
+    font-size: small;
+  }
 a:link{
     color: orange;
 }
