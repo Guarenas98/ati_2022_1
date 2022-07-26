@@ -1,0 +1,47 @@
+.img {
+    width: 250px;
+    float: left;
+    margin-right: 5px;
+      border-top-left-radius: 30%;
+  }
+
+  .contenedor {
+    overflow: hidden;
+    /* max-width: 600px; */
+    border: 1.5px solid black;
+    box-shadow: 4px 4px 2px rgb(170, 162, 162) ;
+  }
+  
+  .titulo {
+    color: #c184c1;
+    font-size: 60px;
+    margin: 0;
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+  
+  .descrip {
+    margin: 0;
+    margin-bottom: 7px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+  }
+
+  tbody {
+    text-align: left;
+    font-weight: normal;
+  }
+
+  th {
+    font-weight: normal;
+  }
+
+  .negrita{
+    font-weight: bold;
+  }
+  a{
+    color: orange;
+  }
+  a:visited{
+    color: red
+  }
