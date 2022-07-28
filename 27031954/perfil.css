@@ -24,7 +24,7 @@ p{
     font-family:Verdana;
     font-style: italic;
 }
-li{
+.divPerfil ul li{
     margin: 5px 0;
 }
 ul{
