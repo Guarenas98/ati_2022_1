@@ -1,0 +1,14 @@
+let config = {
+	"sitio": ["ATI","[UCV]","2022-1"],
+	"home": "Inicio",
+	"saludo": "Hola",
+	"copyRight":"Copyright © [fecha] Escuela de computación - ATI. Todos los derechos reservados",
+	"nombre":"Carlos Castillo",
+	"descripcion":"Soy estudiante de Licenciatura en Computación de la UCV con aspiracion a especializarse en Desarrollo Web o relacionados. Actualmente trabajando y estudiando remoto. Entre mis pasatiempos me gusta jugar beisbol y bailar salsa.",
+	"color":"Mi color favorito es",
+	"libro":"Mi libro favorito es",
+	"musica":"Mi estilo de música preferida",
+	"video_juego":"Vídeo juegos favoritos",
+	"lenguajes":"Lenguajes aprendidos",
+	"email":"Si necesitan comunicarse conmigo me pueden escribir a [email]"
+}
