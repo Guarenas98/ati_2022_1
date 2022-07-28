@@ -25,7 +25,7 @@ img {
 #bordes2 {
 	border: 1px solid;
 	padding-left: 8px;
-	height: 250px;
+	height: 300px;
 }
 
 a { 
@@ -43,4 +43,12 @@ a:visited {
 
 nav ul {
 	margin-top: 0;
+}
+
+#email {
+	margin-top: 20px;
+}
+
+footer {
+	height: 30px;
 }
