@@ -4,7 +4,7 @@ let cargarTextoInterfaz = (config) => {
 	/*carga el texto sujeto a i18n*/
 	document.getElementById("titulo-pestania").innerHTML = config.nombre;
 	document.getElementsByClassName("logo")[0].innerHTML = `${config.sitio[0]} <small>${config.sitio[1]}</small> ${config.sitio[2]}`;
-	document.getElementsByClassName("saludo")[0].innerHTML = `${config.saludo}, ${config.nombre}`;
+	document.getElementsByClassName("saludo")[0].innerHTML = `${config.saludo}, `;
 	document.getElementsByClassName("busqueda")[0].childNodes[0].innerHTML = `${config.home}`;
 	document.getElementById("texto-color").innerHTML = config.color + ": ";
 	document.getElementById("texto-libro").innerHTML = config.libro + ": ";
@@ -17,6 +17,7 @@ let cargarTextoInterfaz = (config) => {
 
 let cargarInformacionEstudiante = (perfil) => {
 	/*cargar la informacion de usuario*/
+	document.getElementsByClassName("saludo")[0].innerHTML += `${perfil.nombre}`;
 	document.getElementsByClassName("titulo-perfil")[0].innerHTML = perfil.nombre;
 	document.getElementById("biogr").innerHTML = perfil.descripcion;
 	document.getElementById("valor-color").innerHTML = perfil.color;
@@ -31,6 +32,7 @@ let cargarInformacionEstudiante = (perfil) => {
 		document.getElementById("valor-lenguajes").innerHTML += `${lenguaje}, `;
 	});
 	document.getElementById("fotoperfil").src = perfil.imagen;
+	document.getElementById("fotoperfil").alt = perfil.imagen;
 	let textoEmail = document.getElementById("texto-email").innerHTML;
 	document.getElementById("texto-email").innerHTML = textoEmail.replace("[email]", `<a href="mailto: ${perfil.email}"> ${perfil.email} </a>`);
 
