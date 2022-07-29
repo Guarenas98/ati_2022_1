@@ -1,7 +1,7 @@
 function cargar() {
 	document.title = perfil.nombre;
 	document.getElementsByClassName("nombre").innerHTML = perfil.nombre;
-	document.getElementById("sitio").innerHTML = config.sitio[0] + "<small>" + config.sitio[1] + "</small>" + config.sitio[2];
+	document.getElementById("sitio").innerHTML = config.sitio[0] + "<small style = 'font-size: 2vw;'>" + config.sitio[1] + "</small>" + config.sitio[2];
 	document.getElementById("nombre").innerHTML = perfil.nombre;
 	document.getElementById("saludo").innerHTML = config.saludo + ", " + perfil.nombre;
 	document.getElementById("home").innerHTML = "<a href='index.html' >" + config.home + "</a>"; 
