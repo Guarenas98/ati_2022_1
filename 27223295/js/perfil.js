@@ -1,5 +1,3 @@
-
-
 let cargarTextoInterfaz = (config) => {
 	/*carga el texto sujeto a i18n*/
 	document.getElementById("titulo-pestania").innerHTML = config.nombre;
@@ -23,14 +21,8 @@ let cargarInformacionEstudiante = (perfil) => {
 	document.getElementById("valor-color").innerHTML = perfil.color;
 	document.getElementById("valor-libro").innerHTML = perfil.libro;
 	document.getElementById("valor-musica").innerHTML = perfil.musica;
-	document.getElementById("valor-video-juegos").innerHTML = "";
-	perfil.video_juego.forEach(juego => {
-		document.getElementById("valor-video-juegos").innerHTML	+= `${juego}, `;
-	});
-	document.getElementById("valor-lenguajes").innerHTML = "";
-	perfil.lenguajes.forEach(lenguaje => {
-		document.getElementById("valor-lenguajes").innerHTML += `${lenguaje}, `;
-	});
+	document.getElementById("valor-video-juegos").innerHTML = perfil.video_juego.join(", ");
+	document.getElementById("valor-lenguajes").innerHTML = perfil.lenguajes.join(", ");
 	document.getElementById("fotoperfil").src = perfil.imagen;
 	document.getElementById("fotoperfil").alt = perfil.imagen;
 	let textoEmail = document.getElementById("texto-email").innerHTML;
