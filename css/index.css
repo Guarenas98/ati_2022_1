@@ -38,6 +38,51 @@ section ul li a:hover {
 	color: #68a0d8;
 }
 
-.clear{
-       clear:both;
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
 }
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(25%);
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+  transform: translateX(-25%);
+}
+  
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+  
+}
+
+.container{
+   width: 100%; 
+}
+
+.img-with-text {
+   text-align: justify;
+   width: 100%; 
+}
+
+.img-with-text img {
+   display: block;
+   margin: 0 auto;
+  
+}
+
+.peopleCarousel{
+   width: auto;
+   height: 256px;
+   max-height: 256px;
+ }
+
+
+
+ /*.nombre{
+   overflow: hidden; 
+ }*/

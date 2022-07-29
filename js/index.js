@@ -45,9 +45,35 @@ busqueda.getElementsByTagName("input")[1].value = config.buscar
 document.getElementsByTagName("footer")[0].innerHTML = config.copyRight;
 
 // Set initial students list
-let persons = listado.reduce( (acc, current) => {
-    return acc += "<li> <img src=" + "./" + current.imagen + " width=40 height=50> " + 
-    current.nombre +  " </li> "
+let persons = listado.reduce( (acc, current, currentIndex) => {
+    if(currentIndex == 0)
+    {
+        return acc += `<div class="carousel-item img-with-text active">
+                <img class="peopleCarousel d-block col-3" src="./${current.imagen}"> 
+                <p> ${current.nombre} </p> 
+            </div>`
+    }
+    return acc += `<div class="carousel-item img-with-text">
+            <img class="peopleCarousel d-block col-3" src="./${current.imagen}">
+            <p> ${current.nombre} </p>
+         </div>`
 } , " ")
 
-document.getElementsByTagName("ul")[1].innerHTML = persons
+//JQuery
+$(".carousel-inner").append(persons)
+
+$('.carousel .carousel-item').each(function(){
+    let next = $(this).next();
+    if (!next.length) {
+        next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+    
+    for (let i=0;i<2;i++) {
+        next=next.next();
+        if (!next.length) {
+        	next = $(this).siblings(':first');
+      	}
+        next.children(':first-child').clone().appendTo($(this));
+    }
+});
