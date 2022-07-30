@@ -10,7 +10,7 @@ h1 {
     font-size: 40pt;
 }
 
-p {
+p span{
     font-family: Georgia;
     line-height: 19px;
 }

@@ -1,44 +1,42 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	   	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
-		<title>Luz Rico</title>
+		<script type="text/javascript" src="conf/config.json"></script>
+		<script type="text/javascript" src="conf/perfil.json"></script>
+		<title class="perfil_nombre"></title>
 	</head>
 	<body>
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, Luz Rico</li>
-					<li class="busqueda"><a href="index.html">Inicio</a></li>
+					<li class="logo"><span id="conf_sitio1"></span><span id="conf_sitio2"></span> <span id="conf_sitio3"></span></li>
+					<li class="saludo"><span id="conf_saludo"></span>, <span class="perfil_nombre"></span></li>
+					<li class="busqueda"><a href="index.html"><span id="conf_home"></span></a></li>
 				</ul>	
 			</nav> 
 	    </header>
 	    <section>
-			<img src="21071997.png" alt="">
+			<img id="imagen" alt="">
 			<div id="caja">
-				<h1> Luz Rico </h1>
+				<h1 class="perfil_nombre"></h1>
 				<p>
-					<i>Soy estudiante del 8vo semestre de Computación de la UCV especializándome en el área de
-						Aplicaciones con Tecnología Internet. También soy maquilladora profesional certificada
-						internacionalmente. Apasionada por los videojuegos y los logros de la plataforma steam.</i>
+					<i><span id="perfil_descripcion"></span></i>
 					<br><br><br>
-					Mi color favorito es: Fucsia<br>
-					Mi libro favorito es: El Psicoanalista<br>
-					Estilo de música preferida es: Pop, romántica, reggaeton<br>
-					Mis Video juegos favoritos son: Dead by Daylight, Fall Guys, 7 days to die<br>
-					<strong>Lenguajes aprendidos: c, c++, java, php</strong><br><br><br>
-					Si necesitan comunicarse conmigo me pueden escribir a: <a href="#">luzrico15@gmail.com</a> <br>
-		
+					<span id="conf_color"></span>: <span id="perfil_color"></span><br>
+					<span id="conf_libro"></span>: <span id="perfil_libro"></span><br>
+					<span id="conf_musica"></span>: <span id="perfil_musica1"></span>, <span id="perfil_musica2"></span>, <span id="perfil_musica3"></span><br>
+					<span id="conf_video_juego"></span>: <span id="perfil_video_juego1"></span>, <span id="perfil_video_juego2"></span>, <span id="perfil_video_juego3"></span><br>
+					<strong><span id="conf_lenguajes"></span>: <span id="perfil_lenguajes1"></span>, <span id="perfil_lenguajes2"></span>, <span id="perfil_lenguajes3"></span>, <span id="perfil_lenguajes4"></span></strong><br><br><br>
+					<span id="conf_email"></span>: <a href="#"><span id="perfil_email"></span></a> <br>
 				</p>
 			</div>
 	    </section>
-	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
-	    </footer>
+	    <footer id="conf_copyRight"></footer>
+		<script type="text/javascript" src="js/javaperfil.js"></script>
 	</body>
 </html>
