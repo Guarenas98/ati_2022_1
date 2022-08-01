@@ -41,3 +41,20 @@ section ul li a:hover {
 .clear{
        clear:both;
 }
+
+form {
+   display: block;
+   margin: 0 auto;
+   width: 300px;
+   text-align: center;
+}
+
+#mensaje {
+   color: #86b1ef;
+   font-size: large;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   width: 100%;
+   padding: 2rem;
+ }

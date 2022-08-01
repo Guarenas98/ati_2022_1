@@ -4,8 +4,8 @@
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
+		<link rel="stylesheet" href="css/style.css"  type="text/css">
 
 		<script type="text/javascript" src="conf/configES.json"></script>
 		<script type="text/javascript" src="datos/index.json"></script>
@@ -15,18 +15,24 @@
 	    <header>
 			<nav>
 				<ul>
-					<li id="logo"> </li>
-					<li id="saludo"></li>
-					<li id="busqueda"><input id="text" type="text" placeholder="Search.."><input id="boton" value="Buscar" type="button" /></li>
+					<li class="logo"> </li>
+					<li class="saludo"></li>
+					<li class="busqueda">
+						<form action="">
+
+						<input id="text" type="text" placeholder="Search..">
+						<input id="boton" value="Buscar" type="button" />
+						</form>>
+					</li>
 				</ul>	
 			</nav> 
 	    </header>
 
-	    <section>
+	    <section justify-content="center">
 			<ul id="list">
 
 			</ul> 
-			<p id="mensaje" style="display:none"></p>
+			<div id="mensaje" style="display:none"></div>
 	    </section>
 
 	    <footer>
