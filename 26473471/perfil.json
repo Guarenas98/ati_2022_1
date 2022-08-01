@@ -1,0 +1,14 @@
+let perfil = {	
+	"nombre": "Alejandro Graterol",
+  "descripcion": "Soy studiante de la Facultad de Ciencias de la Universidad Central de Venezuela. Con interes en la especialidad de bases de datos. Soy practicante de artes marciales chinas para la asociación Venezolana de Wushu, también soy escritor de ciencia ficción con esperanza en publicar alguno de mis libros y practico arte 3D orientada a videojuegos como hobby, pero espero poder hacerlo profesionalmente.",
+  "color": "Verde",
+  "libro": "Fuerza Sigma",
+  "musica": "Rock",
+  "video_juego": "Assassin's Creed",
+  "lenguajes": ["C", "C++", "Python"],
+  "email": "alejandro.graterol98@gmail.com",
+  "ci": 26473471,
+  "genero": "Masculino",
+  "fecha_nacimiento": "16/10/1998",
+  "imagen": "26473471.jpg"
+}

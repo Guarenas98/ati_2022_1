@@ -1,19 +1,14 @@
-h1 { 
-  font-size: 100; 
-  color: blue;
-}
-.intro {
+.descripcion {
     font-style: italic;
     font-size: 5;
 }
-.neg {
-    font-weight: bold;
-}
-img {
+#foto {
+    float: left;
     width: 25%;
     height: 50%;
-    border-top-left-radius: 25%;
-    margin-right: 10px;
+    padding-right: 35px;
+    padding-top: 1%;
+    border-radius: 50px 0 0 0;
 }
 .perfil{
     border: 1px black;
@@ -21,9 +16,9 @@ img {
     padding: 1em;
     box-shadow: 10px 10px 5px black;
 }
-a {
+.email {
     color: orange;
 }
-a:visited {
+.email:visited {
     color: red;
 }
