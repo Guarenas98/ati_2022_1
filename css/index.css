@@ -1,59 +1,44 @@
-body {
-  position: relative;
-}
-.barra{
-  background-color: skyblue;
-  color:white;
+section ul li { 
+   display:inline; 
+   float:left; 
+   width:170px; 
+   height:170px;
+   background-color:#f5f7f9; 
+   padding:20px; 
+   margin:10px; 
+   text-align: center; 
+   border-right: #a5a7aa solid 1px; 
+   border-bottom: #a5a7aa solid 1px; 
+	overflow: hidden; 
 }
 
-.lista{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-  list-style: none;
-  padding: 5px 15px 5px 15px;
+section ul li img {
+	width:140px; 
+   height:140px;	
+	object-fit: contain;
 }
-.logo {
-  font-size: 30px;
+
+section ul li:hover {
+   background-color:#99c5dd;
+   transform:scale(1.05) rotate(5deg);
 }
-.saludo {
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  font-size: 20px;
-  padding-left: 70px;
-  padding-right: 70px;
+
+section ul li a {
+	font-family:arial;
+	font-size:10pt;
+	color: #86b1ef;
+ 	text-decoration:none;
+   display: block;
 }
-.rejilla{
-  display: grid;
-  list-style: none;
-  padding: 20px 20px 20px 20px;
-  grid-template-columns: auto auto auto auto;
-  align-items: center;
-  grid-gap: 50px;
+
+section ul li a:link, section ul li a:visited {
+	 color: #68a0d9;
 }
-.item{
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  background-color: lightgrey;
-  color: blue;
-  box-shadow: 5px 5px grey;
-  padding-top: 20px;
-  padding-bottom: 20px;
+
+section ul li a:hover { 
+	color: #68a0d8;
 }
-.item:hover {
-  background-color: #99c5dd;
-  transform: scale(2);
-  transform: rotate(5deg);
-}
-footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  bottom: 0px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: skyblue;
+
+.clear{
+       clear:both;
 }

@@ -6,31 +6,30 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
-		<title>ATI[UCV] 2022-1</title>
+		<script src="conf/configES.json"></script>
+		<script src="datos/index.json"></script>
+		<script src="js/index.js"></script>
+		<title></title>
 	</head>
-	<body>
+	<body onload="inicio()">
 	    <header>
-			<nav class="barra">
-				<ul class="lista">
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, Alejandro</li>
-					<li class="busqueda"><form><input type="search"  placeholder="Nombre..."><input type="submit" value="Buscar"></form></li>
+			<nav>
+				<ul>
+					<li class="logo"></li>
+					<li class="saludo"></li>
+					<li class="busqueda">
+						<form>
+							<input name="nombre" type="text" onkeyup="buscarEstudiante()"> 
+							<input name="buscar" type="button" onclick="buscarEstudiante()">
+						</form>
+					</li>
 				</ul>	
 			</nav> 
 	    </header>
-	    <section>
-	       <ul class="rejilla">
-                <li class="item"><img src="26473471/26473471.jpg" height="90" width="80"><p>Alejandro Graterol - 26473471</p></li>
-                <li class="item"><img src="dummy1/dummy.jpg" height="90" width="80"><p>Maria Delgado</p></li>
-                <li class="item"><img src="dummy2/dummy.jpg" height="90" width="80"><p>Lesly Alvarez</p></li>
-                <li class="item"><img src="dummy3/dummy.jpg" height="90" width="80"><p>Clara Gonzales</p></li>
-                <li class="item"><img src="dummy4/dummy.jpg" height="90" width="80"><p>Hector Rivera</p></li>
-                <li class="item"><img src="dummy5/dummy.jpg" height="90" width="80"><p>Pablo Perez</p></li>
-                <li class="item"><img src="dummy6/dummy.jpg" height="90" width="80"><p>Victor Juarez</p></li>
-            </ul> 
+	    <section >
+			<ul id="listado"> </ul> 
 	    </section>
 	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
 	    </footer>
 	</body>
 </html>
