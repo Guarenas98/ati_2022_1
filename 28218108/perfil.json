@@ -1,0 +1,14 @@
+let perfil={
+    "nombre":"Jose Miguel Valera",
+    "descripcion":"Soy estudiante de 6to semestre de computacion en la Universidad Central de Venezuela, me entusiasma el desarrollo web y aspiro algun dia ser desarrollador full stack, actualmente poseo una certificacion en java y estoy realizando un curso de desarrollo web.",
+    "color":"Morado",
+    "libro":"Harry Potter y la piedra filosofal",
+    "musica":"Electronica",
+    "video_juego":"Tom Clancy's: Rainbow Six Siege",
+    "lenguajes":["C++", "JavaScript","Java","Haskell","Prolog", "Matlab","Python"],
+    "email":"jhoabran@gmail.com",
+    "ci":28218108,
+    "Genero":"Masculino",
+    "fecha_nacimiento":"08/05/2001",
+    "imagen": "28218108.jpeg"
+}

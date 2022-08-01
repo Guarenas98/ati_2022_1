@@ -6,15 +6,17 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
-		<title>Jose Miguel Valera</title>
+		<script type="text/javascript" src="config.json"></script>
+		<script type="text/javascript" src="perfil.json"></script>
+		<title></title>
 	</head>
 	<body>
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, Jose Miguel Valera</li>
-					<li class="busqueda"><a href="index.html">Inicio</a></li>
+					<li class="logo"></li>
+					<li class="saludo"></li>
+					<li class="busqueda"></li>
 				</ul>	
 			</nav> 
 	    </header>
@@ -22,12 +24,12 @@
 	       
 			<table>
 				<tr>
-					<td id="image"><img src=28218108.jpeg></td>
+					<td id="image"></td>
 					<td>
 					<table id="content">
-						<tr><td><h1>Jose Miguel Valera</h1></td></tr>
+						<tr><td id="nombre"></td></tr>
 						<tr>
-							<td> <i>Soy estudiante de 6to semestre de computacion en la Universidad Central de Venezuela, me entusiasma el desarrollo web y aspiro algun dia ser desarrollador full stack, actualmente poseo una certificacion en java y estoy realizando un curso de desarrollo web.</i></td>
+							<td id="descripcion"> </td>
 						</tr>
 		
 						
@@ -35,31 +37,31 @@
 							<td>
 						<table>
 							<tr>
-								<td> <p>Mi color favorito es:</p></td>
-								<td><p>Morado</p></td>
+								<td id="color"></td>
+								<td id="color-respuesta"></td>
 							</tr>
 							<tr>
-								<td><p>Mi libro favorito es:</p></td>
-								<td><p>Harry Potter y la piedra filosofal</p></td>
+								<td id="libro"></td>
+								<td id="libro-respuesta"></td>
 							</tr>
 							<tr>
-								<td><p>Estilo de música preferida es:</p></td>
-								<td><p>Electronica</p></td>
+								<td id="musica"></td>
+								<td id="musica-respuesta"></td>
 							</tr>
 							<tr>
-								<td><p>Mis Video juegos favoritos son:</p></td>
-								<td><p>Tom Clancy's: Rainbow Six Siege</p></td>
+								<td id="video_juego"></td>
+								<td id="video_juego-respuesta"></td>
 							</tr>
 							<tr>
-								<td><p><b>Lenguajes aprendidos:</b></p></td>
-								<td><b><p> C++, JavaScript,Java,Haskell,Prolog, Matlab,Python</b></p></td>
+								<td id="lenguajes"></td>
+								<td id="lenguajes-respuesta"></td>
 							</tr>
 						</table>
 						</td>    
 					</tr>
 		
 						<tr>
-							<td><p>Si necesitan comunicarse conmigo me pueden escribir a: <a href="mailto:jhoabran@gmail.com">jhoabran@gmail.com</a></p></td>
+							<td id="email"></td>
 						</tr>
 						
 						
@@ -70,7 +72,8 @@
 			 
 	    </section>
 	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
+	       
 	    </footer>
+		<script src="perfil.js"></script>
 	</body>
 </html>
