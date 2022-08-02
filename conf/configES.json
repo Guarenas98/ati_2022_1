@@ -13,5 +13,5 @@ config = {
 	"email":"Si necesitan comunicarse conmigo me pueden escribir a [email]",
 	"buscar": "Buscar",
 	"saludo": "Hola",
-	"no_esta": "No hay alumnos que tengan en ese nombre: "
+	"error": "No hay alumnos que tengan en su nombre: [query]"
 }

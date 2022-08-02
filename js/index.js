@@ -1,56 +1,91 @@
-function inicio(){
-    // Textos sujetos a internacionalización
-    document.getElementsByClassName("logo")[0].innerHTML = config.sitio[0] + "<small>" + config.sitio[1] + "</small>" + config.sitio[2];
-    document.getElementsByClassName("saludo")[0].innerHTML = config.saludo + ", Valeria Acuña"; 
-    document.getElementsByName("nombre")[0].placeholder = config.nombre + "...";
-    document.getElementsByName("buscar")[0].value = config.buscar; 
-    document.getElementsByTagName("footer")[0].innerHTML = config.copyRight; 
-    document.getElementsByTagName("title")[0].innerHTML = config.sitio[0] + config.sitio[1] + config.sitio[2]; 
+document.title = `${config.sitio.join(" ")}`;
 
-    var lista = document.getElementById("listado"); 
+putText = (selec, text) => (document.querySelector(selec).innerText = text);
+putHtml = (selec, text) => (document.querySelector(selec).innerHTML = text);
 
-    // Listado de estudiantes 
-    for(key in listado){
-        var li = document.createElement("li"); 
-        var imagen = document.createElement("img");         
-        imagen.src = listado[key].imagen;
-        var anchor = document.createElement("a");
-        anchor.href = "#"; 
-        anchor.innerText = listado[key].nombre; 
-        li.appendChild(imagen); 
-        li.appendChild(anchor); 
-        lista.appendChild(li);
+putHtml(
+  ".logo",
+  `${config.sitio[0]} <small>${config.sitio[1]}</small> ${config.sitio[2]}`
+);
+
+putText(".saludo", `${config.saludo}, ${"Valeria Acuña"}`);
+
+input = document.querySelector(".busqueda input[type=text]");
+input.placeholder = `${config.nombre}`;
+button = document.querySelector(".busqueda input[type=button]");
+button.value = `${config.buscar}`;
+
+putText("footer", `${config.copyRight}`);
+
+renderGrid = () => {
+  query = document.querySelector(".busqueda input[type=text]").value;
+  pattern = query.toLowerCase();
+
+  res = listado.filter((elem) => elem.nombre.toLowerCase().startsWith(pattern));
+
+  content = res
+    .sort((a, b) => b.nombre < a.nombre)
+    .map(
+      (elem, idx) => `
+<div class="carousel-item grid-container ${!idx ? "active" : ""}">
+  <div class="carousel-item-container">
+    <a href="${
+      elem.ci === "26915574" ? elem.ci + "/perfil.html" : "#"
+    }" class="grid-item">
+      <img src="${elem.imagen}" alt="no foto">
+      <span>${elem.nombre}</span>
+    </a>
+  </div>
+</div>`
+    );
+
+  content.length && putHtml(".carousel-inner", content.join("\n"));
+  putText(
+    ".error-notfound",
+    content.length ? "" : `${config.error.replace("[query]", query)}`
+  );
+  if (!content.length) return;
+
+  $("#carousel").carousel({
+    keyword: true,
+    interval: false,
+    wrap: false,
+  });
+
+  $(".carousel-item").each(function () {
+    var next = $(this).next();
+    next.children(":first-child").clone().appendTo($(this));
+
+    for (var i = 0; i < 2; i++) {
+      next = next.next();
+      next.children(":first-child").clone().appendTo($(this));
     }
-}
+  });
+};
 
+renderGrid();
 
-function buscarEstudiante(){
-    let query = document.getElementsByName("nombre")[0].value;
-    console.log(query); 
-    let found = false; 
-    
-    document.getElementById("listado").innerHTML = ""; 
-    let ul = document.getElementById("listado"); 
-    
-    for(key in listado){
-        let li = document.createElement("li"); 
-        let imagen = document.createElement("img");  
+button.addEventListener("click", renderGrid);
 
-        // Filtrar estudiantes por nombre
-        if(listado[key].nombre.includes(query)){
-            found = true; 
-            imagen.src = listado[key].imagen;
-            let anchor = document.createElement("a");
-            anchor.href = "#"; 
-            anchor.innerText = listado[key].nombre; 
-            li.appendChild(imagen); 
-            li.appendChild(anchor); 
-            ul.appendChild(li);
-        }     
-       
-    }  
-    if(!found){
-        let messag = document.getElementById("listado").innerHTML = config.no_esta +query;         
-    }   
+input.addEventListener("keydown", (event) => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    button.click();
+  }
+});
 
-}
+$("#carousel").swipe({
+  swipe: function (direction) {
+    if (direction == "left") $(this).carousel("next");
+    if (direction == "right") $(this).carousel("prev");
+  },
+  allowPageScroll: "vertical",
+});
+
+$("#carousel").bind("mousewheel", function (e) {
+  if (e.originalEvent.wheelDelta / 120 > 0) {
+    $(this).carousel("next");
+  } else {
+    $(this).carousel("prev");
+  }
+});

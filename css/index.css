@@ -1,4 +1,72 @@
-section ul li { 
+.grid-item {
+   display:inline; 
+   float:left; 
+   width:250px; 
+   height:250px;
+   background-color:#f5f7f9; 
+   padding:20px; 
+   margin:10px; 
+   text-align: center; 
+   border-right: #a5a7aa solid 1px; 
+   border-bottom: #a5a7aa solid 1px; 
+	overflow: hidden;    
+ }
+ 
+ .grid-item:hover {
+   background-color:#99c5dd;
+   transform:scale(1.05) rotate(5deg);
+ }
+ 
+ .grid-item img {
+   width:190px; 
+   height:190px;	
+	object-fit: contain;
+ }
+ 
+ .grid-item span {
+   font-family:arial;
+	font-size:15pt;
+	color: #86b1ef;
+ 	text-decoration:none;
+   display: block;
+ }
+ 
+ .error-notfound {
+   color: red;
+   text-align: center;
+ }
+ 
+ .carousel-item.active {
+   margin: 2%;
+   display: grid;
+   gap: 2rem;
+   grid-template-columns: repeat(4, 1fr);
+   justify-content: center;
+ }
+ 
+ .carousel-inner .carousel-item-right.active,
+ .carousel-inner .carousel-item-next {
+   transform: translateX(25%);
+ }
+ 
+ .carousel-inner .carousel-item-left.active,
+ .carousel-inner .carousel-item-prev {
+   transform: translateX(-25%);
+ }
+ 
+ .carousel-inner .carousel-item-right,
+ .carousel-inner .carousel-item-left {
+   transform: translateX(0);
+ }
+ 
+ .carousel-item-prev {
+   display: none;
+ }
+ 
+ .busqueda > form > * {
+   line-height: 20px;
+ }
+/*section ul li { 
    display:inline; 
    float:left; 
    width:170px; 
@@ -17,7 +85,6 @@ section ul li img {
    height:140px;	
 	object-fit: contain;
 }
-
 section ul li:hover {
    background-color:#99c5dd;
    transform:scale(1.05) rotate(5deg);
@@ -41,4 +108,4 @@ section ul li a:hover {
 
 .clear{
        clear:both;
-}
+}*/

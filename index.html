@@ -6,31 +6,65 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
+		<link
+			rel="stylesheet"
+			href="https://cdn.usebootstrap.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			type="text/css"
+		/>
 		<script src="conf/configES.json"></script>
 		<script src="datos/index.json"></script>
-		<script src="js/index.js"></script>
+		<script src="js/index.js" defer></script>
 		<title></title>
 	</head>
 	<body onload="inicio()">
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo"><small></small></li>
+					<li class="logo"></li>
 					<li class="saludo"></li>
 					<li class="busqueda">
 						<form>
-							<input name="nombre" type="text" onkeyup="buscarEstudiante()"> 
-							<input name="buscar" type="button" onclick="buscarEstudiante()">
+							<input type="text" /> 
+							<input type="button" />
 						</form>
 					</li>
 				</ul>	
 			</nav> 
 	    </header>
-	    <section >
-			<ul id="listado"> </ul> 
-	    </section>
+		<section>
+			<p class="error-notfound"></p>
+			<div id="carousel" class="carousel slide" data-ride="carousel">
+			  <a
+				class="carousel-control-prev"
+				href="#carousel"
+				role="button"
+				data-slide="prev"
+			  >
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			  </a>
+			  <a
+				class="carousel-control-next"
+				href="#carousel"
+				role="button"
+				data-slide="next"
+			  >
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			  </a>
+			  <div class="carousel-inner"></div>
+			</div>
+		</section>
+	    
 	    <footer>
 	    
 	    </footer>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.usebootstrap.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
 	</body>
 </html>
