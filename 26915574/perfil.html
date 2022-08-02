@@ -1,61 +1,56 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<meta charset="UTF-8">
-		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="../css/style.css"  type="text/css">
-		<link rel="stylesheet" href="perfil.css"  type="text/css">
-		<script src="config.json"></script>
-		<script src="perfil.json"></script>
-		<script src="perfil.js"></script>
-		<title></title>
-	</head>
-	<body onload="inicio()">
-	    <header>
-			<nav>
-				<ul>
-					<li class="logo"></li>
-					<li class="saludo"></li>
-					<li class="busqueda"></li>
-				</ul>	
-			</nav> 
-	    </header>
-	    <section>
-			<section id="dFoto">	</section>
-			
-			<section id="perfil">
-				<h1 id="Tva"> </h1>
-				<p id="dPerfil"></p>
-
-				<section id="listaC">
-					<table>
-						<tr>
-							<td id="color"></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td id="libro"></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td id="musica"></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td id="juego"></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td id = "lenguajes"></td>
-							<td></td>
-						</tr>
-					</table>
-					<p id="mail"></p>
-				</section>	
-			</section> 
-			
-	    </section>
-	    <footer></footer>
-	</body>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta charset="UTF-8">
+	<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../css/style.css"  type="text/css">
+	<link rel="stylesheet" href="perfil.css"  type="text/css">
+	<title></title>
+	<script src="perfil.json"></script>
+	<script src="config.json"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li class="logo"></li>
+				<li class="saludo"></li>
+				<li class="busqueda"><a href="../index.html"></a></li>
+			</ul>
+		</nav> 
+	</header>
+	<section>
+		<div id="grid">
+			<img alt="Profile Image">
+			<div id="mycontent">
+				<h1 class="tName"></h1>
+				<p class="dPerfil">
+				</p>
+				<table>
+					<tr>
+						<td class="q-color"></td><td class="a-color"></td>
+					</tr>
+					<tr>
+						<td class="q-libro"></td><td class="a-libro"></td>
+					</tr>
+					<tr>
+						<td class="q-musica"></td><td class="a-musica"></td>
+					</tr>
+					<tr>
+						<td class="q-video_juego"></td><td class="a-video_juego"></td>
+					</tr>
+					<tr>
+						<td class="bold q-lenguajes"></td><td class="bold a-lenguajes"></td>
+					</tr>
+				</table>
+				<p class="email"></p>
+			</div>
+		</div>
+	</section>
+	<footer>
+	</footer>
+	<script src="perfil.js"></script>
+</body>
 </html>
+

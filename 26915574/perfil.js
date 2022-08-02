@@ -1,25 +1,21 @@
-function inicio(){
-    document.getElementsByClassName("logo")[0].innerHTML = config.sitio[0] + "<small>" + config.sitio[1] + "</small>" + config.sitio[2];
-    document.getElementsByClassName("saludo")[0].innerHTML = config.saludo + ", " + perfil.nombre; 
-    document.getElementsByClassName("busqueda")[0].innerHTML = "<a href='index.html'>" + config.home + "</a>"; 
-    document.getElementsByTagName("footer")[0].innerHTML = config.copyRight; 
-    document.getElementsByTagName("title")[0].innerHTML = perfil.nombre; 
-    let imagen = document.createElement("img"); 
-    imagen.src = perfil.imagen; 
-    document.getElementById("dFoto").appendChild(imagen); 
-    document.getElementsByTagName("h1")[0].innerHTML = perfil.nombre; 
-    document.getElementById("dPerfil").innerHTML = perfil.descripcion; 
-    document.getElementById("color").innerHTML = config.color; 
-    document.getElementById("color").nextElementSibling.innerHTML = " " + perfil.color; 
-    document.getElementById("libro").innerHTML = config.libro; 
-    document.getElementById("libro").nextElementSibling.innerHTML = " " + perfil.libro; 
-    document.getElementById("musica").innerHTML = config.musica; 
-    document.getElementById("musica").nextElementSibling.innerHTML = " " + perfil.musica; 
-    document.getElementById("juego").innerHTML = config.video_juego; 
-    document.getElementById("juego").nextElementSibling.innerHTML = " " +  perfil.video_juego; 
-    document.getElementById("lenguajes").innerHTML = "<b>" + config.lenguajes + "</b> "; 
-    document.getElementById("lenguajes").nextElementSibling.innerHTML = "<b>" + perfil.lenguajes[0] + ", " + perfil.lenguajes[1] + ", " + perfil.lenguajes[2] + ", " + perfil.lenguajes[3] +"</b> ";
-    document.getElementById("mail").innerHTML = config.email.replace("[email]", "<a href='mailto:'" + perfil.email + ">" + perfil.email + "</a>");  
+document.title = `${perfil.nombre}`;
+document.querySelector("img").src = `${perfil.ci}.jpg`;
 
+document.querySelector(".logo").innerHTML = `${config.sitio[0]} <small>${config.sitio[1]}</small> ${config.sitio[2]}`;
+document.querySelector(".email").innerHTML = config.email.replace('[email]',`<a href = "mailto: ${perfil.email}">${perfil.email}</a>`);
 
-}
+putText = (selec, text) => document.querySelector(selec).innerText = text;
+
+putText(".saludo",`${config.saludo}, ${perfil.nombre}`);
+putText(".busqueda a",`${config.home}`);
+putText("footer",`${config.copyRight}`);
+
+putText(".tName",`${perfil.nombre}`);
+putText(".dPerfil",`${perfil.descripcion}`);
+
+putTable = elem => {
+	putText(".q-"+elem, config[elem]);
+	putText(".a-"+elem, Array.isArray(perfil[elem])? perfil[elem].join(", ") : perfil[elem]);
+};
+
+["color","libro","musica","video_juego","lenguajes"].forEach(i => putTable(i));

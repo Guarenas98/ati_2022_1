@@ -1,36 +1,60 @@
-#Tva {
-    font-size: 40px; 
-    color: teal; 
-    font-family: cursive;
-}
 
-#dPerfil {
-    font-style: italic; font-family: cursive;
-    font-size: 16px;
+html{
+    margin: 0;
+	width: 100vw;
+	height: 100vh;
+}
+#grid {
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+	padding: 2%;
+	margin: 2.5%;
 }
 
 img {
-    float: left;
-    height: 340px; width: 330px;
-    padding-right: 35px;
-    padding-top: 1%;
-    border-radius: 50px 0 0 0;
+	height: 420px;
+	width: auto;
+	border-top-left-radius: 20%;
 }
 
-#perfil{
-    width: 60%; height: 300px;
-    padding: 20px;
-    float: left;
-    border-style: solid;
-    box-shadow: 10px 15px #E1F2E5;
+#mycontent {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 380px;
+	max-width: 800px;
+	border: 4px solid black;
+	box-shadow: 5px 5px #E1F2E5;
+	padding: 20px;
 }
 
-#mail{
+#mycontent p, #mycontent tr td, #mycontent p a {
+    flex-wrap: wrap;
+	font-size: 1.3vw;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.tName {
+    color: teal; 
     font-family: cursive;
+	font-size: clamp(2.5em, 4.5vw, 4.5em);
 }
-a:link{
-    color: orange;
+
+.dPefil {
+	font-style: italic; font-family: cursive;
+	text-align: justify;
 }
-a:focus, a:visited{
-    color: red;
+
+a {
+	color: orange;
 }
+
+a:visited {
+	color: red;
+}
+
