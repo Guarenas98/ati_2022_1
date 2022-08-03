@@ -50,3 +50,10 @@ table{
     margin-left: -1em;
     border-spacing: 1em 0em ;
 }
+
+#perfil-lenguajes{
+    font-weight: bold;
+}
+#config-lenguajes{
+    font-weight: bold;
+}
