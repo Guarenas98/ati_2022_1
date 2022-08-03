@@ -1,0 +1,118 @@
+nav, .logo, .saludo, .busqueda {
+	background-color: #87b1f0;
+	font-family: "Arial";
+	box-sizing: border-box;
+	margin: 0;
+	padding: 15px;
+	color: white;
+	height: 150%;
+}
+
+.logo, .saludo{
+	border-right: solid 1px;
+}
+
+footer {
+	background-color: #87b1f0;
+	text-align: center;
+	padding: 10px;
+}
+
+body {
+	margin: 0;
+}
+
+nav {
+	padding: 0;
+}
+
+li {
+	display: inline;
+	height: 150px;
+	width: 150px;
+	background-color: #f5f8fa;
+	padding: 30px;
+}
+
+
+.formulario {
+	margin: 0;
+	padding-left: 0;
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+}
+
+img {
+	background-color: #f5f8fa;
+	display: block;
+	margin: 0px auto;
+}
+
+a {
+	text-decoration: none;
+	color: #639dd7;
+}
+
+td {
+	text-align: center;
+}
+
+table {
+	justify-content: center;
+}
+
+#acomodarBorde{
+	height: 64px;
+	align-items: center;
+	padding-top: 20px;
+}
+
+#buscar{
+	color: #87b1f0;
+	border-color: ;
+	border: none;
+	height: 27px;
+
+}
+
+.logo, .saludo, .busqueda {
+	width: 100%;
+}
+
+.logo {
+	font-size: 30px;
+	text-align: left;
+	
+}
+
+.saludo {
+	text-align: center;
+}
+
+.busqueda {
+	text-align: right;
+}
+
+.box {
+	border-right-style: outset;
+	border-bottom-style: outset;
+	display: inline-grid;
+	grid-column-gap: 15px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+
+	transition: transform 0.5s ease-out 25ms;
+}
+
+.card {
+	padding: 20px;
+  	text-align: center;
+}
+
+.box:hover {
+	transform: rotate(10deg);
+	background-color: #99c5dd;
+	height: 155px;
+	width: 155px;
+}
