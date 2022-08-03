@@ -58,7 +58,7 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
   float: right;
 }
 
-.busqueda input[type=button] {
+.busqueda #boton {
     padding: 6px;
     background: #f5f7f9;
     border: none;
