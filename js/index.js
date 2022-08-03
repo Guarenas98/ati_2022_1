@@ -27,16 +27,16 @@ renderGrid = () => {
     .sort((a, b) => b.nombre < a.nombre)
     .map(
       (elem, idx) => `
-<div class="carousel-item grid-container ${!idx ? "active" : ""}">
-  <div class="carousel-item-container">
-    <a href="${
-      elem.ci === "26915574" ? elem.ci + "/perfil.html" : "#"
-    }" class="grid-item">
-      <img src="${elem.imagen}" alt="no foto">
-      <span>${elem.nombre}</span>
-    </a>
-  </div>
-</div>`
+        <div class="carousel-item grid-container ${!idx ? "active" : ""}">
+          <div class="carousel-item-container">
+            <a href="${
+              elem.ci === "26915574" ? elem.ci + "/perfil.html" : "#"
+            }" class="grid-item">
+              <img src="${elem.imagen}" alt="no foto">
+              <span>${elem.nombre}</span>
+            </a>
+          </div>
+        </div>`
     );
 
   content.length && putHtml(".carousel-inner", content.join("\n"));
@@ -46,20 +46,25 @@ renderGrid = () => {
   );
   if (!content.length) return;
 
-  $("#carousel").carousel({
-    keyword: true,
-    interval: false,
-    wrap: false,
-  });
-
-  $(".carousel-item").each(function () {
-    var next = $(this).next();
-    next.children(":first-child").clone().appendTo($(this));
-
-    for (var i = 0; i < 2; i++) {
-      next = next.next();
-      next.children(":first-child").clone().appendTo($(this));
-    }
+  $('#recipeCarousel').carousel({
+    interval :2000
+  })
+  
+  $('.carousel .carousel-item').each(function(){
+      var next = $(this).next();
+      if (!next.length) {
+      next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+      
+      for (var i=0;i<2;i++) {
+          next=next.next();
+          if (!next.length) {
+            next = $(this).siblings(':first');
+          }
+          
+          next.children(':first-child').clone().appendTo($(this));
+        }
   });
 };
 
