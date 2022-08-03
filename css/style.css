@@ -24,8 +24,8 @@ nav ul {
 nav ul li {
   float: left;
   border-right: 1px solid #fff;
-  line-height: 58px;
-  padding: 3px 5px 3px 5px;
+  line-height: 58px; 
+  padding: 3px 5px 3px 5px; 
   color: white;
 }
 
@@ -40,7 +40,7 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
 			
 .logo {
 	margin-left: 2px;
-	font-size: 27pt;
+	font-size: 2.5vw;
    font-family: helvetica;
 	width: 30%;
 }
@@ -56,6 +56,10 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
 
 .busqueda {
   float: right;
+}
+
+input{
+  line-height: normal; 
 }
 
 .busqueda input[type=button] {
@@ -87,6 +91,5 @@ footer {
   padding: 1rem;
   background-color: #86b1ef;
   text-align: center;
-  height: 20px;	
   font-size: 9pt;
 }
