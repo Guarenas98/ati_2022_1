@@ -8,15 +8,14 @@
 html,body { width: 100%; height: 100%; }
 
 header {
-   height: 62px;
+  height: 62px;
 	top: 0;
-   position: relative;
+  position: relative;
 	background-color:#86b1ef;			
 }
 
 nav ul {
   list-style-type: none;
-  margin: 10px;
   padding: 0;
   overflow: hidden;
 }
@@ -34,14 +33,14 @@ nav ul li:last-child {
 }
 
 nav ul li a, nav ul li a:link, nav ul li a:visited {
-	 color: white;
-	 text-decoration:none;
+	color: white;
+	text-decoration:none;
 }
 			
 .logo {
 	margin-left: 2px;
 	font-size: 27pt;
-   font-family: helvetica;
+  font-family: helvetica;
 	width: 30%;
 }
 
@@ -56,17 +55,20 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
 
 .busqueda {
   float: right;
+ 
 }
 
 .busqueda input[type=button] {
-    padding: 6px;
-    background: #f5f7f9;
-    border: none;
-    cursor: pointer;
-	 color: #86b1ef;
+  line-height: normal!important;
+  padding: 6px;
+  background: #f5f7f9;
+  border: none;
+  cursor: pointer;
+	color: #86b1ef;
 }
 
 .busqueda input[type=text] {
+  line-height: normal!important;
   padding: 6px;
   border: none;
   margin-right: 10px;
@@ -87,6 +89,5 @@ footer {
   padding: 1rem;
   background-color: #86b1ef;
   text-align: center;
-  height: 20px;	
   font-size: 9pt;
 }
