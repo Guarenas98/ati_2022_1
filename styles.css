@@ -83,12 +83,14 @@ footer {
   border: none;
   cursor: pointer;
    color: #86b1ef;
+   line-height: 50%;
 }
 
 .busqueda input[type=text] {
 padding: 6px;
 border: none;
 margin-right: 10px;
+line-height: 50%;
 }
 
 
@@ -108,3 +110,4 @@ section li{
 section li div{
   display:block;
 }
+

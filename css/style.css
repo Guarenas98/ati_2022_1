@@ -63,13 +63,15 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
     background: #f5f7f9;
     border: none;
     cursor: pointer;
-	 color: #86b1ef;
+	  color: #86b1ef;
+    line-height: 50%;
 }
 
 .busqueda input[type=text] {
   padding: 6px;
   border: none;
   margin-right: 10px;
+  line-height: 50%;
 }
 
 section { 
@@ -84,9 +86,45 @@ footer {
   width: 100%;
   position: fixed;	
   bottom: 0;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #86b1ef;
   text-align: center;
   height: 20px;	
   font-size: 9pt;
+}
+
+
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(25%);
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+  transform: translateX(-25%);
+}
+  
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+.carousel-item{
+  margin-left: 20px;
+}
+
+.carousel-item div {
+  margin:10px;
+  width:300px; 
+}
+.carousel-item div img{
+  width: 300px;
+  height: 270px;
 }
