@@ -31,7 +31,7 @@ document.getElementsByClassName("logo")[0].innerHTML =
     config.sitio[0]  + "<small>" + config.sitio[1] + "</small> " + config.sitio[2]
 
 // Set greeting text
-document.getElementsByClassName("saludo")[0].innerHTML = config.saludo + ", Gabriel"
+document.getElementsByClassName("saludo")[0].innerHTML = config.saludo + ", Gabriel Carrizo"
 
 // Set inputs texts and listener
 let busqueda = document.getElementsByClassName("busqueda")[0]
@@ -48,19 +48,26 @@ document.getElementsByTagName("footer")[0].innerHTML = config.copyRight;
 let persons = listado.reduce( (acc, current, currentIndex) => {
     if(currentIndex == 0)
     {
-        return acc += `<div class="carousel-item img-with-text active">
-                <img class="peopleCarousel d-block col-3" src="./${current.imagen}"> 
-                <p> ${current.nombre} </p> 
+        return acc += `<div class="carousel-item active">
+                <figure class="col-2">
+                    <img src="./${current.imagen}"> 
+                    <figcaption> ${current.nombre} </figcaption>
+                </figure>
             </div>`
     }
-    return acc += `<div class="carousel-item img-with-text">
-            <img class="peopleCarousel d-block col-3" src="./${current.imagen}">
-            <p> ${current.nombre} </p>
-         </div>`
+    return acc += `<div class="carousel-item">
+                <figure class="col-2">
+                    <img src="./${current.imagen}"> 
+                    <figcaption> ${current.nombre} </figcaption>
+            </figure>
+            </div>`
 } , " ")
+
 
 //JQuery
 $(".carousel-inner").append(persons)
+
+$(".carousel").carousel({ interval: 4000 });
 
 $('.carousel .carousel-item').each(function(){
     let next = $(this).next();
@@ -69,7 +76,7 @@ $('.carousel .carousel-item').each(function(){
     }
     next.children(':first-child').clone().appendTo($(this));
     
-    for (let i=0;i<2;i++) {
+    for (let i=0;i<3;i++) {
         next=next.next();
         if (!next.length) {
         	next = $(this).siblings(':first');
