@@ -26,8 +26,7 @@ document.getElementsByClassName("saludo")[0].innerHTML = config.saludo + ", " + 
 document.getElementsByClassName("busqueda")[0].innerHTML = config.home
 
 // Set perfil's text and image
-document.getElementsByClassName("divFoto")[0].innerHTML =
-    `<img src=${perfil.imagen} alt="Foto de perfil" width="350" height="450" id="fotoPerfil">`
+document.getElementById("fotoPerfil").src = perfil.imagen
 
 let perfilDiv = document.getElementsByClassName("divPerfil")[0]
 perfilDiv.getElementsByTagName("h1")[0].innerHTML = perfil.nombre
