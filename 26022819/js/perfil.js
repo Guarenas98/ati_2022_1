@@ -10,7 +10,8 @@ function inicio() {
   document.getElementsByClassName("inicio")[0].innerHTML =
     "<a href='perfil.html' >" + config.home + "</a>";
   document.getElementsByTagName("footer")[0].innerHTML = config.copyRight;
-  document.getElementsByClassName("saludo")[0].innerHTML = config.saludo + ", ";
+  document.getElementsByClassName("saludo")[0].innerHTML =
+    config.saludo + ", " + perfil.nombre;
   document.getElementsByClassName("nombre")[0].innerHTML = perfil.nombre;
   document.getElementsByClassName("foto")[0].src = perfil.imagen;
   document.getElementsByClassName("descripcion")[0].innerHTML =
