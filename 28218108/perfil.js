@@ -54,3 +54,6 @@ aux.innerHTML="<b>"+perfil.lenguajes+"</b>"
 
 aux = document.getElementById("email");
 aux.innerHTML= config.email+" <a href='"+perfil.email+"'>"+perfil.email+"</a>"
+
+aux = document.getElementsByTagName("footer")[0];
+aux.innerHTML=  config.copyRight;

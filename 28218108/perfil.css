@@ -15,10 +15,15 @@ a:visited{
 }
 
 img {
-    height: 470px;
+    height: 100%;
+    
+    width: auto;
     border-top-left-radius: 100px ;
 }
 
+section{
+    height: 60%;
+}
 table{
     border-spacing:0px;
 }
@@ -30,7 +35,56 @@ table{
 
 #content{
     border:solid 2px;
-    height:469px;
+
     width: 60%;
     box-shadow: 5px 5px gray;
 }
+
+nav .container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav .container .item{
+    width:33%;
+}
+
+.container-main{
+    display:flex;
+    flex-direction:row;
+    width: 100%;
+    height: 100%;
+}
+
+.container-secundario{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+.container-secundario #nombre{
+    height:10%;
+}
+
+.container-secundario #descripcion{
+    height:20%;
+}
+
+.container-secundario .container-terciario{
+    height:60%;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.container-secundario #email{
+    height:10%;
+}
+
+.container-grid{
+    display:grid;
+    grid-template-columns: 1fr 3fr ;
+}
+
