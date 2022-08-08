@@ -1,0 +1,44 @@
+td img{
+    width: 400px;
+    height: 530px;
+}
+
+#info{
+    padding-left: 50px;
+    vertical-align: top;
+}
+
+#info table{
+    width: 800px;
+}
+
+#info {
+    border: 1px solid;
+    box-shadow: 5px 10px #888888;
+}
+
+td h1{
+    color: blue;
+}
+
+.gustos{
+    padding-left: 0px;
+}
+
+a{
+    color: orange;
+}
+
+a:visited {
+    color: red;
+}
+
+.descripcion {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.intereses {
+    margin-top: 10px;
+}
