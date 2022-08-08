@@ -1,0 +1,13 @@
+{
+    "nombre": "Jorge David Contreras Flores",
+    "descripcion": "Soy estudiante de la Universidad Central de Venezuela (UCV). Me gusta la programacion web y la ciencias. He hecho cursos en udemy de Ciencias de Datos y de programacion web. En estos momentos me encuentro trabajando para la Empresa Group Trust Mediatic en el area de programacion de Vepaco. Me ocupo de la parte del backend del sistema programando en Django",
+    "color": ["Azul", "Verde", "Morado", "Rojo"],
+    "libro": "El arte de la guerra",
+    "Musica": "Escucho de todo, pero me gusta mas la Salsa",
+    "video_juego": ["Fifa", "Tekken", "Call Of Duty"],
+    "lenguajes": ["C/C++", "Python", "JavaScript"],
+    "email": "Jorgedcontreras.94@gmail.com",
+    "CI": "23.685.724",
+    "genero": "masculino",
+    "fecha_nacimiento": "1994-01-21"
+}
