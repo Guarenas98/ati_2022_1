@@ -1,4 +1,4 @@
-
+$(function(){
 
 
 
@@ -30,41 +30,74 @@ busqueda.getElementsByTagName("input")[1].value = config.buscar
 document.getElementsByTagName("footer")[0].innerHTML = config.copyRight;
 
 
+
 //Inicializacion 
-let personas = listado.reduce( (acumulado, actual) => {
-    return acumulado += "<li class='perfil'> <img src=" + "./" + actual.imagen + " width=40 height=50> " + 
-    actual.nombre +  " </li> "
-} , "<a id='error' style='display: none;'>"+ config.errorB +" </a> ")
-
-document.getElementsByTagName("ul")[1].innerHTML = personas
-
-
-function busquedas(texto) {
+let personas = listado.reduce( (acumulado, actual, indice) => {
+    if (indice == 0){
+    return acumulado += "<div class='carousel-item active'><figure class='col-2'><img  src='"+actual.imagen+"'> <figcaption '> "+ actual.nombre +"</figcaption></figure></div>"
+    }
+    else 
+    return acumulado += "<div class='carousel-item'><figure class='col-2'><img  src='"+actual.imagen+"'> <figcaption '>"+ actual.nombre +"</figcaption></figure></div>"
     
-    texto=texto.toLowerCase();
-    let x = document.getElementsByClassName('perfil');
-    let cont = 0; 
-    
-        for (i = 0; i < x.length; i++) { 
-            if (!x[i].innerHTML.toLowerCase().includes(texto)) {
-                x[i].style.display="none";
-                cont++;
-            }
-            else {
-                x[i].style.display="list-item";                 
-            }
-        }
-     
+} , " ")
 
-        if (cont === x.length){
-            
-            test = document.getElementById("error").style.display="list-item";
-            document.getElementById("error" ).innerHTML =  config.errorB.replace("[query]", texto);
-           
+$(".carousel-inner").append(personas)
+
+$(".carousel").carousel({ interval: 4000 });
+
+$('.carousel .carousel-item').each(function(){
+    let next = $(this).next();
+    if (!next.length) {
+        next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+    
+    for (let i=0;i<3;i++) {
+        next=next.next();
+        if (!next.length) {
+        	next = $(this).siblings(':first');
+      	}
+        next.children(':first-child').clone().appendTo($(this));
+    }
+})
+
+
+const busquedas = (filter) => {
+    console.log(filter);
+    $('#Carrusel').hide();
+    let length = filter.length
+    let filteredListado = length === 0
+    ? listado
+    : listado.filter(
+        personas => personas.nombre.slice(0, length).toLowerCase() === filter.toLowerCase()
+    )
+    if (length === 0){
+        $('#Carrusel').show();
+        
+    }
+    if(filteredListado.length === 0)
+    {
+        document.getElementsByTagName("ul")[1].innerHTML = config.errorB.replace("[query]", filter)
+    }
+    else
+    {
+
+        let personsToShow = filteredListado.reduce( (acumulado, actual) => {
+            return acumulado += "<li> <img src=" + "./" + actual.imagen + " width=40 height=50> " + 
+            actual.nombre +  " </li> "
+        } , " ")
+        if(length === 0){
+            $('#Carrusel').show();
+            $('#error').hide();
         }
-        else
+        else 
         {
-            document.getElementById("error").style.display="none";
+            $('#Carrusel').hide();
+        document.getElementsByTagName("ul")[1].innerHTML = personsToShow
+        $('#error').show();
         }
-   
+    }
 }
+
+
+})
