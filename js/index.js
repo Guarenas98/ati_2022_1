@@ -88,9 +88,9 @@ const BuscarAndFilter = () => {
 
         if (exit) {
 
-            if (exit.style.display === 'none') {
-                exit.style.display = 'flex';
-            }
+            exit.style.display = 'flex';
+            exit.className = "textMensaje";
+            exit.innerText = `${config["mensajetNoHAyEstudiante"]} ${value}`;
 
         } else {
 
