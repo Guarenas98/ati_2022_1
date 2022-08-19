@@ -40,13 +40,15 @@ table{
     box-shadow: 5px 5px gray;
 }
 
-nav .container{
+.container{
+    justify-content:center;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 100%;
 }
 
-nav .container .item{
+.container .item{
     width:33%;
 }
 

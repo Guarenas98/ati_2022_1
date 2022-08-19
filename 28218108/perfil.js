@@ -3,14 +3,14 @@
 let aux=document.getElementsByTagName("title")[0]
 aux.innerHTML=perfil.nombre
 
-aux = document.getElementsByClassName("logo")[0];
+aux = document.getElementById("logo");
 aux.innerHTML=config.sitio[0]+"<small>"+config.sitio[1]+"</small>"+" "+config.sitio[2]
 
-aux = document.getElementsByClassName("saludo")[0];
+aux = document.getElementById("saludo");
 aux.innerHTML = config.saludo+", Jose Miguel Valera"
 
 
-aux = document.getElementsByClassName("busqueda")[0]
+aux = document.getElementById("busqueda")
 aux.innerHTML= "<a href='../index.html'>"+config.home+"</a>"
 
 aux = document.getElementById("image");
