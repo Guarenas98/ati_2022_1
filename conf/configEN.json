@@ -12,5 +12,6 @@ config = {
 	"lenguajes":"Languages learned",
 	"email":"please send me a email to [email], if you need to contact me",
 	"buscar": "Search",
-	"saludo": "Hi"
+	"saludo": "Hi",
+	"mensajetNoHAyEstudiante": "No hay alumnos que tengan en su nombre: [query]",
 }

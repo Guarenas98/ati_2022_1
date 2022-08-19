@@ -2,102 +2,47 @@
 <html>
 
 <head>
+	
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta charset="UTF-8">
 	<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/index.css" type="text/css">
-	<title>ATI[UCV] 2022-1</title>
+	<script type="text/javascript" src="./conf/configES.json"></script>
+	<script type="text/javascript" src="./datos/index.json"></script>
+	<title id="tituloPestania"></title>
+
 </head>
 
 <body>
 	<header class="containerHeader">
 		<nav class="containerNav">
 			<section>
-				<p class="logo">ATI<span>[UCV]</span> 2022-1</p>
-			</section>
-			<section>
-				<p class="saludo">
-					Hola, Maria Fernanda Tejeda
+				<p class="logo" id="logo">
 				</p>
 			</section>
 			<section>
-				<form action="" class="busqueda">
+				<p class="saludo" id="saludo">
+				</p>
+			</section>
+			<section>
+				<form action="" class="busqueda" id="formSearchAti">
 					<input type="text" name="searchAtiName" id="searchAtiName" placeholder="Nombre...">
-					<input type="button" value="Buscar">
+					<input type="button" value="Buscar" id="botonBuscar">
 				</form>
 			</section>
 		</nav>
 	</header>
 
-	<article class="containerMain">
-		
-		<section class="containerPerfil">
-			<img src="./25641163/25641163.jpg" alt="MariaFernanda"/>
-			<a href="#"> Maria Fernanda</a>
-		</section>
-
-		<section class="containerPerfil">
-			<img src="./dummy1/dummy.jpg" alt="dummy1"/>
-			<a href="#"> Emilia Cascado</a>
-		</section>
-		
-		<section class="containerPerfil">
-			<img src="./dummy2/dummy.jpg" alt="dummy2"/>
-			<a href="#"> Maria Elena Pinto</a>
-		</section>
-		
-		<section class="containerPerfil">
-			<img src="./dummy3/dummy.jpg" alt="dummy3"/>
-			<a href="#"> Maritza Rodriguez</a>
-		</section>
-		
-		<section class="containerPerfil">
-			<img src="./dummy4/dummy.jpg" alt="dummy4"/>
-			<a href="#"> Enrique Colina</a>
-		</section>
-		
-		<section class="containerPerfil">
-			<img src="./dummy5/dummy.jpg" alt="dummy5"/>
-			<a href="#"> Ronald Gutierrez</a>
-		</section>
-		
-		<section class="containerPerfil">
-			<img src="./dummy6/dummy.jpg" alt="dummy6"/>
-			<a href="#">Juan Antonio Perez </a>
-		</section>
-		<section class="containerPerfil">
-			<img src="./dummy2/dummy.jpg" alt="dummy2"/>
-			<a href="#"> Maria Elena Pinto</a>
-		</section>
-		
-		<section class="containerPerfil">
-			<img src="./dummy3/dummy.jpg" alt="dummy3"/>
-			<a href="#"> Maritza Rodriguez</a>
-		</section>
-		
-		<section class="containerPerfil">
-			<img src="./dummy4/dummy.jpg" alt="dummy4"/>
-			<a href="#"> Enrique Colina</a>
-		</section>
-		
-		<section class="containerPerfil">
-			<img src="./dummy5/dummy.jpg" alt="dummy5"/>
-			<a href="#"> Ronald Gutierrez</a>
-		</section>
-		
-		<section class="containerPerfil">
-			<img src="./dummy6/dummy.jpg" alt="dummy6"/>
-			<a href="#">Juan Antonio Perez </a>
-		</section>
-	
-	</article>
+	<section class="containerMain" id="containerListadoEstudiantes">
+	</section>
 
 	<footer class="footer">
-		<p>
-			Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
+		<p id="copyRight">
 		</p>
 	</footer>
+
 </body>
+<script src="./js/index.js"></script>
 
 </html>
