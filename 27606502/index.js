@@ -15,3 +15,5 @@ function cargar() {
 	document.getElementById("email").innerHTML = config.email.replace("[email]","<a href='mailto:'" + perfil.email + ">" + perfil.email + "</a>");
 	document.getElementById("footer").innerHTML = config.copyRight;
 }
+
+
