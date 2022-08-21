@@ -1,4 +1,4 @@
-let perfil={
+{
     "nombre":"Jose Miguel Valera",
     "descripcion":"Soy estudiante de 6to semestre de computacion en la Universidad Central de Venezuela, me entusiasma el desarrollo web y aspiro algun dia ser desarrollador full stack, actualmente poseo una certificacion en java y estoy realizando un curso de desarrollo web.",
     "color":"Morado",
