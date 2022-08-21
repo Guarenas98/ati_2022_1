@@ -62,7 +62,7 @@
 				?></div>
 				<div class="container-secundario item" id="content">
 					<div class="item" id="nombre"><?php 
-						printf("<h1> %s qlq</h1>",$perfil->nombre);
+						printf("<h1> %s </h1>",$perfil->nombre);
 					?></div>
 					<div class="item" id="descripcion">
 						<?php printf("<i> %s </i>",$perfil->descripcion); ?>
