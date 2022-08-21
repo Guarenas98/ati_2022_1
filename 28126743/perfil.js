@@ -1,16 +1,18 @@
 function inicio(){
-    document.getElementsByClassName("logo")[0].innerHTML = config.sitio[0] + "<small>" + config.sitio[1] + "</small>" + config.sitio[2];
-    document.getElementsByClassName("saludo")[0].innerHTML = config.saludo + ", " + perfil.nombre; 
-    document.getElementsByClassName("busqueda")[0].innerHTML = "<a href='index.html'>" + config.home + "</a>"; 
+    document.getElementById("logo").innerHTML = config.sitio[0] + "<small>" + config.sitio[1] + "</small>" + config.sitio[2]; 
+    document.getElementById("saludo").innerHTML = config.saludo + ", " + perfil.nombre; 
+    document.getElementById("busqueda").innerHTML = "<a href='index.html'>" + config.home + "</a>"; 
     document.getElementsByTagName("footer")[0].innerHTML = config.copyRight; 
     document.getElementsByTagName("title")[0].innerHTML = perfil.nombre; 
 
     // Imagen 
     let imagen = document.createElement("img"); 
     imagen.src = perfil.imagen; 
+    imagen.className = "img-fluid"; 
     document.getElementById("foto").appendChild(imagen); 
 
     document.getElementsByTagName("h1")[0].innerHTML = perfil.nombre; 
+    document.getElementsByTagName("h3")[0].innerHTML = perfil.nombre; 
     document.getElementById("descrip").innerHTML = perfil.descripcion; 
 
     // Tabla 
