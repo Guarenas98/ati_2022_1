@@ -3,36 +3,49 @@
 	<head>
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
+		
+		<!-- bootstrap4 css -->
+		<link rel="stylesheet" href="css/Bootstrap4/bootstrap.min.css">
+
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
+
+		
 		<title>ATI[UCV] 2022-1</title>
 		<script type="text/javascript" src="datos/index.json"></script>
 		<script type="text/javascript" src="conf/configES.json"></script>
 	</head>
 	<body>
 	    <header>
-			<nav>
-				<ul>
-					<li class="logo"></li>
-					<li class="saludo">Gabriel Belisario</li>
-					<li class="busqueda">
-						<form action="">
-							<input type="text">
-							<input type="button">
-						</form>
-					</li>
-				</ul>	
-			</nav> 
+			<nav class="navbar justify-content-between">
+				<span class="navbar-brand logo col-3" href="#"></span>
+				<span class="saludo navbar-text col-5">Gabriel Belisario</span>
+				<form action="" class="form-inline busqueda col-3">
+					<input type="text" class="form-control">
+					<input type="submit" class="" >
+				</form>
+			</nav>
+			
 	    </header>
-	    <section>
-	       
-			<ul></ul>
+	    <section >
+	       <div class="container text-center my-3">
+
+				<div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2" id="listado_estudiantes"></div>
+				
+			</div>
 			 
 	    </section>
 	    <footer>
 	       
 	    </footer>
+		
+		<!-- jquery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<!-- bootstrap4 js -->
+    	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    	<script src="js/Bootstrap4/bootstrap.min.js" ></script>
+
 		<script src="js/index.js"></script>
 	</body>
 </html>
