@@ -15,7 +15,8 @@ document.getElementById("config-lenguajes").innerText = config.lenguajes;
 // profile info
 document.title = perfil.nombre;
 document.getElementsByClassName("saludo")[0].innerHTML += perfil.nombre;
-document.getElementById("foto").innerHTML = "<img src=\""+ perfil.imagen +"\" alt=\"\">";
+// document.getElementById("foto").innerHTML = "<img src=\""+ perfil.imagen +"\" alt=\"\">";
+document.getElementById("foto").innerHTML = "<img class=\"img-fluid\" src=\""+ perfil.imagen +"\" alt=\"\">";
 document.getElementById("perfil-nombre").innerText = perfil.nombre;
 document.getElementById("perfil-descripcion").innerText = perfil.descripcion;
 document.getElementById("perfil-color").innerText = perfil.color;
@@ -23,5 +24,5 @@ document.getElementById("perfil-libro").innerText = perfil.libro;
 document.getElementById("perfil-musica").innerText = perfil.musica;
 document.getElementById("perfil-juego").innerText = perfil.video_juego;
 document.getElementById("perfil-lenguajes").innerText = perfil.lenguajes.join(", ") ;
-document.getElementById("email").innerHTML = config.email.replace("[email]", `<a href="mailto:${perfil.email}">${perfil.email}</a>`);
+document.getElementById("email").innerHTML = config.email.replace("[email]", ` <a href="mailto:${perfil.email}">${perfil.email}</a>`);
 

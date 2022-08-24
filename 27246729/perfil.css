@@ -1,14 +1,17 @@
-.container{
-    display: flex;
-    margin-left: 2em;
-    margin-top: 1em;
-    width: 70vw;
-    height: 40vh;
-}
+
 
 img{
-    height: 40vh;
+    /* height: 40vh; */
     border-radius: 25% 0px 0px 0px;
+    /* height: min-content; */
+    /* height: 19vw; */
+}
+
+#contenido{
+    /* margin-left: 1vw; */
+    margin-right: 5vw;
+    margin-top: 5vh;
+    /* height: min-content; */
 }
 
 #info{
@@ -16,9 +19,11 @@ img{
     border-width: 2px;
     box-shadow: 8px 8px 8px rgb(99, 99, 99);
     border-color: black;
-    width: 100%;    
-    padding: 0.5em;
-    margin-left: 0.5em;
+    /* width: 100%;     */
+    padding: 2em;
+    padding-top: 0.5em;
+    /* height: fit-content; */
+    /* margin-left: 0.5em; */
 }
 
 h1{
@@ -44,12 +49,12 @@ a:visited{
     color: red;
 }
 
-table{
+/* table{
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: -1em;
     border-spacing: 1em 0em ;
-}
+} */
 
 #perfil-lenguajes{
     font-weight: bold;

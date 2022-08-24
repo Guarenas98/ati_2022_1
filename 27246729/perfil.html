@@ -4,6 +4,10 @@
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+		
+		<!-- bootstrap4 css -->
+		<link rel="stylesheet" href="../css/bootstrap4/bootstrap.min.css">
+
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
 
@@ -21,9 +25,46 @@
 				</ul>	
 			</nav> 
 	    </header>
-	    <section>
+	    <section class="container-fluid" id="contenido">
 	       
-			<div class="container">
+			<div class="row col-11">
+				<span class="col-3 " id="foto">
+					<img src="" alt="">
+				</span>
+
+				<span class="col-9" id="info">
+					<h1 class="row" id="perfil-nombre"></h1>
+					<div class="row" id="perfil-descripcion"></div>
+					<br>
+					<div class="container" id="tabla-datos-perfil">
+						<div class="row">
+							<span class="col-3" id="config-color"></span>
+							<span class="col-9" id="perfil-color"></span>
+						</div>
+						<div class="row">
+							<span class="col-3" id="config-libro"></span>
+							<span class="col-9" id="perfil-libro"></span>
+						</div>
+						<div class="row">
+							<span class="col-3" id="config-musica"></span>
+							<span class="col-9" id="perfil-musica"></span>
+						</div>
+						<div class="row">
+							<span class="col-3" id="config-juego"></span>
+							<span class="col-9" id="perfil-juego"></span>
+						</div>
+						<div class="row">
+							<span class="col-3" id="config-lenguajes"></span>
+							<span class="col-9" id="perfil-lenguajes"></span>
+						</div>
+					</div>
+					<br>
+					<div id="email" class="row"></div>
+				</span>
+			</div>
+			
+
+			<!-- <div class="profile-box">
 				<div id="foto">
 					<img src="" alt="">
 				</div>
@@ -59,12 +100,20 @@
 					</div>
 				</div>
 
-			</div>
+			</div> -->
 			 
 	    </section>
 
 	    <footer> </footer>
 		
 		<script src="perfil.js"></script>
+
+		<!-- bootstrap4 js -->
+    	<script src="../js/bootstrap4/bootstrap.min.js" ></script>
+		
+    	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		
+		<!-- jquery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	</body>
 </html>
