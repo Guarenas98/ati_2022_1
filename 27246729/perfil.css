@@ -1,4 +1,6 @@
-
+.logo{
+    font-size: 2.25vw;
+}
 
 img{
     /* height: 40vh; */
@@ -61,4 +63,33 @@ a:visited{
 }
 #config-lenguajes{
     font-weight: bold;
+}
+
+figure{
+    position: relative;
+    margin-top: -125%;
+    overflow: hidden;
+}
+
+path{
+    fill:white;
+    transition: all 1s ease;
+    /* overflow: hidden; */
+    transform: translateY(-100%);
+    opacity: 50%;
+}
+
+#no_hover_svg{
+    transform: translateY(-5%);
+}
+
+/* figcaption{
+    overflow: hidden;
+} */
+
+#email{
+    margin-top: -125%;
+    transform: translateY(-400%);
+    transition: all 1s ease;
+    padding: 3rem;
 }

@@ -27,10 +27,28 @@
 	    </header>
 	    <section class="container-fluid" id="contenido">
 	       
-			<div class="row col-11">
-				<span class="col-3 " id="foto">
+			<div class="row col-md-11 col-sm-12">
+
+					<span class="col-md-3 col-sm-2" id="svg-foto"  >
+
+						<img  src="" class="img-fluid" id="foto">
+						<figure >
+							<svg class="" viewBox="0 0 180 320" preserveAspectRatio="none">
+								<path id="no_hover_svg" d="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z"></path>
+								<path id="hover_svg" d="M0,0C0,0,0,171.14385,0,171.14385C24.580441,186.61523,55.897012,195.90157,90,195.90157C124.10299,195.90157,155.41956,186.61523,180,171.14385C180,171.14385,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"></path>
+								<desc>Created with Snap</desc>
+								<defs></defs>
+							</svg>
+							
+							<figcaption>
+								<p id="email"></p>
+							</figcaption>
+						</figure>
+					</span>
+					
+				<!-- <span class="col-md-3 col-sm-2" id="foto">
 					<img src="" alt="">
-				</span>
+				</span> -->
 
 				<span class="col-9" id="info">
 					<h1 class="row" id="perfil-nombre"></h1>
@@ -62,58 +80,21 @@
 					<div id="email" class="row"></div>
 				</span>
 			</div>
-			
-
-			<!-- <div class="profile-box">
-				<div id="foto">
-					<img src="" alt="">
-				</div>
-				<div id="info">
-					
-					<h1 id="perfil-nombre"> </h1>
-					<div id="perfil-descripcion"> </div>
-
-					<div>
-						<table>
-							<tr>
-								<td id="config-color"> </td>
-								<td id="perfil-color"> </td>
-							</tr>
-							<tr>
-								<td id="config-libro"> </td>
-								<td id="perfil-libro"> </td>
-							</tr>
-							<tr>
-								<td id="config-musica"> </td>
-								<td id="perfil-musica"> </td>
-							</tr>
-							<tr>
-								<td id="config-juego"> </td>
-								<td id="perfil-juego"> </td>
-							</tr>
-							<tr>
-								<td id="config-lenguajes"> </td>
-								<td id="perfil-lenguajes"> </td>
-							</tr>
-						</table>
-						<div id="email"> </div>
-					</div>
-				</div>
-
-			</div> -->
 			 
 	    </section>
 
 	    <footer> </footer>
 		
-		<script src="perfil.js"></script>
-
-		<!-- bootstrap4 js -->
-    	<script src="../js/bootstrap4/bootstrap.min.js" ></script>
+		
 		
     	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		
 		<!-- jquery -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+		<!-- bootstrap4 js -->
+    	<script src="../js/bootstrap4/bootstrap.min.js" ></script>
+		
+		<script src="perfil.js"></script>
 	</body>
 </html>
