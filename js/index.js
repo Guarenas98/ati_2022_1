@@ -1,3 +1,64 @@
+
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  
+  function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+  
+  function checkCookieVisitas() {
+    let aux = getCookie("visitas");
+    if (aux != "") {
+      aux= parseInt(aux)+1;
+      setCookie("visitas",aux,1);
+    } else {
+      setCookie("visitas",0,1);
+    }
+  }
+
+  function checkCookieLenguaje() {
+    let aux = getCookie("lenguaje");
+    if (aux != "") {
+      lenguaje=aux;
+    } else {
+      setCookie("lenguaje",'ES',1);
+    }
+  }
+
+  let lenguaje;
+  checkCookieVisitas()
+  checkCookieLenguaje()
+
+function sendResponse(objeto){
+    //let aux=objeto.innerHTML.slice(objeto.innerHTML.search(">")+1,objeto.innerHTML.length);
+    let aux = objeto.id;
+    var theObject = new XMLHttpRequest();
+    theObject.open('POST','getDatos.php',true);
+    theObject.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+    theObject.onreadystatechange = function(){
+        document.getElementById("perfil").innerHTML=theObject.responseText;
+    }    
+
+    let params="lenguaje="+lenguaje+"&cedula="+aux;
+    theObject.send(params);
+}
+
 function busqueda(){
     var text = document.getElementById("text").value;
 
@@ -24,7 +85,7 @@ function busqueda(){
         var aux = document.getElementById("mensaje");
         aux.style.display="none";
     }
-    console.log("done");
+    console.log(cont);
 }
 
 function crearItems(lista){
@@ -33,12 +94,14 @@ function crearItems(lista){
     aux = document.getElementsByClassName("carousel-inner w-100")[0];
     
     let div= document.createElement("div");
+    
     div.classList.add('carousel-item')
     div.classList.add('active')
     let div1= document.createElement("div");
     div1.classList.add('contenido')
+    div1.setAttribute("onclick","sendResponse(this)");
     let img = document.createElement('img');
-    img.style.width="100%"
+    
     //img.src = "28218108\/28218108.jpeg"
     img.src = lista[0].imagen
     div.appendChild(div1);
@@ -52,8 +115,9 @@ function crearItems(lista){
         div.classList.add('carousel-item')
         let div1= document.createElement("div");
         div1.classList.add('contenido')
+        div1.setAttribute("onclick","sendResponse(this)");
         let img = document.createElement('img');
-        img.style.width="100%"
+        
         //img.src = "28218108\/28218108.jpeg"
         img.src = lista[i].imagen
         div.appendChild(div1);
@@ -81,6 +145,25 @@ function crearItems(lista){
     }
 }
 
+let config;
+let listado;
+//config =fetch('./conf/configEN.json')
+//        .then(results =>config = results.json())
+//        .then(console.log)
+
+$.ajaxSetup({
+    async: false
+});
+
+$.getJSON('./conf/configEN.json',function(result){
+    config=result;
+})
+        
+$.getJSON('./datos/index.json',function(result){
+    listado=result;
+})
+
+
 var aux = document.getElementById("titulo");
 aux.innerHTML=config.sitio[0]+config.sitio[1]+" "+config.sitio[2]
 
@@ -98,12 +181,12 @@ aux = document.getElementsByTagName("footer");
 aux[0].innerHTML=config.copyRight;
 
 
-crearItems(listado)
+//crearItems(listado)
 
  
 
 $('#recipeCarousel').carousel({
-  interval :2000
+  interval : 2000
 })
 
 
