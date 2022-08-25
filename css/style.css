@@ -27,7 +27,7 @@ nav ul {
   overflow: hidden;
 }
 
-nav ul li {
+nav ul li, nav a{
   float: left;
   border-right: 1px solid #fff;
   line-height: 58px;
