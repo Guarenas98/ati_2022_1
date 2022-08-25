@@ -18,17 +18,26 @@
 	</head>
 	<body>
 	    <header>
-			<nav class="navbar navbar-expand-lg">
-				<div class="container-fluid">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item logo"></li>
-						<li class="nav-item saludo"></li>
-						<li class="nav-item busqueda text-right"><a class="nav-link" href="index.html"> </a></li>
-					</ul>	
+			<nav class="navbar navbar-expand-lg" >
+				<div class="container-fluid flex-row">
+					<ul>
+						<a class="navbar-brand" href="#"> <li class="logo"></li></a>
+					</ul>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					  </button>
+					  <div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ">
+							<span class="navbar-text saludo"></span>
+							<li class="nav-item busqueda ">
+								<a class="nav-link disabled"  href="index.html"> </a>
+							</li>
+						</ul>	
+					</div>
 				</div>
 			</nav> 
 	    </header>
-	    <section class="container-fluid row">
+	    <section class="container-fluid">
 	       <div class="row align-items-center ">
 				<div class="divFoto col-4"> 
 					<img class="img-fluid" id="fotoPerfil" > 
