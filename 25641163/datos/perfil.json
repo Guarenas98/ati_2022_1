@@ -1,0 +1,32 @@
+let perfil = {	
+
+	"nombre":"Maria Fernanda",
+    
+    "apellido": "Tejeda Caballero",
+
+    "descripcion": "Soy estudiantes de la escuela de Computacion, en la Universidad Central de Venezuela, actualmente estoy trabajando en el desarrollo de paginas web y aplicaciones mobiles, desde hace un año, en una empresa de software.",
+    
+    "color": ["Morado" , "verde", "azul", "gris"],
+    
+    "libro" : "Las Reliquias de la Muerte parte I",
+    
+    "musica":"pop",
+    
+    "video_juego": ["Mario Bros" , "Sonic"],
+    
+    "lenguajes": ["javaScripts", "python", "c++"],
+    
+    "framework":["django", "django Rest Framework", "ReactJs", "Nodejs"],
+    
+    "email": "mariaf0821@gmail.com",
+    
+    "CI": "25641163",
+    
+    "genero" : "Femenina",  
+    
+    "fecha_nacimiento" : "21 de Agosto de 1995",
+    
+    "imagen": "25641163.jpg",
+    
+    "email": "mariaf0821@gmail.com"
+}
