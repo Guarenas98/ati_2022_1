@@ -13,45 +13,78 @@
 
 		<script type="text/javascript" src="datos/perfil.json"> </script>
 		<script type="text/javascript" src="datos/config.json"> </script>
-		
+		<script src="js/snap.svg-min.js"></script>
+
 		<title> </title>
 	</head>
 	<body>
 	    <header>
-			<nav class="navbar navbar-expand-lg">
-				<div class="container-fluid custom-nav">
-					<ul class="container-fluid">
-						<li class="logo col"> </li>
-						<li class="saludo col"></li>
-						<li class="busqueda col">
-							<a href="index.html"> </a>
-						</li>
-					</ul>	
-				</div>
+			<nav>
+				<ul class="container-fluid ">
+					<li class="logo col"> </li>
+					<li class="saludo col"></li>
+					<li class="busqueda col">
+						<a href="index.html"> </a>
+					</li>
+				</ul>	
 			</nav> 
 	    </header>
-	    <section class="container-fluid">
-	       <div class="row align-items-center ">
-				<div class="divFoto col-4"> 
-					<img class="img-fluid" id="fotoPerfil" > 
+
+	    <section class="container-fluid row grid"  id="grid">
+			<a  href="#" class="divFoto col-4  my-auto" data-path-hover="M 0,0 0,38 90,38 180.5,38 180,0 z">
+				<figure>
+					<img class="img-fluid" id="fotoPerfil"> 
+					<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+						<path d="M0,0C0,0,0,50,0,50C0,50,90,80,90,80C90,80,180,50,180,50C180,50,180,0,180,0C180,0,0,0,0,0C0,0,0,0,0,0"></path>
+					</svg>
+
+				</figure>
+			</a>
+			<div class="divPerfil col  my-auto">
+				<h1> </h1>
+				<p> </p>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li id="lenguajes"></li>
+				</ul>
+				<div> 
+					<a> </a> 
 				</div>
-				<div class="divPerfil col">
-					<h1> </h1>
-					<p> </p>
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li id="lenguajes"></li>
-					</ul>
-					<div> 
-						<a> </a> 
-				</div>
-			</div>		 
+			</div>		
 	    </section>
 	    <footer> </footer>
 	</body>
 
 	<script src="js/perfil.js"> </script>
+
+	<script>
+		(function() {
+
+			function init() {
+				var speed = 300,easing = mina.backout;
+
+				[].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+					var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+						pathConfig = {
+							from : path.attr( 'd' ),
+							to : el.getAttribute( 'data-path-hover' )
+						};
+
+					el.addEventListener( 'mouseenter', function() {
+						path.animate( { 'path' : pathConfig.to }, speed, easing );
+					} );
+
+					el.addEventListener( 'mouseleave', function() {
+						path.animate( { 'path' : pathConfig.from }, speed, easing );
+					} );
+				} );
+			}
+
+			init();
+
+		})();
+	</script>
 </html>
