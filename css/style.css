@@ -14,6 +14,12 @@ header {
 	background-color:#86b1ef;			
 }
 
+.custom-nav{
+  height: 62px;
+	top: 0;
+  position: relative;
+}
+
 nav ul {
   list-style-type: none;
   margin: 10px;

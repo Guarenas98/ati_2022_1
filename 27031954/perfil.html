@@ -18,22 +18,18 @@
 	</head>
 	<body>
 	    <header>
-			<nav class="navbar navbar-expand-lg" >
-				<div class="container-fluid flex-row">
-					<ul>
-						<a class="navbar-brand" href="#"> <li class="logo"></li></a>
-					</ul>
+			<nav class="navbar navbar-expand-lg">
+				<div class="container-fluid custom-nav">
+					<ul class="collapse navbar-collapse row">
+						<li class="logo col"> </li>
+						<li class="saludo col"></li>
+						<li class="busqueda col">
+							<a href="index.html"> </a>
+						</li>
+					</ul>	
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
-					  </button>
-					  <div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav ">
-							<span class="navbar-text saludo"></span>
-							<li class="nav-item busqueda ">
-								<a class="nav-link disabled"  href="index.html"> </a>
-							</li>
-						</ul>	
-					</div>
+					</button>
 				</div>
 			</nav> 
 	    </header>
@@ -42,7 +38,7 @@
 				<div class="divFoto col-4"> 
 					<img class="img-fluid" id="fotoPerfil" > 
 				</div>
-				<div class="col divPerfil">
+				<div class="divPerfil col">
 					<h1> </h1>
 					<p> </p>
 					<ul>
@@ -55,8 +51,7 @@
 					<div> 
 						<a> </a> 
 				</div>
-			</div>
-			 
+			</div>		 
 	    </section>
 	    <footer> </footer>
 	</body>
