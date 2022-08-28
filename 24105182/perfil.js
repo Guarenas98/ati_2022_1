@@ -16,7 +16,7 @@ function load() {
 	let i = 0
 	let list= mydata.video_juego;
 	let string= list[i];
-	i=i+1
+	i=i+1;
 	while (i < list.length) {
 		string= string+", " + list[i]
 		i=i+1
@@ -35,9 +35,15 @@ function load() {
 
 
 
-	document.getElementById("como_comunicarse").innerHTML =obj.como_comunicarse;
-	document.getElementById("email").href =mydata.email;
-	document.getElementById("email").innerHTML =mydata.email;
+	//document.getElementById("como_comunicarse").innerHTML = obj.como_comunicarse + document.getElementById("como_comunicarse").innerHTML;
+
+	document.getElementById("como_comunicarse").insertAdjacentHTML('afterbegin', obj.como_comunicarse);
+
+	var com = document.getElementById("como_comunicarse").getElementsByClassName("email");
+	com[0].href= mydata.email;
+	com[0].innerHTML= mydata.email;
+
+
 	document.getElementById("copyRight").innerHTML =obj.copyRight;
 
 
