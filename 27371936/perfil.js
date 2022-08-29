@@ -37,7 +37,6 @@ const perfilEstudiante = () => {
         if (i + 2 == 6) {
           let text = "";
           datos[6].forEach((element) => {
-            console.log(element);
             if (element != "c++") {
               text += element + ", ";
             } else {
