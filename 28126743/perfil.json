@@ -1,4 +1,4 @@
-let perfil = {	
+{	
 	"nombre":"Daniela Ruggiero",
 	"descripcion":"Soy estudiante de Computación de la UCV y actualmente me encuentro cursando el sexto semestre. Me gustan muchos los idiomas y escuchar música. Además de mis actividades en la Universidad, estoy completando mis estudios académicos en música en el Conservatorio Pedro Nolasco Colón, en donde actualmente continúo mi formación como pianista.",
 	"color":"Azul",
