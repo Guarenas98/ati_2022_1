@@ -40,7 +40,6 @@ items[3].innerHTML  = config.video_juego + ": " + parseGroup(perfil.video_juego)
 items[4].innerHTML  = config.lenguajes + ": " + parseGroup(perfil.lenguajes)
 
 let correoDiv = perfilDiv.getElementsByTagName("div")[0]
-console.log(correoDiv)
 correoDiv.innerHTML = config.como_comunicarse.replace("[email]", ": ") + `<a href=mailto:${perfil.email}> ${perfil.email}</a>`
 
 // Set footer text
