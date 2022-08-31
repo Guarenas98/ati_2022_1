@@ -5,7 +5,7 @@
 	font-size: 11pt;
 }
 
-html,body { width: 100%; height: 100%; }
+html,body { width: 100%;  height: 95vh; }
 
 header {
   height: 62px;
@@ -81,7 +81,12 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
-			
+	
+hr {
+  width: 100%;
+  border: 10px solid #86b1ef;
+}
+
 footer {
   width: 100%;
   position: fixed;	

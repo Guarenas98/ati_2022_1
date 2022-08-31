@@ -3,7 +3,7 @@ section{
   margin-top: 5%;
 }
 
-section ul li { 
+/*section ul li { 
   display:inline; 
   float:left; 
   width:170px; 
@@ -41,7 +41,7 @@ section ul li a:link, section ul li a:visited {
 
 section ul li a:hover { 
 	color: #68a0d8;
-}
+}*/
 
 /*Carousel CSS*/
 .carousel-inner .carousel-item.active,
