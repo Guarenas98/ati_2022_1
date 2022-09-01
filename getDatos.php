@@ -4,8 +4,10 @@
 $len = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 setcookie("len", $len);
 
-$visitas = 0;
-setcookie("visitas", $visitas);
+$visitas = 1;
+if(isset($_COOKIE['visitas'])){ 
+    setcookie("visitas", $_COOKIE['visitas'] + 1);
+}
 
 if(isset($_GET['ci'])) {
     $ci = $_GET['ci'];

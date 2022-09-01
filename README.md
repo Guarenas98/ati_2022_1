@@ -1,6 +1,15 @@
 # ati_2022_1
 Proyecto del semestre 2022_1
 
+## Importante:
+Para construir y ejecutar el contenedor usamos las siguientes líneas:
+docker build -t php-server . 
+docker run --name php-server -p 8000:80 php-server
+
+Y para abrir el servidor y el cliente ingresamos a las siguientes direcciones:
+Servidor: http://localhost:8000/getDatos.php
+Cliente http://localhost:8000/index.php
+
 ## Content
 
 Este proyecto es para practicar paso a paso todo el contenido que se estudia en la primera parte de ATI. 

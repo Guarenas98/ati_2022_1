@@ -9,8 +9,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 
-		<link rel="stylesheet" href="css/index.css"  type="text/css">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
+		<link rel="stylesheet" href="css/index.css"  type="text/css">
 		<link rel="stylesheet" href="css/perfil.css"  type="text/css">
 
 		<?php
@@ -32,9 +32,6 @@
 			}
 
 			$config = json_decode($json_config);
-			
-			// Update number of visits
-			//setcookie('visitas', $_COOKIE['visitas']+1, time()+3600, '/');
 
 			function parseArray($group) {
 				$parsed = current($group);
@@ -75,84 +72,80 @@
 			</nav> 
 	    </header>
 
-	    <section class="container-fluid">
-			<div class="row">
-				<div id = "studentsCarousel" class = "carousel slide col-12" data-ride = "carousel">
-					<div class="carousel-inner"> 
-						<?php 
-							$isFirst = true;
-							foreach($listado as $perfil) {
-								if ($isFirst) {
-									echo '<div class="carousel-item active" data-id="'.$perfil->ci.'" data-imagen="'.$perfil->imagen.'">
-										<figure class="col-2">
-											<img src="./' . $perfil->imagen . '"> 
-											<figcaption>' . $perfil->nombre . '</figcaption>
-										</figure>
-									</div>';
-									$isFirst = false;
-									continue;
-								}  
-								echo '<div class="carousel-item" data-id="'.$perfil->ci.'" data-imagen="'.$perfil->imagen.'">
-										<figure class="col-2">
-											<img src="./' . $perfil->imagen . '"> 
-											<figcaption>' . $perfil->nombre . '</figcaption>
-										</figure>
-									</div>';
-							}
-						?>
-					</div>
-						
-					<a class = "carousel-control-prev" href = "#studentsCarousel" role = "button" data-slide = "prev">
-						<span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
-						<span class = "sr-only">Previous</span>
-					</a>
-						   
-					<a class = "carousel-control-next" href = "#studentsCarousel" role =" button" data-slide = "next">
-						<span class = "carousel-control-next-icon" aria-hidden = "true"></span>
-						<span class = "sr-only">Next</span>
-					</a>
+	    <section class="section-index container-fluid">
+			<div id = "studentsCarousel" class = "carousel slide" data-ride = "carousel">
+				<a class = "carousel-control-prev col-1" href = "#studentsCarousel" role = "button" data-slide = "prev">
+					<span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
+					<span class = "sr-only">Previous</span>
+				</a>
+
+				<ul class="carousel-inner col-10 mx-auto row" role="listbox"> 
+					<?php 
+						$isFirst = true;
+						foreach($listado as $perfil) {
+							if ($isFirst) {
+								echo '<li class="carousel-item col active" data-id="'.$perfil->ci.'" data-imagen="'.$perfil->imagen.'">
+										<img src="./' . $perfil->imagen . '"> 
+										<a>' . $perfil->nombre . '</a>
+									</li>';
+								$isFirst = false;
+								continue;
+							}  
+							echo '<li class="carousel-item col" data-id="'.$perfil->ci.'" data-imagen="'.$perfil->imagen.'">
+										<img src="./' . $perfil->imagen . '"> 
+										<a>' . $perfil->nombre . '</a>
+								 </li>';
+						}
+					?>
+				</ul>
+				<a class = "carousel-control-next col-1" href = "#studentsCarousel" role =" button" data-slide = "next">
+					<span class = "carousel-control-next-icon" aria-hidden = "true"></span>
+					<span class = "sr-only">Next</span>
+				</a>
+			</div>
+		</section>
+		<hr> 
+
+		<div class="perfil container-fluid row">
+			<img class="divFoto col-4  my-auto img-fluid" id="fotoPerfil"> 
+			<div class="divPerfil col my-auto">
+				<h1> </h1>
+				<p>  </p>
+				<ul>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li id="lenguajes">  </li>
+				</ul>
+				<div id="info_contacto"> 
+					<a > </a> 
 				</div>
-			</div>
-			<hr> 
-			<div class="row">
-				<img class="divFoto col-4  my-auto img-fluid" id="fotoPerfil" src=""> 
-				<div class="divPerfil col my-auto">
-					<h1> </h1>
-					<p>  </p>
-					<ul>
-						<li> </li>
-						<li> </li>
-						<li> </li>
-						<li> </li>
-						<li id="lenguajes">  </li>
-					</ul>
-					<div> 
-						<a> </a> 
-					</div>
-				</div>		
-			</div>
-						
-	    </section>
+			</div>		
+		</div>
 					
 	    <footer> <?php echo $config->copyRight ?> </footer>
 
 		<script>
-			$(".carousel").carousel({ interval: 4000 });
+			$("#studentsCarousel").carousel({ interval: 40000 });
 
-			$('.carousel .carousel-item').each(function(){
-				let next = $(this).next();
-				if (!next.length) {
-					next = $(this).siblings(':first');
-				}
+			$('#studentsCarousel').on('slide.bs.carousel', function (e) {
+				var $e = $(e.relatedTarget);
+				var idx = $e.index();
+				var itemsPerSlide = 5;
+				var totalItems = $('.carousel-item').length;
 				
-				next.children(':first-child').clone().appendTo($(this));
-				
-				for (let i=0;i<3;i++) {
-					next=next.next();
-					if (!next.length) {
-						next = $(this).siblings(':first');
+				if (idx >= totalItems-(itemsPerSlide-1)) {
+					var it = itemsPerSlide - (totalItems - idx);
+					for (var i=0; i < it; i++) {
+						// append slides to end
+						if (e.direction=="left") {
+							$('.carousel-item').eq(i).appendTo('.carousel-inner');
+						}
+						else {
+							$('.carousel-item').eq(0).appendTo('.carousel-inner');
+						}
 					}
-					next.children(':first-child').clone().appendTo($(this));
 				}
 			});
 
@@ -160,7 +153,6 @@
 				$(this).on("click", function(){
 					let ci = $(this).attr("data-id");
 					let imagen = $(this).attr("data-imagen");
-
 
 					$.get('/getDatos.php', {ci: String(ci)}, function (data) {
 						console.log(data);
@@ -196,8 +188,8 @@
 						}
 						$('.divPerfil ul li:eq(4)').html( <?php echo '"' . $config->lenguajes . '"'?> + ": " + lenguajes);
 
-						let contacto = "<?php echo $config->email?>".replace("[email]", "<a>" + ": " + perfil['email'] + "</a>");
-						$('.divPerfil div').html(contacto);
+						let contacto = "<?php echo $config->email?>".replace(" [email]", ": " + '<a href="mailto:' + perfil['email'] + '">' + perfil['email'] + "</a>");
+						$('#info_contacto').html(contacto);
 					});
 				});
 			});

@@ -8,30 +8,31 @@
     box-shadow: 10px 15px rgb(142, 155, 155);
 }
 #fotoPerfil{
-    width: 100%;
-    border-radius: 0 0 80px 80px;
+    max-height: 40vh;
+    max-width: 30vh;
+    border-radius: 50px 0 0 0;
 }
 #lenguajes{
     font-weight: bold;
 }
-h1{
-    color:blue; 
+.divPerfil h1{
+    color:orange; 
     font-family:verdana; 
     font-size: 40px;
 }
-p{
+.divPerfil p{
     font-family:Verdana;
     font-style: italic;
 }
 .divPerfil ul li{
     margin: 5px 0;
 }
-ul{
+.divPerfil ul{
     list-style-type:none;
 }
-a:link{
+#info_contacto a:link{
     color: orange;
 }
-a:focus, a:visited {
+#info_contacto a:focus, #info_contacto a:visited {
     color: red;
 }
