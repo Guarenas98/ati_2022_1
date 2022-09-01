@@ -13,9 +13,18 @@ const filterList = (filter) => {
     }
     else
     {
-        let personsToShow = filteredListado.reduce( (acc, current) => {
-            return acc += "<li> <img src=" + "./" + current.imagen + " width=40 height=50> " + 
-            current.nombre +  " </li> "
+        let personsToShow = filteredListado.reduce( (acc, current, currentIndex) => {
+            if(currentIndex == 0)
+            {
+                return acc += `<li class="carousel-item col active">
+                                    <img src="./${current.imagen}"> 
+                                    <a> ${current.nombre} </a>
+                               </li>`
+            }
+            return acc += `<li class="carousel-item col">
+                                <img src="./${current.imagen}"> 
+                                <a> ${current.nombre} </a>
+                            </li>`
         } , " ")
     
         document.getElementsByTagName("ul")[1].innerHTML = personsToShow
@@ -48,39 +57,39 @@ document.getElementsByTagName("footer")[0].innerHTML = config.copyRight;
 let persons = listado.reduce( (acc, current, currentIndex) => {
     if(currentIndex == 0)
     {
-        return acc += `<div class="carousel-item active">
-                <figure class="col-2">
-                    <img src="./${current.imagen}"> 
-                    <figcaption> ${current.nombre} </figcaption>
-                </figure>
-            </div>`
+        return acc += `<li class="carousel-item col active">
+                            <img src="./${current.imagen}"> 
+                            <a> ${current.nombre} </a>
+                       </li>`
     }
-    return acc += `<div class="carousel-item">
-                <figure class="col-2">
-                    <img src="./${current.imagen}"> 
-                    <figcaption> ${current.nombre} </figcaption>
-            </figure>
-            </div>`
+    return acc += `<li class="carousel-item col">
+                        <img src="./${current.imagen}"> 
+                        <a> ${current.nombre} </a>
+                    </li>`
 } , " ")
 
 
 //JQuery
 $(".carousel-inner").append(persons)
 
-$(".carousel").carousel({ interval: 4000 });
+$(".carousel").carousel({ interval: 40000 });
 
-$('.carousel .carousel-item').each(function(){
-    let next = $(this).next();
-    if (!next.length) {
-        next = $(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
+$('#studentsCarousel').on('slide.bs.carousel', function (e) {
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 5;
+    var totalItems = $('.carousel-item').length;
     
-    for (let i=0;i<3;i++) {
-        next=next.next();
-        if (!next.length) {
-        	next = $(this).siblings(':first');
-      	}
-        next.children(':first-child').clone().appendTo($(this));
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i < it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
     }
 });
