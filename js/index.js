@@ -7,96 +7,30 @@ function inicio(){
     document.getElementsByTagName("title")[0].innerHTML = config.sitio[0] + config.sitio[1] + config.sitio[2]; 
 }
 
-
 // Desplegar carrusel 
 function myCarousel(){
     $('.carousel').carousel({
         interval: false,
     });
-    
-    let cont = 1; 
-    let beginC = document.getElementById("estudiantes");    // Carrusel
-    let newSlide = document.createElement("div");           // Slide
-    newSlide.className = "carousel-item active";
+}
 
-    let newRow = document.createElement("div");             // Crear fila
-    newRow.className = "row";
-    newRow.style.marginTop = "30px"; 
+function sendCI(ci){
+    // Enviar cedula del estudiante     
+    student.open("POST", "getDatos.php", true); 
+    student.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+    student.send("cedula="+ci); 
+}
 
-    // Activo
-    for(let i=0; i<4; i++){
-        let newCol = document.createElement("div");         // Crear columna 
-        newCol.className = "col"; 
-
-        let imagen = document.createElement("img");         // Imagen 
-        imagen.className = "img-fluid";     
-        imagen.src = listado[i].imagen;
-        imagen.style.width = "20rem"; 
-        imagen.style.height = "15rem";
-         
-        let anchor = document.createElement("a");           // Nombre del listado
-        anchor.href = "#"; 
-        anchor.innerText = listado[i].nombre; 
-
-        newCol.appendChild(imagen); 
-        newCol.appendChild(anchor); 
-        newRow.appendChild(newCol);        
-    }
-
-    newSlide.appendChild(newRow); 
-    beginC.appendChild(newSlide); 
-
-    // Items  
-    newSlide = document.createElement("div"); 
-    newSlide.className = "carousel-item";
-
-    newRow = document.createElement("div"); 
-    newRow.className = "row";
-    newRow.style.marginTop = "30px"; 
-
-    for(i=4; i<listado.length; i++){      
-        let newCol = document.createElement("div");         // Nueva columna 
-        newCol.className = "col"; 
-
-        let imagen = document.createElement("img");         // Imagen
-        imagen.className = "img-fluid";     
-        imagen.src = listado[i].imagen;                     // Nombre del listado
-        imagen.style.width = "20rem"; 
-        imagen.style.height = "15rem";
-         
-        let anchor = document.createElement("a");           
-        anchor.href = "#"; 
-        anchor.innerText = listado[i].nombre; 
-
-        newCol.appendChild(imagen); 
-        newCol.appendChild(anchor); 
-        newRow.appendChild(newCol);    
-
-        if(cont==4){
-            newSlide.appendChild(newRow); 
-            beginC.appendChild(newSlide); 
-             
-            newSlide = document.createElement("div");   // Nuevo item 
-            newSlide.className = "carousel-item"; 
-
-            newRow = document.createElement("div"); 
-            newRow.className = "row";                   // Nueva fila
-            newRow.style.marginTop = "30px"; 
-  
-            newSlide.appendChild(newRow);           
-            cont = 0;          
-        }
-
-        cont++; 
-    }
-
+function sendListado(listado){
+    console.log("hola"); 
+    document.getElementById("aqui").innerHTML = "hola"; 
 }
 
 function buscarEstudiante(){
     let query = document.getElementsByName("nombre")[0].value;  
     let found = false; 
     document.getElementById("estudiantes").innerHTML = "";
-
+ 
     let beginC = document.getElementById("estudiantes");    // Carousel
     let newSlide = document.createElement("div"); 
     newSlide.className = "carousel-item active";
@@ -120,7 +54,7 @@ function buscarEstudiante(){
                 found = true; 
                 console.log("includes"); 
                 imagen.src = listado[i].imagen;
-                imagen.style.width = "20rem"; 
+                imagen.style.width = "100%"; 
                 imagen.style.height = "15rem";
              
                 let anchor = document.createElement("a");
@@ -142,3 +76,4 @@ function buscarEstudiante(){
     }  
    
 }
+

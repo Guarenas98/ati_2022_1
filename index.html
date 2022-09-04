@@ -20,39 +20,92 @@
 			.carousel-control-next-icon {
 				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 			}
+
+			
+            h1 {
+                font-size: 48px;
+                color: #7b1182;
+            }
+
+            #descrip {
+                font-family: Verdana;
+                font-style: italic;
+            }
+
+            #miPerfil{
+                width:24.5%;
+                height:25%;
+                float: left;
+                padding-right:1%;
+                border-top-left-radius: 50px;
+            }
+
+            #perfil{
+                width:70%;
+                height: 70%;
+                border: black;
+                border-style: solid;
+                display: inline-block;
+                box-shadow:10px 5px 5px rgb(125, 122, 122);
+                padding-left: 0.5%;
+            }
+
+            a:link{
+                color: orange;
+            }
+
+            a:focus{ 
+                color: red;
+            }
+
+        
 		</style>
 	</head>
 	<body onload="inicio(); myCarousel()">
+		
 	    <header>
 			<nav>
 				<ul>
 					<li class="logo"><small></small></li>
 					<li class="saludo"></li>
-					<li class="busqueda"><form> <input name="nombre" type="text" onkeyup="buscarEstudiante()"><input name="buscar" type="button" onclick="buscarEstudiante()"></form></li>
+					<li class="busqueda" ><form> <input name="nombre" type="text" onkeyup="buscarEstudiante()"><input name="buscar" type="button" onclick="buscarEstudiante()"></form></li>
 				</ul>	
 			</nav> 
 	    </header>
-	    <section>
-			<ul id="listado"></ul>
-			<div id="gallery" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner" id="estudiantes"> </div>
+	    <section id = "carrusel">
 			
-				<a class="carousel-control-prev" href="#gallery" role="button" data-slide-to="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-			
-				<a class="carousel-control-next" href="#gallery" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
-			</div>
 			
 	    </section>
+		
+		<hr>
+		<section id= "perfilSeleccionado">
+		</section>
+
+
 	    <footer> </footer>
 
 		<script src="js/jQuery.js"></script>
     	<script src="js/bootstrap.min.js"></script>
+		<script>
+			
+			let xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "index.php", true); 
+            xhttp.onreadystatechange = function(){                				
+                document.getElementById("carrusel").innerHTML = xhttp.responseText; 
+            }
+            xhttp.send(); 
+
+			let student = new XMLHttpRequest(); 
+			student.open("GET", "getDatos.php", true); 
+			student.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			student.onreadystatechange = function(){                				
+                document.getElementById("perfilSeleccionado").innerHTML = student.responseText; 
+            }
+            student.send(); 	
+			
+		</script>
+		
+
 	</body>
 	
 </html>
