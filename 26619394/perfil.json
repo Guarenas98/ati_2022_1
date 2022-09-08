@@ -1,0 +1,13 @@
+{
+ "nombre": "Carlos Guillen",
+ "descripcion": "Soy estudiante actualmente de la carrera de computacion en la UCV, trabajo actualmente en el departamento de Infraestructura en CGTS, tengo aficion por algunas ciencias puras como la astronomia y la quimica, en mis tiempos libres me gusta divertirme con videojuegos y escuchar musica.",
+ "color": "Rojo",
+ "libro":"Harry Potter",
+ "musica": "Electro",
+ "video_juego": "Minecraft",
+ "lenguajes": "['Python', 'Ruby']",
+ "email": "cawinosjose4@gmail.com",
+ "CI": "26619394",
+ "genero": "masculino",
+ "fecha_nacimiento": "28/01/1999"
+}

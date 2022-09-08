@@ -1,0 +1,11 @@
+{
+  "saludo": "Hola, Carlos Guillen",
+  "busqueda": "inicio",
+  "color": "Mi color favorito es: {color}",
+  "libro": "Mi libro favorito es: {libro}",
+  "musica": "Estilo de música favorito es: {musica}",
+  "video_juego": "Mis Video juegos favoritos: {juego}",
+  "lenguaje": "Lenguajes aprendidos: {lenguaje}",
+  "comunicarse_con": "Si necesitan comunicarse conmigo me pueden escribir a: {email}",
+  "copyright": "Copyright © {anio} Escuela de computación - ATI. Todos los derechos reservados"
+}
