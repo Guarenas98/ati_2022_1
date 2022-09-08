@@ -1,3 +1,31 @@
+function cargarCarousel() {
+	/*mostrar listado de estudiantes como carousel*/
+	$('#recipeCarousel').carousel({
+        interval: 4000
+    })
+    
+    $('.carousel .carousel-item').each(function() {
+        var minPerSlide = 4;
+        var next = $(this).next();
+        if (!next.length) {
+            //next = $(this).siblings(':first');
+            return;
+        }
+        next.children(':first-child').clone().appendTo($(this));
+    
+        for (var i = 0; i < minPerSlide; i++) {
+            next = next.next();
+            if (!next.length) {
+                //next = $(this).siblings(':first');
+                return;
+            }
+    
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    })
+}
+
+
 function cargarListadoEstudiantes(listado) {
 	/*recorre el listado en JSON y carga los datos de estudiantes en HTML*/
 	if(listado.length <= 0) {return;}
@@ -6,14 +34,21 @@ function cargarListadoEstudiantes(listado) {
 	let foto = itemContenedor.querySelector(".foto-estudiante");
 	let nombre = itemContenedor.querySelector(".nombre-estudiante");
 	listaEstudiantes.innerHTML = "";
+	i = 0;
 	for(let estudiante of listado) {
 		foto.src = estudiante.imagen;
 		itemContenedor.id = estudiante.ci;
 		nombre.innerText = estudiante.nombre;
 		//copia e insertar
 		nuevoEstudiante = document.importNode(itemContenedor, true);
+		if(i === 0) {
+			console.log("entre");
+			nuevoEstudiante.classList.add("active");
+		}
 		listaEstudiantes.appendChild(nuevoEstudiante);
+		++i;
 	}
+	cargarCarousel();
 }
 
 
@@ -44,7 +79,7 @@ function busquedaEstudiante(event)
 	}
 	else
 	{
-		ciList = listado.filter( estudiante => estudiante.nombre.includes(nombre) );
+		ciList = listado.filter( estudiante => estudiante.nombre.toLowerCase().includes( nombre.toLowerCase() ) );
 		if(ciList.length <= 0)
 		{
 			document.getElementById("lista-estudiantes").innerHTML = "<p class='msj'>" + msjNoEncontrado.replace("[query]", nombre) + "<p>";
@@ -57,7 +92,7 @@ function busquedaEstudiante(event)
 }
 
 /*INICIO SCRIPT*/
-document.getElementById("input-texto-nombre").onkeyup = busquedaEstudiante;
+//document.getElementById("input-texto-nombre").onkeyup = busquedaEstudiante;
 document.getElementById("boton-buscar").onclick = busquedaEstudiante;
 cargarTextoInterfaz(config);
 cargarListadoEstudiantes(listado);

@@ -1,3 +1,48 @@
+/*
+estilo para el carousel
+
+.estudiante-item {
+   display:inline;
+   float:left;
+   width:170px;
+   height:200px;
+   background-color:#f5f7f9;
+   padding:20px;
+   margin:10px;
+   text-align: center;
+   border-right: #a5a7aa solid 1px;
+   border-bottom: #a5a7aa solid 1px;
+    overflow: hidden;
+}
+
+.estudiante-item img {
+    width:140px;
+   height:140px;
+    object-fit: contain;
+}
+
+.estudiante-item:hover {
+    background-color:#99c5dd;
+    transform:scale(1.05) rotate(5deg);
+}
+
+.estudiante-item a {
+    font-family:arial;
+    font-size:10pt;
+    color: #86b1ef;
+    text-decoration:none;
+}
+
+.estudiante-item a:link, .estudiante-item a:visited {
+     color: #68a0d9;
+}
+
+.estudiante-item a:hover {
+    color: #68a0d8;
+}
+
+*/
+
 section ul li {
    display:inline;
    float:left;
