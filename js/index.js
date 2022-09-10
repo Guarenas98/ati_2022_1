@@ -1,16 +1,20 @@
 
 const photoDefault = './default/usuario.png';
 
-const containerListadoEstudiantes = document.getElementById("containerListadoEstudiantes");
-//const query = "maria"
+const containerListadoEstudiantes = document.getElementById('containerListadoEstudiantes');
+const carouselInner = document.getElementById('carousel-inner');
+const carouselItem = document.getElementById('carousel-item'); 
+
+
+//const query = 'maria'
 
 
 const LeerJsonConf = () => {
-    document.getElementById("logo").innerHTML = `${config["sitio"][0]}  <span> ${config["sitio"][1]}</span>  ${config["sitio"][2]}`;
+    document.getElementById('logo').innerHTML = `${config['sitio'][0]}  <span> ${config['sitio'][1]}</span>  ${config['sitio'][2]}`;
 
-    document.getElementById("saludo").innerHTML = `${config["saludo"]} Maria Fernanda`;
+    document.getElementById('saludo').innerHTML = `${config['saludo']} Maria Fernanda`;
 
-    document.getElementById("copyRight").innerHTML = `${config["copyRight"]}`;
+    document.getElementById('copyRight').innerHTML = `${config['copyRight']}`;
 
 }
 
@@ -22,26 +26,36 @@ const LeerListado = () => {
 
         for (let index = 0; index < searchLengthListado; index++) {
 
-            const section = document.createElement("section");
+            const section = document.createElement('section');
 
-            section.className = "containerPerfil";
+            section.className = 'containerPerfil';
 
-            const img = document.createElement("img");
+            const img = document.createElement('img');
 
             img.id = index;
 
-            img.src = `./${listado[index]["imagen"]}`;
+            img.src = `./${listado[index]['imagen']}`;
 
-            const linkUsuario = document.createElement("a");
+            const linkUsuario = document.createElement('a');
 
-            linkUsuario.textContent = listado[index]["nombre"];
+            linkUsuario.textContent = listado[index]['nombre'];
 
-            section.appendChild(img);
+           section.appendChild(img);
 
             section.appendChild(linkUsuario);
 
-            containerListadoEstudiantes.appendChild(section);
+            //containerListadoEstudiantes.appendChild(section);
 
+            /* crear para el carrusel */
+            const div = document.createElement('div');
+         
+            div.className = "carousel-item";
+         
+            //div.appendChild(img);
+            //div.appendChild(linkUsuario);
+         
+            carouselInner.appendChild(section);
+         
             img.addEventListener('error', (event) => {
 
                 event.target.src = photoDefault;
@@ -50,16 +64,16 @@ const LeerListado = () => {
         }
 
     } catch (error) {
-        console.log("error =====> try Catch", error);
+        console.log('error =====> try Catch', error);
     }
 
 }
 
 const BuscarAndFilter = () => {
 
-    const searchValue = document.getElementById("searchAtiName");//event.target.value;
+    const searchValue = document.getElementById('searchAtiName');//event.target.value;
 
-    const exit = document.getElementById("containerMensajeError");
+    const exit = document.getElementById('containerMensajeError');
 
     const value = searchValue.value;
 
@@ -84,29 +98,29 @@ const BuscarAndFilter = () => {
     
     if (sumaEstudiante === searchContainer.length) {
 
-        //console.log("existe el container", exit);
+        //console.log('existe el container', exit);
 
         if (exit) {
 
             exit.style.display = 'flex';
-            exit.className = "textMensaje";
-            exit.innerText = `${config["mensajetNoHAyEstudiante"]} ${value}`;
+            exit.className = 'textMensaje';
+            exit.innerText = `${config['mensajetNoHAyEstudiante']} ${value}`;
 
         } else {
 
-            const section = document.createElement("section");
+            const section = document.createElement('section');
 
-            section.id = "containerMensajeError";
+            section.id = 'containerMensajeError';
 
-            const text = document.createElement("p");
+            const text = document.createElement('p');
 
-            text.className = "textMensaje";
+            text.className = 'textMensaje';
 
-            text.innerText = `${config["mensajetNoHAyEstudiante"]} ${value}`;
+            text.innerText = `${config['mensajetNoHAyEstudiante']} ${value}`;
 
             section.appendChild(text);
             
-            containerListadoEstudiantes.insertAdjacentElement("beforebegin",section);
+            containerListadoEstudiantes.insertAdjacentElement('beforebegin',section);
 
         }
 
@@ -134,7 +148,7 @@ botonBuscar.addEventListener('click', () => {
 });
 
 // searchAtiName.addEventListener('keyup', (event) => {
-//     //console.log("entre aqui a ver si esto funciona keyup", event)
+//     //console.log('entre aqui a ver si esto funciona keyup', event)
 //    // console.log(event.keyCode)
 //     if (event.keyCode === 13) {
 //         BuscarAndFilter();

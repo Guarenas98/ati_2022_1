@@ -44,12 +44,12 @@
 
 /* *********** containerMain *********** */
 .containerMain {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1em;
+    gap: 1em; */
     padding: 3em;
-    height: 65%;
-    overflow-y: scroll;
+    height: 80%;
+    /* overflow-y: scroll; */
 }
 
 .containerPerfil {
@@ -60,7 +60,6 @@
     background: #F1F7FA;
     padding: 1em 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
 }
 
 .containerPerfil:hover {
