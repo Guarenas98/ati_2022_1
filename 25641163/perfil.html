@@ -10,27 +10,60 @@
 
 	<script type="text/javascript" src="./datos/perfil.json"></script>
 	<script type="text/javascript" src="./datos/config.json"></script>
-	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- <script src="/lib/jquery-1.12.2.min.js"></script> -->
+
+	<script type="text/javascript" language="javascript">
+		$(document).ready(function () {
+			function efecto() {
+				$("#imagenPerfil").animate({ width: '100%', height: '100%',opacity: '0.8' }, "slow");
+
+				$("#imagenPerfil").animate({ width: '30%', opacity: '0.8' }, "slow");
+				$("#imagenPerfil").animate({ height: '60%', opacity: '0.4' }, "slow");
+				$("#imagenPerfil").animate({ width: '80%', hegiht: '80%', opacity: '0.8' }, "slow");
+				$("#imagenPerfil").animate({ width: '100%', height: '100%'});
+
+			}
+
+			$("#imagenPerfil").click(function () {
+
+				efecto();
+				return false;
+			});
+		});
+	</script>
 	<title id="title"></title>
-	
+
 </head>
 
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li class="logo" id="sitio"> </li>
-				<li class="saludo" id="saludo"></li>
-				<li class="busqueda" id="busqueda"></li>
+
+	<header class="container-fluid">
+
+		<nav class="container-fluid">
+
+			<ul class="row">
+
+				<li class="logo col" id="sitio"> </li>
+
+				<li class="saludo col" id="saludo"></li>
+
+				<li class="busqueda col-5" id="busqueda"></li>
+
 			</ul>
+
 		</nav>
+
 	</header>
-	<section class="ContainerMain">
-		<section class="ContainerSecondary">
-			<section class="ConatinerImagen">
+	<section class="container-fluid">
+		<section class="row m-auto">
+			<section class="ConatinerImagen col-4" id="ConatinerImagen">
 				<img id="imagenPerfil">
 			</section>
-			<section class="ContainerContent">
+			<section class="ContainerContent col-8">
 				<h1 id="nombre"></h1>
 				<p id="descripcion"></p>
 				<ul>
@@ -44,18 +77,21 @@
 					<li id="framework"> </li>
 				</ul>
 				<p class="email" id="email">
-						<!-- <a href="mailto:mariaf0821@gmail.com" target="_blank"> mariaf0821@gmail.com </a> -->
-						<!-- <a href="#" id="email" ></a> -->
-					</span>
+
 				</p>
 			</section>
 		</section>
 	</section>
-	<footer id="footer">
-		<p id="copyRight">
+	<footer id="footer" class="container-fluid">
+		
+		<p id="copyRight" class="m-0">
 		</p>
+		
 	</footer>
 	<script src="./js/index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>

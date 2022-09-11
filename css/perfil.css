@@ -46,7 +46,7 @@ section img {
     border: 1px #9A64AF solid;
     box-shadow: 5px 5px #888888;
     padding: 30px;
-    width: 65%;
+    width: 100%;
 }
 
 .ContainerContent p {
