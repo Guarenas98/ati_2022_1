@@ -6,36 +6,38 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
+		
+		<script type="text/javascript" src="conf/configEN.json"></script>
+		<script type="text/javascript" src="conf/configPT.json"></script>
+
 		<script type="text/javascript" src="conf/configES.json"></script>
+
+		<script type="text/javascript" src="datos/index.json"></script>
+
+		<script type="text/javascript" src="js/index.js"></script>
+		
+
 		<title>ATI[UCV] 2022-1</title>
 	</head>
-	<body>
+	<body onload="load();">
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo"></li>
-					<li class="saludo"></li>
+					<li class="logo" id="logo"></li>
+					<li class="saludo" id="saludo"></li>
 					<li class="busqueda">
-						<input type="text" id="search" name="search" value="Nombre.." >
-						<input type="button" value="Buscar"></li>
+						<input type="text" id="search" name="search" value="..." >
+						<input type="button" value="Buscar" onclick="myFunction()" ></li>
 				</ul>	
 			</nav> 
 	    </header>
 		
 	    <section>
-			<ul>
-				<li>
-					<div class="bloc">
-						<img src="24105182/imagen.png" alt="imagen1" width="100" height="100"> 
-						<a href="">Ioannis Morakis</a>
-					</div>
-				</li>
-				
-
+			<ul id="lista">
 			</ul>
 			 
 	    </section>
-	    <footer>
+	    <footer id="copyRight">
 	    </footer>
 	</body>
 </html>
