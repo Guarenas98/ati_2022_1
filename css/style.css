@@ -11,7 +11,7 @@ header {
    height: 62px;
 	top: 0;
    position: relative;
-	background-color:#86b1ef;			
+	background-color:#86b1ef;
 }
 
 nav ul {
@@ -37,7 +37,7 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
 	 color: white;
 	 text-decoration:none;
 }
-			
+
 .logo {
 	margin-left: 2px;
 	font-size: 27pt;
@@ -72,21 +72,25 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
   margin-right: 10px;
 }
 
-section { 
+section {
   width: 95%;
   margin-top:10px;
   margin-bottom:80px;
   margin-left: auto;
   margin-right: auto;
 }
-			
+
 footer {
   width: 100%;
-  position: fixed;	
+  position: fixed;
   bottom: 0;
   padding: 1rem;
   background-color: #86b1ef;
   text-align: center;
-  height: 20px;	
+  height: 20px;
   font-size: 9pt;
+}
+
+button, input {
+	line-height: normal !important;
 }

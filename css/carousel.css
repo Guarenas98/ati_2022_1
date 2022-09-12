@@ -49,3 +49,7 @@
 .carousel-inner .carousel-item-left {
     transform: translateX(0);
 }
+
+.w-auto {
+  width: auto !important;
+}

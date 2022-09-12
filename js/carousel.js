@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     $('#recipeCarousel').carousel({
-        interval: 1000
+        interval: 6000
     })
     
     $('.carousel .carousel-item').each(function() {

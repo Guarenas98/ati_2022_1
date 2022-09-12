@@ -1,5 +1,5 @@
-/*
-estilo para el carousel
+
+/*estilo para el carousel*/
 
 .estudiante-item {
    display:inline;
@@ -16,7 +16,7 @@ estilo para el carousel
 }
 
 .estudiante-item img {
-    width:140px;
+    /*width:140px;*/
    height:140px;
     object-fit: contain;
 }
@@ -41,8 +41,7 @@ estilo para el carousel
     color: #68a0d8;
 }
 
-*/
-
+/*
 section ul li {
    display:inline;
    float:left;
@@ -81,7 +80,7 @@ section ul li a:link, section ul li a:visited {
 
 section ul li a:hover {
 	color: #68a0d8;
-}
+}*/
 
 .msj {
   color: #86b1ef;
