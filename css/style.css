@@ -64,12 +64,14 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
     border: none;
     cursor: pointer;
 	 color: #86b1ef;
+   line-height: normal;
 }
 
 .busqueda input[type=text] {
   padding: 6px;
   border: none;
   margin-right: 10px;
+  line-height: normal;
 }
 
 section { 
@@ -96,4 +98,46 @@ footer {
   font-size: 15pt;
   text-align: center;
   margin-top: 50px;
+}
+img{
+  width: 150px;
+  height: 230px;
+}
+
+a{
+  text-align: center;
+}
+#lista{
+  margin-top: 20px;
+}
+.owl-carousel .owl-item {
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item img {
+    border-radius: 6px;
+}
+
+.owl-carousel .owl-item .card {
+    opacity: 0.2;
+    transform: scale3d(0.8, 0.8, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item.active.center .card {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
+
+@media(min-width: 480.6px) and (max-width: 575.5px) {
+    .owl-carousel .owl-item .card .name {
+        left: 24%;
+    }
+}
+
+@media(max-width: 360px) {
+    .owl-carousel .owl-item .card .name {
+        left: 30%;
+    }
 }

@@ -70,10 +70,65 @@ const buscarEstudiante = () => {
   }
 };
 
+const Carousel = (lista, valor) => {
+  if (lista.length > 0) {
+    lista.forEach((estudiante) => {
+      const div = document.createElement("div");
+      const img = document.createElement("img");
+      const a = document.createElement("a");
+      img.src = estudiante.imagen;
+      a.href = "#";
+      a.textContent = estudiante.nombre;
+      div.setAttribute("class", "estudiante item");
+      div.setAttribute("id", estudiante.ci);
+      div.appendChild(img);
+      div.appendChild(a);
+      document.getElementById("lista").appendChild(div);
+      let nueEst = {
+        ci: estudiante.ci,
+        imagen: estudiante.imagen,
+        nombre: estudiante.nombre.toLowerCase(),
+      };
+      pri == 0 ? Estudiante.push(nueEst) : null;
+    });
+  } else {
+    const p = document.createElement("p");
+    let lista = document.getElementById("lista");
+    removeAllChildNodes(lista);
+    p.textContent = `${config.sinnombre}  ${valor}`;
+    p.setAttribute("id", "sinNombre");
+    document.getElementById("lista").appendChild(p);
+  }
+};
+
 window.addEventListener("load", () => {
   contenido();
-  listaEstudiantes(listado);
+  // listaEstudiantes(listado);
+  Carousel(listado);
   pri = 1;
   const element = document.getElementById("nombre");
   element.addEventListener("keyup", buscarEstudiante);
+  let silder = $(".owl-carousel");
+  silder.owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: false,
+    items: 1,
+    wrap: true,
+    stagePadding: 140,
+    center: true,
+    nav: false,
+    margin: 50,
+    dots: false,
+    loop: true,
+    responsive: {
+      0: { items: 1 },
+      480: { items: 2 },
+      575: { items: 2 },
+      768: { items: 2 },
+      991: { items: 3 },
+      1200: { items: 4 },
+    },
+  });
+
 });
