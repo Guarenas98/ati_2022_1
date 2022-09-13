@@ -9,12 +9,6 @@ function imageExists(image_url){
 
 }
 
-function efecto(){
-	$( "#effect" ).animate({left: '50px'});
-	
-	//$( "#effect" ).animate({left: '50px'});
-}
-
 function load() {
 	
 
