@@ -9,10 +9,14 @@ function imageExists(image_url){
 
 }
 
+
+
+
+
 function load() {
 	
 
-    console.log(listado[0]);
+    //console.log(listado[0]);
 
 	document.getElementById("logo").innerHTML =  config.sitio[0]+ '<small>'+ config.sitio[1]+ '</small> '+ config.sitio[2];
 	document.getElementById("saludo").innerHTML =  config.saludo+ ", Ioannis Morakis";
@@ -26,9 +30,9 @@ function load() {
 	let i=0;
 	while (i < listado.length) {
 
-		//if(imageExists(listado[i].imagen)){
-			document.getElementById("lista").innerHTML+='<li> <div class="bloc"> <img src= ' + listado[i].imagen + ' alt= '+ "imagen"+ i+ ' width="100" height="100"> <a href=""> ' + listado[i].nombre + ' </a> </div> </li>' ;
-		//}
+		if(imageExists(listado[i].imagen)){
+			document.getElementById("lista").innerHTML+='<div class="item" > <div class="pad15"> <div class="bloc"> <img src= ' + listado[i].imagen + ' alt= '+ "imagen"+ i+ ' width="100" height="100"> <a href=""> ' + listado[i].nombre + ' </a> </div> </div> </div>' ;
+		}
 		
 		i=i+1;
 	}
