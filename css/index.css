@@ -46,3 +46,8 @@ nav ul {
 .clear{
        clear:both;
 }
+
+h1 {
+    text-align: center;
+    color: #86b1ef;
+}
