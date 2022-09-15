@@ -81,3 +81,13 @@ section ul li a:hover {
 .card-body {
     padding-top: 5px;
 }
+
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    bottom: 50px;
+}
+
+hr {
+    border: 10px solid #86b1ef;
+    border-radius: 5px;
+}

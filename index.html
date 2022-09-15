@@ -5,9 +5,9 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/perfil.css"  type="text/css">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
-		<script type="text/javascript" src="./conf/configES.json"></script>
 		<script type="text/javascript" src="./datos/index.json"></script>
 		<script type="text/javascript" src= "./js/index.js"></script>
 	
@@ -26,15 +26,41 @@
 			</nav> 
 	    </header>
 
+
+
 		<section>
-			<div class="container">
-  				<div id="listado"></div>
-  	  		</div>
+			<div id="carousel" class="container"></div>
 		</section>
-	
+
+		<section>
+			<div id="perfil"></div>
+	    </section>
+
 	  <footer id="footer"></footer>
 	  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+	  <script>
+	  	console.log("hola")
+	  		var carousel = new XMLHttpRequest();
+            carousel.open("GET", "index.php", true); 
+            carousel.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            carousel.onreadystatechange = function(){                				
+                document.getElementById("carousel").innerHTML = carousel.responseText;
+            }
+            carousel.send();
+
+            var perfil = new XMLHttpRequest();
+            perfil.open("POST", "getDatos.php", true); 
+            perfil.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            perfil.onreadystatechange = function(){                				
+                document.getElementById("perfil").innerHTML = perfil.responseText;
+                //console.log(perfil.responseText);
+            }
+            perfil.send('cedula=20304752');
+	  	
+	  </script>
+
 	</body>
 
 </html>
