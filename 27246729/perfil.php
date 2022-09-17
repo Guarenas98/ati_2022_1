@@ -1,5 +1,11 @@
 <!DOCTYPE HTML>
 <html>
+	<?php
+
+		$perfil = json_decode( file_get_contents( './perfil.json' ) );
+		$config = json_decode( file_get_contents( '../config/config' . strtoupper( htmlspecialchars($_GET["len"]) ) . '.json' ) );
+
+	?>
 	<head>
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta charset="UTF-8">
@@ -11,17 +17,32 @@
 		<link rel="stylesheet" href="../css/style.css"  type="text/css">
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
 
-		<script type="text/javascript" src="perfil.json"></script>
-		<script type="text/javascript" src="config.json"></script>
+		<!-- <script type="text/javascript" src="perfil.json"></script> -->
+		<!-- <script type="text/javascript" src="config.json"></script> -->
+
+		<title> <?php echo $perfil->nombre ?> </title>
 
 	</head>
 	<body>
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo"> </li>
-					<li class="saludo"> </li>
-					<li class="busqueda"><a id="home" href="index.html"></a></li>
+					<li class="logo">
+						<?php echo $config->sitio[0] ?>
+						<small>
+							<?php echo $config->sitio[1] ?>
+						</small>
+						<?php echo $config->sitio[2] ?>
+					</li>
+
+					<li class="saludo">
+						<?php echo $config->saludo . ', ' . $perfil->nombre ?>
+					</li>
+					<li class="busqueda">
+						<a id="home" href="index.html">
+							<?php echo $config->home ?>	
+						</a>
+					</li>
 				</ul>	
 			</nav> 
 	    </header>
@@ -31,7 +52,7 @@
 
 					<span class="col-md-3 col-sm-2" id="svg-foto"  >
 
-						<img  src="" class="img-fluid" id="foto">
+						<img  src=<?php echo $perfil->imagen ?> class="img-fluid" id="foto">
 						<figure >
 							<svg class="" viewBox="0 0 180 320" preserveAspectRatio="none">
 								<path id="no_hover_svg" d="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z"></path>
@@ -41,35 +62,64 @@
 							</svg>
 							
 							<figcaption>
-								<p id="email"></p>
+								<p id="email">
+									<?php 
+										$email_link =  "<a href=\"mailto:" . $perfil->email . "\">" . $perfil->email . "</a>";
+										echo str_replace('[email]', $email_link , $config->email);
+									?>
+								</p>
 							</figcaption>
 						</figure>
 					</span>
 
 				<span class="col-9" id="info">
-					<h1 class="row" id="perfil-nombre"></h1>
-					<div class="row" id="perfil-descripcion"></div>
+					<h1 class="row" id="perfil-nombre">
+						<?php echo $perfil->nombre ?>
+					</h1>
+					<div class="row" id="perfil-descripcion">
+						<?php echo $perfil->descripcion ?>
+					</div>
 					<br>
 					<div class="container" id="tabla-datos-perfil">
 						<div class="row">
-							<span class="col-3" id="config-color"></span>
-							<span class="col-9" id="perfil-color"></span>
+							<span class="col-3" id="config-color">
+								<?php echo $config->color . ":" ?>
+							</span>
+							<span class="col-9" id="perfil-color">
+								<?php echo $perfil->color ?>
+							</span>
 						</div>
 						<div class="row">
-							<span class="col-3" id="config-libro"></span>
-							<span class="col-9" id="perfil-libro"></span>
+							<span class="col-3" id="config-libro">
+								<?php echo $config->libro . ":" ?>
+							</span>
+							<span class="col-9" id="perfil-libro">
+								<?php echo $perfil->libro  ?>
+							</span>
 						</div>
 						<div class="row">
-							<span class="col-3" id="config-musica"></span>
-							<span class="col-9" id="perfil-musica"></span>
+							<span class="col-3" id="config-musica">
+								<?php echo $config->musica . ":" ?>
+							</span>
+							<span class="col-9" id="perfil-musica">
+								<?php echo $perfil->musica ?>
+							</span>
 						</div>
 						<div class="row">
-							<span class="col-3" id="config-juego"></span>
-							<span class="col-9" id="perfil-juego"></span>
+							<span class="col-3" id="config-juego">
+								<?php echo $config->video_juego .":" ?>
+							</span>
+							<span class="col-9" id="perfil-juego">
+								<?php echo implode(", ", $perfil->video_juego) ?>
+							</span>
 						</div>
 						<div class="row">
-							<span class="col-3" id="config-lenguajes"></span>
-							<span class="col-9" id="perfil-lenguajes"></span>
+							<span class="col-3" id="config-lenguajes">
+								<?php echo $config->lenguajes .":" ?>
+							</span>
+							<span class="col-9" id="perfil-lenguajes">
+								<?php echo implode(", ", $perfil->lenguajes) ?>
+							</span>
 						</div>
 					</div>
 					<br>
@@ -79,7 +129,9 @@
 			 
 	    </section>
 
-	    <footer> </footer>
+	    <footer>
+			<?php echo $config->copyRight ?>
+		</footer>
 		
 		
 		
@@ -91,6 +143,6 @@
 		<!-- bootstrap4 js -->
     	<script src="../js/bootstrap4/bootstrap.min.js" ></script>
 		
-		<script src="perfil.js"></script>
+		<script src="svg_animation.js"></script>
 	</body>
 </html>

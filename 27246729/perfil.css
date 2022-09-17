@@ -61,6 +61,7 @@ path{
     transition: all 1s ease;
     transform: translateY(-100%);
     opacity: 50%;
+    /* overflow: visible; */
 }
 
 #no_hover_svg{
