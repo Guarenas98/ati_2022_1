@@ -92,7 +92,7 @@
 					<li id="lenguajes"> <?php echo $config->lenguajes . ": " .parseArray($perfil->lenguajes); ?> </li>
 				</ul>
 				<div> 
-					<a> <?php echo str_replace("[email]", ": " . $perfil->email, $config->email); ?> </a> 
+					<?php echo str_replace("[email]", '<a href="mailto:'.$perfil->email.'">' .$perfil->email.'</a>' , $config->email); ?>
 				</div>
 			</div>		
 	    </section>
