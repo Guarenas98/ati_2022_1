@@ -72,7 +72,7 @@
 			</nav> 
 	    </header>
 
-	    <section class="section-index container-fluid">
+	    <section class="section-index  container-fluid">
 			<div id = "studentsCarousel" class = "carousel slide" data-ride = "carousel">
 				<a class = "carousel-control-prev col-1" href = "#studentsCarousel" role = "button" data-slide = "prev">
 					<span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
