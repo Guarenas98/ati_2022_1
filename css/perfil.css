@@ -19,25 +19,27 @@ img {
 	border: 5px;
 	border-right-style: outset;
 	border-bottom-style: outset;
-	margin-top: 45px;
+	height: auto;
+	margin-bottom: 50px;
 }
 
 #bordes2 {
 	border: 1px solid;
 	padding-left: 8px;
-	height: 300px;
+	height: auto;
 }
 
-a { 
+
+#email { 
 	text-decoration: none;
 	color: orange; 
 }
 
-a:focus { 
+#email:focus { 
 	color: red; 
 }
 
-a:visited { 
+#email:visited { 
 	color: red; 
 }
 
