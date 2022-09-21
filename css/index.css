@@ -1,10 +1,21 @@
+#listado_estudiantes{
+   width: 100vw;
+   /* justify-content: center; */
+}
+
+#div_listado{
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
 #listado_estudiantes .card { 
    display:inline; 
    float:left; 
    height:200px; 
    background-color:#f5f7f9; 
+   margin-top: 2.5vh;
    padding:20px; 
-   margin:10px; 
    text-align: center; 
    border-right: #a5a7aa solid 1px; 
    border-bottom: #a5a7aa solid 1px; 
@@ -41,7 +52,10 @@
 }
 
 .scrolling-wrapper{
-	overflow-x: auto;
+	overflow-x: scroll;
+   height: 30vh;
+   cursor: grab;
+   width: 100%;
 }
 
 .foto_estudiante{
@@ -49,8 +63,86 @@
    object-fit: cover;
    overflow: hidden;
    pointer-events: none;
+   display: inline;
 }
 
 .scrolling-wrapper.active {
     cursor: grabbing;
   }
+
+button{
+   display: inline;
+}
+
+/* perfil */
+
+.logo{
+    font-size: 2.25vw;
+}
+
+#foto{
+    border-radius: 25% 0px 0px 0px;
+    object-fit: cover;
+    max-height: 50vh;
+}
+
+#contenido-perfil{
+    margin-top: 0vh;
+    margin-bottom: 30vh;
+    width: 80vw;
+    display: none;
+    max-height: 30vh;
+}
+
+#info{
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 8px 8px 8px rgb(99, 99, 99);
+    border-color: black;
+    padding: 2em;
+    padding-top: 0.5em;
+}
+
+h1{
+    color: orange;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30pt;
+    margin-bottom: 0.125em;
+    margin-top: 0.125em;
+}
+
+a{
+    color: orange;
+    padding-left: 0.5em; 
+    text-decoration: none;
+}
+a:active{
+    color: red;
+}
+a:focus{
+    color: red;
+}
+a:visited{
+    color: red;
+}
+
+#perfil-lenguajes{
+    font-weight: bold;
+}
+#config-lenguajes{
+    font-weight: bold;
+}
+
+.card a{
+   cursor: pointer;
+}
+
+.btn-listado{
+   padding: 6px;
+   background: #f5f7f9;
+   border: none;
+   cursor: pointer;
+   color: #86b1ef;
+   margin: 0;
+   font-weight: 900;
+}

@@ -1,4 +1,4 @@
-config = {
+{
 	"sitio": ["ATI","[UCV]","2022-1"],
 	"home": "Início",
 	"login": "Sessão",

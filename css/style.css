@@ -72,13 +72,13 @@ section {
   width: 95%;
   margin-top:10px;
   margin-bottom:80px;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
 }
 			
 footer {
   width: 100%;
-  position: fixed;	
+  position: absolute;	
   bottom: 0;
   padding: 1rem;
   background-color: #86b1ef;
