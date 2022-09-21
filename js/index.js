@@ -16,11 +16,10 @@ function displayPerfil(perfil, img_src) {
 
 function clickPerfil(ci, img_src) {
 
-  console.log(ci);
-  console.log(img_src);
+  // console.log(ci);
+  // console.log(img_src);
 
   $.get('/getDatos.php', {ci: String(ci)}, data => {
-    console.log(data);
     displayPerfil( JSON.parse(data), img_src );
   });
   
