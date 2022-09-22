@@ -1,3 +1,22 @@
+h1{
+    color:orange; 
+    font-family:verdana; 
+    font-size: 40px;
+}
+.divPerfil p{
+    font-family:Verdana;
+    font-style: italic;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 20px 5px;
+}
+td {
+    padding: 10px 0;
+}  
+th{
+    font-weight: normal;
+}
 .divFoto, .divPerfil{
     float:left;
 }
@@ -13,21 +32,6 @@
 }
 #lenguajes{
     font-weight: bold;
-}
-h1{
-    color:blue; 
-    font-family:verdana; 
-    font-size: 40px;
-}
-p{
-    font-family:Verdana;
-    font-style: italic;
-}
-.divPerfil ul li{
-    margin: 5px 0;
-}
-ul{
-    list-style-type:none;
 }
 a:link{
     color: orange;

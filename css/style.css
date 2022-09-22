@@ -16,7 +16,6 @@ header {
 
 nav ul {
   list-style-type: none;
-  margin: 10px;
   padding: 0;
   overflow: hidden;
 }
@@ -57,8 +56,31 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
 }
 
 .busqueda {
+  width: 30%;
   font-size: max(1vw, 10pt);
+  text-align: center;
+}
+
+.busqueda #boton {
+  line-height: normal!important;
+  padding: 6px;
+  background: #f5f7f9;
+  border: none;
+  cursor: pointer;
+	color: #86b1ef;
+}
+
+.busqueda input[type=text] {
+  line-height: normal!important;
+  padding: 6px;
+  border: none;
+  margin-right: 10px;
+}
+
+.lenguajes{
+  font-size: max(0.5vw, 10pt);
   float: right;
+  text-align: center;
 }
 
 section { 
