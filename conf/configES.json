@@ -12,5 +12,6 @@
 	"lenguajes":"Lenguajes aprendidos",
 	"email":"Si necesitan comunicarse conmigo me pueden escribir a [email]",
 	"buscar": "Buscar",
-	"saludo": "Hola"
+	"saludo": "Hola",
+	"error_busqueda": "There are no students that have '[query]' in their name"
 }

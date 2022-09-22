@@ -52,6 +52,20 @@ const changeLenIndex = (config, nombre, email, contador) =>
             = config.email.replace("[email]", `<a href=mailto:${email}> ${email}</a>`);
     }
 
+    var element =  document.getElementById('perfilDiv');
+    if (typeof(element) != 'undefined' && element != null){
+        // Set perfil text
+        document.getElementsByTagName("table")[0].children[0].children[0].children[0].innerHTML = config.color + ": ";
+        document.getElementsByTagName("table")[0].children[0].children[1].children[0].innerHTML = config.libro + ": ";
+        document.getElementsByTagName("table")[0].children[0].children[2].children[0].innerHTML = config.musica + ": ";
+        document.getElementsByTagName("table")[0].children[0].children[3].children[0].innerHTML = config.video_juego + ": ";
+        document.getElementsByTagName("table")[0].children[0].children[4].children[0].innerHTML = config.lenguajes + ": ";
+
+        document.getElementById("contacto").innerHTML 
+            = config.email.replace("[email]", `<a href=mailto:${email}> ${email}</a>`);
+    }
+
+
     // Set footer text
     document.getElementsByTagName("footer")[0].innerHTML = config.copyRight;
 }

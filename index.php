@@ -117,7 +117,7 @@
 							}  
 							echo '<li class="carousel-item col" data-id="'.$perfil->ci.'">
 										<img src="' . $perfil->imagen . '"> 
-										<a href="perfil.php?ci=' . $perfil->ci . '">' . $perfil->nombre . '</a>
+										
 								 </li>';
 						}
 					?>
@@ -135,7 +135,8 @@
 	    <?php include_once("post.php")?>
 
 		<script>
-			let currentMail;
+			let listado = <?php echo $json_listado;?>
+			let currentMail, errorBusqueda = <?php echo '"' . $config->error_busqueda . '"'; ?>;
 
 			const parseJS = (group) =>{
 				if(Array.isArray(group)){
@@ -150,6 +151,53 @@
 					return group;
 				}
 			}
+
+			const filterList = (filter) => {
+				let length = filter.length
+				let filteredListado = length === 0
+				? listado
+				: listado.filter(
+					person => {
+						if(person.nombre != null){
+							return person.nombre.slice(0, length).toLowerCase() === filter.toLowerCase();
+						}else{
+							return false;
+						}	
+					}
+				)
+				
+				if(filteredListado.length === 0){
+					document.getElementsByTagName("ul")[1].innerHTML = errorBusqueda.replace("[query]", filter)
+				}
+				else{
+					let personsToShow = filteredListado.reduce( (acc, current, currentIndex) => {
+						let nombre = current.nombre == null ? "" : current.nombre;
+
+						if(currentIndex == 0){
+							return acc += `<li class="carousel-item col active" data-id=${current.ci}>
+												<img src="./${current.imagen}"> 
+												<a href="perfil.php?ci=${current.ci}">  ${nombre} </a>
+											</li>`
+						} 
+
+						return acc += `<li class="carousel-item col" data-id=${current.ci}>
+											<img src="./${current.imagen}"> 
+											<a href="perfil.php?ci=${current.ci}">  ${nombre} </a>
+										</li>`
+
+					} , " ")
+				
+					document.getElementsByTagName("ul")[1].innerHTML = personsToShow;
+				}
+			}
+
+			filterList("");
+
+			document.getElementsByClassName("busqueda")[0]
+					.getElementsByTagName("input")[0]
+					.addEventListener("keyup", (event) => { filterList(event.target.value)});
+
+			//JQuer
 
 			$("#studentsCarousel").carousel({ interval: 50000 });
 
@@ -237,6 +285,7 @@
 				conf = await response.json();
 				changeLenIndex(conf, '<?php echo $nombre; ?>', currentMail, '<?php echo $contador; ?>');
 				$.post("/changeVar.php", {len:len, conf:conf});
+				errorBusqueda = conf.error_busqueda;
 			}); 
 		</script>
 	</body>

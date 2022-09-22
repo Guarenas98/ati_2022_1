@@ -12,5 +12,6 @@
 	"lenguajes":"Languages learned",
 	"email":"Please send me a email to [email], if you need to contact me",
 	"buscar": "Search",
-	"saludo": "Hi"
+	"saludo": "Hi",
+	"error_busqueda": "There is no name that begins with: [query]"
 }
