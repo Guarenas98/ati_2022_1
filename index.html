@@ -6,18 +6,20 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
-		<title>ATI[UCV] 2022-1</title>
+		<script type="text/javascript" src="./datos/index.json"> </script>
+		<script type="text/javascript" src="./conf/configES.json"> </script>
+		<title class="title"> </title>
 	</head>
 	<body>
 	    <header>
 			<nav>
 				<ul>
-					<li class="logo">ATI<small>[UCV]</small> 2022-1</li>
-					<li class="saludo">Hola, Carlos Guillén</li>
+					<li class="logo"> </li>
+					<li class="saludo"> </li>
 					<li class="busqueda">
 						<form>
-							<input type="text" placeholder="Nombre...">
-							<input type="button" name="submit" value="Buscar">
+							<input type="text">
+							<input type="button" name="submit">
 						</form>
 					</li>
 				</ul>	
@@ -25,40 +27,12 @@
 	    </header>
 	    <section>
 	       
-			<ul>
-				<li>
-					<img src="26619394/26619394.jpg">
-					<a>Carlos Guillén</a>
-				</li>
-				<li>
-					<img src="dummy1/dummy.jpg">
-					<a>Karol Guarate</a>
-				</li>
-				<li>
-					<img src="dummy2/dummy.jpg">
-					<a>Nicole Gutenberg</a>
-				</li>
-				<li>
-					<img src="dummy3/dummy.jpg">
-					<a>María Estafano</a>
-				</li>
-				<li>
-					<img src="dummy4/dummy.jpg">
-					<a>Andrés Pestano</a>
-				</li>
-				<li>
-					<img src="dummy5/dummy.jpg">
-					<a>Ricardo Montenegro</a>
-				</li>            
-				<li>
-					<img src="dummy6/dummy.jpg">
-					<a>Abdul Jabbar</a>
-				</li>
+			<ul id="list_students">
 			</ul>
 			 
 	    </section>
-	    <footer>
-	        Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados
+	    <footer class="copyright">
 	    </footer>
 	</body>
+	<script src="js/index.js"></script>
 </html>
