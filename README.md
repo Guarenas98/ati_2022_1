@@ -1,6 +1,18 @@
 # ati_2022_1
 Proyecto del semestre 2022_1
 
+## Importante:
+Para construir y ejecutar el contenedor usamos las siguientes líneas:
+- docker build -t php-server . 
+- docker run --name php-server -p 8000:80 php-server
+
+Y para abrir la página index ingresamos a la siguiente dirección:
+- http://localhost:8000/index.php
+
+Por otro lado para abrir un perfil, por ejemplo el del estudiante con número de cédula 27031954, usaríamos la siguiente dirección:
+- http://localhost:8000/perfil.php?ci=2703954
+
+
 ## Content
 
 Este proyecto es para practicar paso a paso todo el contenido que se estudia en la primera parte de ATI. 
