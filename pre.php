@@ -3,7 +3,7 @@
     <nav>
         <ul>
             <li class="logo">' .
-                $config->sitio[0] .'<small>' . $config->sitio[1] . '</small>' . $config->sitio[2] .
+                $config->sitio[0] .'<small>' . $config->sitio[1] . '</small> ' . $config->sitio[2] .
             '</li>
             <li class="saludo"> 
                 <p>' . $config->saludo . ', ' . $nombre . $visitasTag .  '</p> 

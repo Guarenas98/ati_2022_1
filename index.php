@@ -28,13 +28,13 @@
 	else if(isset($_SESSION['len'])){
 		$len = $_SESSION['len'];
 	}
-	else{   // Default len
+	else{ // Default len
 		$len = "en";
 		$_SESSION["len"] = $len;
 	}
 
-	 // Load configuration JSON
-	 if($len == "es"){
+	// Load configuration JSON
+	if($len == "es"){
 		$json_config = file_get_contents('/conf/configES.json');
 	}
 	else if($len == "pt"){
@@ -96,7 +96,7 @@
 			include_once("pre.php");
 		?>
 
-	    <section class="section-index  container-fluid">
+	    <section class="section-index container-fluid">
 			<div id = "studentsCarousel" class = "carousel slide" data-ride = "carousel">
 				<a class = "carousel-control-prev col-1" href = "#studentsCarousel" role = "button" data-slide = "prev">
 					<span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
@@ -128,9 +128,6 @@
 				</a>
 			</div>
 		</section>
-		<hr> 
-		
-		<div id="invisibleDiv"> </div>
 		
 	    <?php include_once("post.php")?>
 
@@ -197,8 +194,6 @@
 					.getElementsByTagName("input")[0]
 					.addEventListener("keyup", (event) => { filterList(event.target.value)});
 
-			//JQuer
-
 			$("#studentsCarousel").carousel({ interval: 50000 });
 
 			$('#studentsCarousel').on('slide.bs.carousel', function (e) {
@@ -219,53 +214,6 @@
 						}
 					}
 				}
-			});
-
-			$( ".carousel-item" ).each(function(index) {
-				$(this).on("click", function(){
-					let ci = $(this).attr("data-id");
-					let jsonName = "data/" + ci + "/" + "perfil.json";
-
-					$.getJSON(jsonName, function(jd) {
-						currentMail = jd.email;
-						$('#invisibleDiv').html(
-							` <div class="perfil container-fluid row" id="perfilDiv">
-								<img class="divFoto col-4  my-auto img-fluid" id="fotoPerfil" src=${"data/" + ci + "/" + jd.imagen}> 
-								<div class="divPerfil col my-auto"> 
-									<h1> ${jd.nombre} </h1>
-									<p> ${jd.descripcion} </p>
-									<table>
-										<tbody>
-											<tr> 
-												<th> <?php echo $config->color?> : </th>
-												<th> ${jd.color} </th>
-											</tr>
-											<tr> 
-												<th> <?php echo $config->libro?> : </th>
-												<th> ${jd.libro} </th>
-											</tr>
-											<tr> 
-												<th> <?php echo $config->musica?> : </th>
-												<th> ${jd.musica} </th>
-											</tr>
-											<tr> 
-												<th> <?php echo $config->video_juego?> :  </th>
-												<th> ${parseJS(jd.video_juego)} </th>
-											</tr>
-											<tr> 
-											<th id="lenguajes"> <?php echo $config->lenguajes?> :  </th>
-												<th> ${parseJS(jd.lenguajes)} </th>
-											</tr>
-										</tbody>
-									</table>
-									<div id="contacto">
-										${ <?php echo '"' . $config->email . '"' ?>.replace(" [email]", `: <a href="mailto: ${jd.email}"> ${jd.email}</a>`)}
-									</div>
-								</div>
-							</div>		
-						`);
-					});
-				});
 			});
 
 			$('select').val('<?php echo $len; ?>');

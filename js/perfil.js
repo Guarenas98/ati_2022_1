@@ -64,9 +64,7 @@ const changeLenIndex = (config, nombre, email, contador) =>
         document.getElementById("contacto").innerHTML 
             = config.email.replace("[email]", `<a href=mailto:${email}> ${email}</a>`);
     }
-
-
+    
     // Set footer text
     document.getElementsByTagName("footer")[0].innerHTML = config.copyRight;
 }
-
