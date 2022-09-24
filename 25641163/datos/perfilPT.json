@@ -1,0 +1,33 @@
+{
+    "nombre": "Maria Fernanda",
+    "apellido": "Tejeda Caballero",
+    "descripcion": "Sou estudante da Escola de Informática, da Universidade Central da Venezuela, atualmente estou trabalhando no desenvolvimento de páginas web e aplicativos móveis, há um ano, em uma empresa de software.",
+    "color": [
+        "Roxo",
+        "verde",
+        "azul",
+        "cinza"
+    ],
+    "libro": "As Relíquias da Morte Parte I",
+    "musica": "pop",
+    "video_juego": [
+        "Mario Bros",
+        "Sonic"
+    ],
+    "lenguajes": [
+        "javaScripts",
+        "python",
+        "c++"
+    ],
+    "framework": [
+        "django",
+        "django Rest Framework",
+        "ReactJs",
+        "Nodejs"
+    ],
+    "email": "mariaf0821@gmail.com",
+    "CI": "25641163",
+    "genero": "Feminino",
+    "fecha_nacimiento": "21 de agosto de 1995",
+    "imagen": "25641163.jpg"
+}

@@ -1,0 +1,33 @@
+{
+    "nombre": "Maria Fernanda",
+    "apellido": "Tejeda Caballero",
+    "descripcion": "I am a student at the Computer School, at the Central University of Venezuela, I am currently working on the development of web pages and mobile applications, for a year, in a software company.",
+    "color": [
+        "Purple",
+        "green",
+        "blue",
+        "grey"
+    ],
+    "libro": "The Deathly Hallows Part I",
+    "musica": "pop",
+    "video_juego": [
+        "Mario Bros",
+        "Sonic"
+    ],
+    "lenguajes": [
+        "javaScripts",
+        "python",
+        "c++"
+    ],
+    "framework": [
+        "django",
+        "django Rest Framework",
+        "ReactJs",
+        "Nodejs"
+    ],
+    "email": "mariaf0821@gmail.com",
+    "CI": "25641163",
+    "genero": "Female",
+    "fecha_nacimiento": "August 21, 1995",
+    "imagen": "25641163.jpg"
+}
