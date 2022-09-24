@@ -62,14 +62,36 @@ function inicio(){
             } 
             
             
-            document.getElementById("color").innerHTML = config["color"] + ": "; 
-            document.getElementById("libro").innerHTML = config["libro"] + ": "; 
-            document.getElementById("musica").innerHTML = config["musica"] + ": ";
-            document.getElementById("juego").innerHTML = config["video_juego"] + ": ";
-            document.getElementById("lenguajes").innerHTML = config["lenguajes"] + ": "; 
-            let mailReplace =  config["email"]; 
+            var element = document.getElementById("color");
+            if(typeof(element) != 'undefined' && element != null){
+                document.getElementById("color").innerHTML = config["color"] + ": "; 
+            } 
             
-            document.getElementById("mail").innerHTML = mailReplace.replace("[email]", "") + document.getElementById("mail").innerHTML;  
+            var element = document.getElementById("libro");
+            if(typeof(element) != 'undefined' && element != null){
+                document.getElementById("libro").innerHTML = config["libro"] + ": ";  
+            } 
+            
+            var element = document.getElementById("musica");
+            if(typeof(element) != 'undefined' && element != null){
+                document.getElementById("musica").innerHTML = config["musica"] + ": "; 
+            } 
+           
+            var element = document.getElementById("juego");
+            if(typeof(element) != 'undefined' && element != null){
+                document.getElementById("juego").innerHTML = config["video_juego"] + ": ";
+            } 
+            
+            var element = document.getElementById("lenguajes");
+            if(typeof(element) != 'undefined' && element != null){
+                document.getElementById("lenguajes").innerHTML = config["lenguajes"] + ": "; 
+            } 
+            
+            let mailReplace =  config["email"]; 
+            var element = document.getElementById("mail");
+            if(typeof(element) != 'undefined' && element != null){
+                document.getElementById("mail").innerHTML = mailReplace.replace("[email]", "") + document.getElementById("mail").innerHTML;  
+            } 
         }
     };
     xmlhttp.open("GET", url, true);
@@ -103,50 +125,66 @@ function buscarEstudiante(){
     let query = document.getElementsByName("nombre")[0].value;  
     let found = false; 
     document.getElementById("estudiantes").innerHTML = "";
- 
-    let beginC = document.getElementById("estudiantes");    // Carousel
-    let newSlide = document.createElement("div"); 
-    newSlide.className = "carousel-item active";
+    let buscar = new XMLHttpRequest();
+    let find_url = "./datos/index.json"; 
+    let listado; 
 
-    let newRow = document.createElement("div"); 
-    newRow.className = "row";
-    newRow.style.marginTop = "30px"; 
+    buscar.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            listado = JSON.parse(this.responseText);      
 
-    if(query == ""){
-        myCarousel(); 
-    }else{
-        for(let i=0; i<listado.length; i++){
-            let newCol = document.createElement("div"); 
-            newCol.className = "col"; 
-    
-            let imagen = document.createElement("img");    
-            imagen.className = "img-fluid";     
+            let beginC = document.getElementById("estudiantes");    // Carousel
+            let newSlide = document.createElement("div"); 
+            newSlide.className = "carousel-item active";
+
+            let newRow = document.createElement("div"); 
+            newRow.className = "row";
+            newRow.style.marginTop = "30px"; 
             
-    
-            if(listado[i].nombre.includes(query)){
-                found = true; 
-                console.log("includes"); 
-                imagen.src = listado[i].imagen;
-                imagen.style.width = "100%"; 
-                imagen.style.height = "15rem";
              
-                let anchor = document.createElement("a");
-                anchor.href = "#"; 
-                anchor.innerText = listado[i].nombre; 
-                newCol.appendChild(imagen); 
-                newCol.appendChild(anchor); 
-                newRow.appendChild(newCol);                 
-            }   
-              
-        }
-    
-        newSlide.appendChild(newRow); 
-        beginC.appendChild(newSlide);
+            if(query == ""){
+                myCarousel(); 
+            }else{
+                for(let i=0; i<listado.length; i++){
+                    let newCol = document.createElement("div"); 
+                    newCol.className = "col"; 
+            
+                    let imagen = document.createElement("img");    
+                    imagen.className = "img-fluid";     
+                    
+                    let thisStudent = listado[i]["nombre"];                     
+                    
+                    if(thisStudent.includes(query)){
+                        found = true;                          
+                        imagen.src = listado[i]["imagen"];
+                        let cedulaID = listado[i]["ci"]; 
+                        imagen.style.width = "100%"; 
+                        imagen.style.height = "15rem";
+                    
+                        let anchor = document.createElement("a");
+                        anchor.href = "perfil.php"; 
+                        anchor.onclick = sendCI(cedulaID); 
+                        anchor.innerText = listado[i]["nombre"]; 
+                        newCol.appendChild(imagen); 
+                        newCol.appendChild(anchor); 
+                        newRow.appendChild(newCol);                 
+                    }   
+                    
+                }
+            
+                newSlide.appendChild(newRow); 
+                beginC.appendChild(newSlide);
 
-        if(!found){
-            let messag = document.getElementById("estudiantes").innerHTML = config.no_encontrado + query;         
-        } 
-    }  
-   
+                if(!found){
+                    let messag = document.getElementById("estudiantes").innerHTML = "No hay alumnos que tengan en su nombre: " + query;         
+                } 
+            } 
+           
+            
+            
+        }
+    };
+    buscar.open("GET", find_url, true);
+    buscar.send();
 }
 
