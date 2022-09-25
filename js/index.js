@@ -102,7 +102,7 @@ function buscar(){
 				   + "<div class='card' style='width: 15rem; height: 15rem; background-color: #86b1ef''>"
 				   + "<img class='card-img-top' style='width: 15rem; height: 15rem;' src=" 
 				   + listado[i].imagen + ">"
-				   + "<div class='card-body'><a href='#'>" + 
+				   + "<div class='card-body'><a href='#' onclick='postCI(" + listado[i].ci + ")'>" +
 				   listado[i].nombre + "</a>"
 				   + "</div></div></div>";
 
