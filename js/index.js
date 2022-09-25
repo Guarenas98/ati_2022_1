@@ -1,160 +1,111 @@
-
 const photoDefault = './default/usuario.png';
 
-const containerListadoEstudiantes = document.getElementById('containerListadoEstudiantes');
-const carouselInner = document.getElementById('carousel-inner');
-const carouselItem = document.getElementById('carousel-item'); 
-
-
-//const query = 'maria'
-
-
-const LeerJsonConf = () => {
+const leerJsonConf = () => {
+    if (!config) {
+        return;
+    }
     document.getElementById('logo').innerHTML = `${config['sitio'][0]}  <span> ${config['sitio'][1]}</span>  ${config['sitio'][2]}`;
-
     document.getElementById('saludo').innerHTML = `${config['saludo']} Maria Fernanda`;
-
     document.getElementById('copyRight').innerHTML = `${config['copyRight']}`;
+};
 
-}
-
-const LeerListado = () => {
-    try {
-
-        const searchLengthListado = listado.length;
-
-
-        for (let index = 0; index < searchLengthListado; index++) {
-
-            const section = document.createElement('section');
-
-            section.className = 'containerPerfil';
-
-            const img = document.createElement('img');
-
-            img.id = index;
-
-            img.src = `./${listado[index]['imagen']}`;
-
-            const linkUsuario = document.createElement('a');
-
-            linkUsuario.textContent = listado[index]['nombre'];
-
-           section.appendChild(img);
-
-            section.appendChild(linkUsuario);
-
-            //containerListadoEstudiantes.appendChild(section);
-
-            /* crear para el carrusel */
-            const div = document.createElement('div');
-         
-            div.className = "carousel-item";
-         
-            //div.appendChild(img);
-            //div.appendChild(linkUsuario);
-         
-            carouselInner.appendChild(section);
-         
-            img.addEventListener('error', (event) => {
-
-                event.target.src = photoDefault;
-
-            });
-        }
-
-    } catch (error) {
-        console.log('error =====> try Catch', error);
-    }
-
-}
-
-const BuscarAndFilter = () => {
-
-    const searchValue = document.getElementById('searchAtiName');//event.target.value;
-
-    const exit = document.getElementById('containerMensajeError');
-
-    const value = searchValue.value;
-
-    const searchContainer = document.querySelectorAll('section.containerPerfil');
-
-    let sumaEstudiante = 0;
-
-    searchContainer.forEach((container) => {
-
-        const searchName = container.innerText;
-
-        const existEstudiante = new RegExp(value, 'ig').test(searchName);
-
-        if (!existEstudiante) {
-            container.style.display = 'none';
-            sumaEstudiante += 1;
-        } else {
-            container.style.display = 'flex';
-        }
+const testImage = (imageSrc) => {
+    return new Promise((resolve, reject) => {
+        let imageTest = new Image();
+        imageTest.onload = () => {
+            resolve(imageTest.currentSrc);
+        };
+        imageTest.onerror = () => {
+            resolve(photoDefault);
+        };
+        imageTest.src = imageSrc;
     });
-
-    
-    if (sumaEstudiante === searchContainer.length) {
-
-        //console.log('existe el container', exit);
-
-        if (exit) {
-
-            exit.style.display = 'flex';
-            exit.className = 'textMensaje';
-            exit.innerText = `${config['mensajetNoHAyEstudiante']} ${value}`;
-
-        } else {
-
-            const section = document.createElement('section');
-
-            section.id = 'containerMensajeError';
-
-            const text = document.createElement('p');
-
-            text.className = 'textMensaje';
-
-            text.innerText = `${config['mensajetNoHAyEstudiante']} ${value}`;
-
-            section.appendChild(text);
-            
-            containerListadoEstudiantes.insertAdjacentElement('beforebegin',section);
-
-        }
-
-        containerListadoEstudiantes.style.display = 'none';
-
-    } else {
-        containerListadoEstudiantes.style.display = 'grid';
-
-        if (exit) {
-            exit.style.display = 'none';
-        }
-
-    }
-
-    searchValue.value = '';
 }
 
-// searchAtiName.addEventListener('change', (event) =>{
-//     //console.log(event)
-//     BuscarAndFilter();
-// });
+const generarCarruselItem = async (data) => {
+    try {
+        const section = document.createElement('section');
+        section.id = 'usuario';
+        section.className = 'containerPerfil card card-body h-100';
 
-botonBuscar.addEventListener('click', () => {
-    BuscarAndFilter();
-});
+        const img = document.createElement('img');
+        img.id = data.ci;
+        img.className='img-fluid';
+        img.src = await testImage(`./${data.imagen}`);
 
-// searchAtiName.addEventListener('keyup', (event) => {
-//     //console.log('entre aqui a ver si esto funciona keyup', event)
-//    // console.log(event.keyCode)
-//     if (event.keyCode === 13) {
-//         BuscarAndFilter();
-//     }
+        const linkUsuario = document.createElement('a');
+        linkUsuario.textContent = data.nombre;
 
-// });
+        section.appendChild(img);
+        section.appendChild(linkUsuario);
 
-LeerJsonConf();
-LeerListado();
+        return section;
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+const leerListado = async () => {
+    if (!listado) {
+        return;
+    }
+    
+    const containerListadoEstudiantes = document.getElementById('containerListadoEstudiantes');
+
+    let lista = [];
+
+    try {
+        for (const estudiante of listado) {
+            const html = await generarCarruselItem(estudiante);
+            lista.push(html);
+        }
+        return lista;
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+const loadItems = (lista) => {
+    for (let i = 1; i < 5; i++) {
+        let current = document.getElementById(`activeItem${i}`);
+        if (current.firstElementChild) {
+            current.removeChild(current.firstElementChild);
+        }
+        current.appendChild(lista[i-1]);
+    }
+}
+
+let currentPlace = 0;
+let listadoNodos;
+
+const nextPage = () => {
+    currentPlace++;
+    if (currentPlace > listadoNodos.length) {
+        currentPlace = 1;
+    }
+    let resultado = listadoNodos.slice(currentPlace, currentPlace + 4);
+    if (resultado.length < 4) {
+        resultado.push(...listadoNodos.slice(0, 4 - resultado.length));
+    }
+    loadItems(resultado);
+}
+
+const prevPage = () => {
+    currentPlace--;
+    if (currentPlace < 0) {
+        currentPlace = listadoNodos.length - 1;
+    }
+    let resultado = listadoNodos.slice(currentPlace, currentPlace + 4);
+    if (resultado.length < 4) {
+        resultado.push(...listadoNodos.slice(0, 4 - resultado.length));
+    }
+    loadItems(resultado);
+}
+
+window.onload = async () => {
+    $('#siguiente').click(() => console.log(111111));
+    leerJsonConf();
+    listadoNodos = await leerListado();
+    setInterval(nextPage, 1000);
+    nextPage();
+}

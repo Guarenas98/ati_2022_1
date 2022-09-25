@@ -2,49 +2,25 @@
 <html>
 
 <head>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta charset="UTF-8">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
-
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-
 	<link rel="stylesheet" href="css/index.css" type="text/css">
 
 	<script type="text/javascript" src="./conf/configES.json"></script>
-
 	<script type="text/javascript" src="./datos/index.json"></script>
-
-	<script type="text/javascript" language="javascript">
-		$(document).ready(function () {
-
-			// $('.carousel-inner').slick({
-			// 	slidesToShow: 6,
-			// 	slidesToScroll: 1,
-			// 	autoplay: true,
-			// 	autoplaySpeed: 2000,
-			// });
-
-			// function efecto(){
-			// 	var selectedEffect = $( "#effectTypes" ).val();
-
-			// 	if(selectedEffect == "derecha"){
-			// 		$( "#effect" ).animate({left: '100px'});
-			// 	} 
-			// 	if(selectedEffect == "izquierda"){
-			// 		$( "#effect" ).animate({left: '50px'});
-			// 	}
-
-			// }
-			// $( "#button" ).click(function() {
-			// 	efecto();
-			// 	return false;
-			// });
-		});
-	</script>
+	
+	<script src="./js/index.js"></script>
+	
 	<title id="tituloPestania"></title>
 
 </head>
@@ -69,23 +45,30 @@
 		</nav>
 	</header>
 
-	<section class="containerMain" id="containerListadoEstudiantes">
-		<!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"> -->
-		<div id="carouselExampleSlidesOnly" class="carousel slide" >
-		
-			<div class="carousel-inner" id="carousel-inner">
-				
+	<section class="containerMain">
+		<div class="container-fluid text-center my-3 h-100" id="containerListadoEstudiantes">
+			<div class="row mx-auto h-100 my-auto">
+				<div class="col" id="activeItem1"></div>
+				<div class="col" id="activeItem2"></div>
+				<div class="col" id="activeItem3"></div>
+				<div class="col" id="activeItem4"></div>
+				<a class="col-1 carousel-control-prev w-auto" onclick='prevPage()' id='siguiente'>
+					<span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
+						aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="col-1 carousel-control-next w-auto" onclick='nextPage()' id='anterior'>
+					<span class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
+						aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>
+		</div>
 	</section>
-
 	<footer class="footer">
 		<p id="copyRight">
 		</p>
 	</footer>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-<script src="./js/index.js"></script>
 
 </html>
