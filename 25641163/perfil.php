@@ -143,7 +143,7 @@ $data_perfil = json_decode($json_perfil_str);
 				<ul>
 					<li id="color">
 						<?php
-						echo $data_config->color . ": " . $data_perfil->color;
+						echo $data_config->color . ": " .  implode(', ', $data_perfil->color);
 						?>
 					</li>
 					<li id="libro">
