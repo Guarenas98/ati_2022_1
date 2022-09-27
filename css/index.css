@@ -1,0 +1,108 @@
+#listado_estudiantes{
+   width: 100vw;
+   /* justify-content: center; */
+}
+
+#div_listado{
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#listado_estudiantes .card { 
+   display:inline; 
+   float:left; 
+   height:200px; 
+   background-color:#f5f7f9; 
+   margin-top: 2.5vh;
+   padding:20px; 
+   text-align: center; 
+   border-right: #a5a7aa solid 1px; 
+   border-bottom: #a5a7aa solid 1px; 
+	overflow: hidden; 
+}
+
+#listado_estudiantes img {
+	width:125px; 
+	object-fit: contain;
+}
+
+#listado_estudiantes .card:hover {
+    background-color:#99c5dd;
+    transform:scale(1.05) rotate(5deg);
+}
+		
+#listado_estudiantes a {
+	font-family:arial;
+	font-size:10pt;
+	color: #86b1ef;
+ 	text-decoration:none;
+}
+
+ #listado_estudiantes a:link, #listado_estudiantes a:visited {
+	 color: #68a0d9;
+}
+
+#listado_estudiantes a:hover { 
+	color: #68a0d8;
+}
+
+.clear{
+   clear:both;
+}
+
+.scrolling-wrapper{
+	overflow-x: scroll;
+   height: 30vh;
+   cursor: grab;
+   width: 100%;
+}
+
+.foto_estudiante{
+   height: 150px;
+   object-fit: cover;
+   overflow: hidden;
+   pointer-events: none;
+   display: inline;
+}
+
+.scrolling-wrapper.active {
+    cursor: grabbing;
+  }
+
+button{
+   display: inline;
+}
+
+.card a{
+   cursor: pointer;
+}
+
+.btn-listado{
+   padding: 6px;
+   background: #f5f7f9;
+   border: none;
+   cursor: pointer;
+   color: #86b1ef;
+   margin: 0;
+   font-weight: 900;
+}
+
+section { 
+  width: 95%;
+  margin-top:10px;
+  margin-bottom:80px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+}
+			
+
+.msg_error {
+  color: #86b1ef;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 2rem;
+}

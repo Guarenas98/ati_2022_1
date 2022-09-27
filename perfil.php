@@ -1,10 +1,11 @@
+<?php
+	include_once 'pre.php';
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<?php
-
-		$perfil = json_decode( file_get_contents( './perfil.json' ) );
-		$config = json_decode( file_get_contents( '../config/config' . strtoupper( htmlspecialchars($_GET["len"]) ) . '.json' ) );
-
+		$perfil = json_decode( file_get_contents( './data/'.htmlspecialchars($_GET["ci"]).'/perfil.json' ) );
 	?>
 	<head>
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -12,47 +13,24 @@
 		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
 		
 		<!-- bootstrap4 css -->
-		<link rel="stylesheet" href="../css/bootstrap4/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/bootstrap4/bootstrap.min.css">
 
-		<link rel="stylesheet" href="../css/style.css"  type="text/css">
-		<link rel="stylesheet" href="perfil.css"  type="text/css">
-
-		<!-- <script type="text/javascript" src="perfil.json"></script> -->
-		<!-- <script type="text/javascript" src="config.json"></script> -->
+		<link rel="stylesheet" href="./css/style.css"  type="text/css">
+		<link rel="stylesheet" href="./css/perfil.css"  type="text/css">
 
 		<title> <?php echo $perfil->nombre ?> </title>
 
 	</head>
 	<body>
-	    <header>
-			<nav>
-				<ul>
-					<li class="logo">
-						<?php echo $config->sitio[0] ?>
-						<small>
-							<?php echo $config->sitio[1] ?>
-						</small>
-						<?php echo $config->sitio[2] ?>
-					</li>
-
-					<li class="saludo">
-						<?php echo $config->saludo . ', ' . $perfil->nombre ?>
-					</li>
-					<li class="busqueda">
-						<a id="home" href="index.html">
-							<?php echo $config->home ?>	
-						</a>
-					</li>
-				</ul>	
-			</nav> 
-	    </header>
+	    <?php
+			include_once 'navbar.php';
+		?>
 	    <section class="container-fluid" id="contenido">
-	       
 			<div class="row col-md-11 col-sm-12">
 
 					<span class="col-md-3 col-sm-2" id="svg-foto"  >
 
-						<img  src=<?php echo $perfil->imagen ?> class="img-fluid" id="foto">
+						<img  src=<?php echo "./data/" . $perfil->ci . '/' . $perfil->imagen ?> class="img-fluid" id="foto">
 						<figure >
 							<svg class="" viewBox="0 0 180 320" preserveAspectRatio="none">
 								<path id="no_hover_svg" d="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z"></path>
@@ -70,6 +48,7 @@
 								</p>
 							</figcaption>
 						</figure>
+						<!-- <img  src=<?php echo "./data/" . $perfil->ci . '/' . $perfil->imagen ?> class="img-fluid" id="foto"> -->
 					</span>
 
 				<span class="col-9" id="info">
@@ -123,26 +102,21 @@
 						</div>
 					</div>
 					<br>
-					<div id="email" class="row"></div>
+					<div id="email" class="row">
+						<!-- <?php 
+							$email_link =  "<a href=\"mailto:" . $perfil->email . "\">" . $perfil->email . "</a>";
+							echo str_replace('[email]', $email_link , $config->email);
+						?> -->
+					</div>
 				</span>
 			</div>
 			 
 	    </section>
 
-	    <footer>
-			<?php echo $config->copyRight ?>
-		</footer>
+	    <?php
+			include_once "post.php"
+		?>
 		
-		
-		
-    	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		
-		<!-- jquery -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-		<!-- bootstrap4 js -->
-    	<script src="../js/bootstrap4/bootstrap.min.js" ></script>
-		
-		<script src="svg_animation.js"></script>
+		<script src="./js/svg_animation.js"></script>
 	</body>
 </html>
