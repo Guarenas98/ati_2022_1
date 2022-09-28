@@ -1,10 +1,11 @@
 .titulo-perfil {
 		color: #fcba03;
-	  font-size: 150%;
+    font-size: 1.8em;
 	  margin-bottom: 7px;
 	}
 
 .content-perfil {
+	font-size: 2em;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;

@@ -2,8 +2,8 @@
 	margin: 0;
 	padding: 0;
 	font-family: Verdana, Arial, helvetica, sans-serif;
-	font-size: 11pt;
 }
+html {font-size: 62.5%; /*1em = 16px =100%. 62.55 = 10px */}
 
 html,body { width: 100%; height: 100%; }
 
@@ -39,40 +39,44 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
 	 color: white;
 	 text-decoration:none;
 }
-			
+
+/*la parte del header*/
 .logo {
 /*!	margin-left: 2px;*/
-	font-size: 27pt;
+	font-size: 4.2em;
    font-family: helvetica;
 	/*! width: 30%; */
 	text-align: center;
-padding-bottom: 2pt;
-padding-top: 3pt;
+padding-bottom: 1rem;
+padding-top: 1rem;
 }
 
 .logo small {
-	font-size: 14pt;
+	font-size: 0.5em;
 }
 
 .saludo {
   /*! width: 29%; */
   text-align: center;
   /*! height: 38pt; */
-  padding-top: 9pt;
-  padding-bottom: 9pt;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 2.4em;
 }
 
 .busqueda {
   /*! float: right; */
   text-align: center;
-  padding-top: 9pt;
-  padding-bottom: 9pt;
+  padding-top: 2rem;
+  padding-bottom: 1.8rem;
+  font-size: 2.4em;
 }
+/*la parte del header*/
 
 section { 
   /*width: 95%;*/
   margin-top:10px;
-  margin-bottom:80px;
+  margin-bottom: 10rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -80,11 +84,51 @@ section {
 footer {
   width: 100%;
   position: fixed;	
-  bottom: 0px;
+  bottom: 0.3px;
   padding: 1rem;
   background-color: #86b1ef;
   text-align: center;
-  height: 54pt;	
-  font-size: 9pt;
+  height: 7rem;	
+  font-size: 2em;
 }
 
+/*responsive for font size. See breakponts: https://getbootstrap.com/docs/5.0/layout/breakpoints/*/
+/*extra small*/
+@media (max-width: 575px) {
+  html {
+    font-size: 0.7em;
+  }  
+}
+/*small width*/
+@media (min-width: 576px) and (max-width: 767px) {
+  html {
+    font-size: 0.8em;
+  }  
+}
+
+/*mid widh*/
+@media (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 0.86em;
+  }
+}
+
+/*large width*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 0.9em;
+  }
+}
+
+/*extra lg*/
+@media (min-width: 1200px) and (max-width: 1399px) {
+  html {
+    font-size: 0.95em;
+  }
+}
+ /* extra extra lg*/
+@media (min-width: 1400px) {
+  html {
+    font-size: 1.5em;
+  }
+}
