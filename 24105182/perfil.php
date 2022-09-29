@@ -13,7 +13,11 @@
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 		<title>Ioannis Morakis</title>
 	</head>
-	<body onload="load();">
+	<body >
+
+		
+
+
 	    <header>
 			<nav>
 				<ul>
@@ -56,5 +60,40 @@
 	    </section>
 	    <footer id="copyRight">
 	    </footer>
+
+		<?php 
+			if(empty($_GET['len'])){
+				//echo "empty key";
+
+				$len = 'es';
+			}else{
+				//echo $_GET['key'];
+	
+				$len = $_GET['len'];
+			}
+
+			$json = file_get_contents('conf/configES.json');
+
+			if($len == 'es'){
+				$json = file_get_contents('conf/configES.json');
+
+			}
+			if($len == 'en'){
+				$json = file_get_contents('conf/configEN.json');
+				
+
+			}
+			if($len == 'pt'){
+				$json = file_get_contents('conf/configPT.json');
+
+			}
+			
+			echo '<script type="text/JavaScript"> var mydata = '.$json .'; </script>';        
+        	echo '<script type="text/JavaScript">  load(mydata); </script>';
+	
+		
+		
+		?>
+
 	</body>
 </html>

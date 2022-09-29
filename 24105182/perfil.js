@@ -1,6 +1,8 @@
-function load() {
+function load(obj) {
 	var mydata = JSON.parse(perfil);
-	var obj = JSON.parse(config);
+	//var obj = JSON.parse(config);
+	//var mydata = perfil;
+	//var obj = config;
 
 	document.getElementById("logo").innerHTML =  obj.sitio[0]+ '<small>'+ obj.sitio[1]+ '</small> '+ obj.sitio[2];
 	document.getElementById("saludo").innerHTML =  obj.saludo+ ", "+ mydata.nombre;
@@ -9,9 +11,9 @@ function load() {
 	document.getElementById("imagen").src = mydata.imagen;
 	document.getElementById("nombre").innerHTML = mydata.nombre;
 	document.getElementById("descripción").innerHTML = mydata.descripción;
-	document.getElementById("color").innerHTML = obj.color+ mydata.color;
-	document.getElementById("libro").innerHTML = obj.libro+ mydata.libro;
-	document.getElementById("música").innerHTML =obj.música+ mydata.música;
+	document.getElementById("color").innerHTML = obj.color+ " " + mydata.color;
+	document.getElementById("libro").innerHTML = obj.libro+ " " + mydata.libro;
+	document.getElementById("música").innerHTML =obj.música+ " " +mydata.música;
 
 	let i = 0
 	let list= mydata.video_juego;
@@ -21,7 +23,7 @@ function load() {
 		string= string+", " + list[i]
 		i=i+1
 	}
-	document.getElementById("video_juego").innerHTML = obj.video_juego+ string;
+	document.getElementById("video_juego").innerHTML = obj.video_juego + " " + string;
 
 	i = 0
 	list= mydata.lenguajes;
@@ -31,17 +33,23 @@ function load() {
 		string= string+", " + list[i]
 		i=i+1
 	}
-	document.getElementById("lenguajes").innerHTML = obj.lenguajes+ string;
+	document.getElementById("lenguajes").innerHTML = obj.lenguajes+ " " + string;
 
 
 
 	//document.getElementById("como_comunicarse").innerHTML = obj.como_comunicarse + document.getElementById("como_comunicarse").innerHTML;
 
-	document.getElementById("como_comunicarse").insertAdjacentHTML('afterbegin', obj.como_comunicarse);
+	let text = obj.email;
+	const myArray = text.split("[email]");
+
+	document.getElementById("como_comunicarse").insertAdjacentHTML('afterbegin', myArray[0]);
 
 	var com = document.getElementById("como_comunicarse").getElementsByClassName("email");
 	com[0].href= mydata.email;
 	com[0].innerHTML= mydata.email;
+
+
+	document.getElementById("como_comunicarse").insertAdjacentHTML('beforeend', myArray[1]);
 
 
 	document.getElementById("copyRight").innerHTML =obj.copyRight;
