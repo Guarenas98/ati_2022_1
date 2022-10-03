@@ -22,16 +22,43 @@
 	</head>
 	<body>
 	<?php 
+		function getConfigLanPath($languaje) {
+			switch ($languaje) {
+				case "es":
+					return "./conf/configES.json";
+					break;
+				case "en":
+					return "./conf/configEN.json";
+					break;
+				case "pt":
+					return "./conf/configPT.json";
+					break;
+				default:
+					return "./conf/configES.json";
+					break;
+			}
+		}
+
+		ini_set('display_errors', 1);
+		ini_set('display_startup_errors', 1);
+		error_reporting(E_ALL);
 		$data1 = file_get_contents("./datos/perfil.json");
-		$data2 = file_get_contents("./datos/config.json");
+		$pathJson = "./conf/configES.json";
+		if( isset($_GET["len"]) ) {
+			$pathJson = getConfigLanPath( $_GET["len"] );	
+		} 
+		$data2 = file_get_contents($pathJson);
 		if(!$data1 or !$data2) {
-			return throw new Exception("Error Loading Perfil Information or Languaja config site", 1);
+			throw new Exception("Error Loading Perfil Information or Languaje config site", 1);
 		}
 		$perfil = json_decode($data1, 1);
 		$config = json_decode($data2, 1);
 
-		$emailtext = preg_replace("[email]", "<a href='mailto:".$perfil["email"]."'> ".$perfil["email"]."</a>" , $config["email"]);
-		$fechatext = preg_replace("[fecha]", date("Y") , $config["copyRight"]);
+		$emailtext = preg_replace('/\[email\]/', "<a href='mailto:".$perfil["email"]."'> ".$perfil["email"]."</a>" , $config["email"]);
+		$fechatext = preg_replace('/\[fecha\]/', date("Y") , $config["copyRight"]);
+
+		$valor_videojuego = implode(", ", $perfil["video_juego"]);
+		$valor_lenguajes = implode(", ", $perfil["lenguajes"]);
 
 		$BODY = "";
 		
@@ -69,21 +96,22 @@
 					</tr>
 					<tr>
 						<td id="texto-video-juegos">'.$config["video_juego"].': </td>
-						<td id="valor-video-juegos">'.implode(", ", $perfil["video_juego"]).'</td>
+						<td id="valor-video-juegos">'.$valor_videojuego.'</td>
 					</tr>
 					<tr id="lenguajes-preferidos">
-						<td id="texto-lenguajes">'.$config["lenguaje"].'</td>
-						<td id="valor-lenguajes">'.implode(", ", $perfil["lenguaje"]).'</td>
+						<td id="texto-lenguajes">'.$config["lenguajes"].'</td>
+						<td id="valor-lenguajes">'.$valor_lenguajes.'</td>
 					</tr>
 					</table>
+					<br />
 					<p id="texto-email">'.$emailtext.'</p>
 				</article>			 			 
 	    	</section>
 			</div>';
 
 		$BODY .= '<footer id="copyRight">'.$fechatext.'</footer>';
-
-	    ?>
-	    <script type="text/javascript" src="./js/perfil.js"></script>';
+		echo $BODY;
+	?>
+	<!--<script type="text/javascript" src="./js/perfil.js"></script>'-->
 	</body>
 </html>

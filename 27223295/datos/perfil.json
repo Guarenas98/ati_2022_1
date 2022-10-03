@@ -1,4 +1,4 @@
-let perfil = {	
+{	
 	"nombre":"Carlos Daniel Castillo Orozco",
 	"descripcion":"Soy estudiante de Licenciatura en Computación de la UCV con aspiracion a especializarse en Desarrollo Web o relacionados. Actualmente trabajando y estudiando remoto. Entre mis pasatiempos me gusta jugar beisbol y bailar salsa.",
 	"color":"Verde",
