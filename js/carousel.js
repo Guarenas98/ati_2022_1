@@ -1,13 +1,14 @@
-$('.list_students').slick({
-    slide: 'li',
+$('#list_students').slick({
+    variableWidth: true,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     autoplay: true,
-    autoplaySpeed: 1,
-    dots: true,
+    autoplaySpeed: 3000,
+    dots: false,
     infinite: true,
-    adaptiveHeight: true,
-    arrows: false
+    adaptiveHeight: false,
+    arrows: false,
+    rows: 0
   }).on('wheel', (function(e) {
   e.preventDefault();
   if (e.originalEvent.deltaY < 0) {
