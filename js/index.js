@@ -46,14 +46,14 @@ function searchStudent (event){
 		else
 		{
 			loadStudents(list_students);
-			carousel();
+			$('#list_students').slick('refresh');
 		}
 	}
 
 	else
 	{
 		loadStudents(listado);
-		carousel();
+		$('#list_students').slick('refresh');
 	}
 	
 
