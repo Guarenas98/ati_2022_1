@@ -46,16 +46,21 @@ function searchStudent (event){
 		else
 		{
 			loadStudents(list_students);
+			carousel();
 		}
 	}
 
 	else
 	{
 		loadStudents(listado);
+		carousel();
 	}
+	
+
 }
 
 loadInterfaces(config);
 loadStudents(listado);
+carousel();
 document.getElementsByTagName('input')[0].onkeyup = searchStudent;
 document.getElementsByTagName('input')[1].onclick = searchStudent;
