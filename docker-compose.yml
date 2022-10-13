@@ -1,0 +1,10 @@
+services:
+  reto18:
+    container_name: reto18_container
+    image: nimmis/apache-php7
+    ports:
+    - 8080:80
+    volumes:
+    - type: bind
+      source: ./
+      target: /var/www/html/

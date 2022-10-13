@@ -15,26 +15,67 @@
 		<link rel="stylesheet" href="css/style.css"  type="text/css">
 		<link rel="stylesheet" href="css/index.css"  type="text/css">
 		<!--get JSON files-->
-		<script type="text/javascript" src="./conf/configES.json"></script>
-		<script type="text/javascript" src="./datos/index.json"></script>
+		<!--<script type="text/javascript" src="./conf/configES.json"></script>-->
+		<!--<script type="text/javascript" src="./datos/index.json"></script>-->
 		<title id="titulo-pestania"></title>
 	</head>
 	<body>
-	    <header>
+		<?php 
+			function getConfigLanPath($languaje) {
+			switch ($languaje) {
+				case "es":
+					return "./conf/configES.json";
+					break;
+				case "en":
+					return "./conf/configEN.json";
+					break;
+				case "pt":
+					return "./conf/configPT.json";
+					break;
+				default:
+					return "./conf/configES.json";
+					break;
+			}
+		}
+
+
+		ini_set('display_errors', 1);
+		ini_set('display_startup_errors', 1);
+		error_reporting(E_ALL);
+		$data1 = file_get_contents("./datos/index.json");
+		$pathJson = "./conf/configES.json";
+		if( isset($_GET["len"]) ) {	$pathJson = getConfigLanPath( $_GET["len"] );} 
+		$data2 = file_get_contents($pathJson);
+		if(!$data1 or !$data2) {
+			throw new Exception("Error Loading Index Students Information or Languaje config site", 1);
+		}
+		$students = json_decode($data1, 1);
+		$config = json_decode($data2, 1);
+		$fechatext = preg_replace('/\[fecha\]/', date("Y") , $config["copyRight"]);
+
+		$perfil["nombre"] ="Cralos"; //FIX ME!
+		$BODY = "";
+
+		//header
+		$BODY .= '
+			<header>
 			<nav>
 				<ul>
-					<li class="logo" id="sitio"></li>
-					<li class="saludo" id="saludo"></li>
+					<li class="logo" id="sitio">'. $config["sitio"][0].'<small>'.$config["sitio"][1].'</small>'.$config["sitio"][2] .'</li>
+					<li class="saludo" id="saludo">'.$config["saludo"].', '.$perfil["nombre"].'</li>
 					<li class="busqueda">
 					<form>
-						<input id="input-texto-nombre" type="text" name="nombre..." placeholder="nombre...">
-						<input id="boton-buscar" type="button" name="submit" value="buscar">
+						<input id="input-texto-nombre" type="text" name="nombre..." placeholder="">
+						<input id="boton-buscar" type="button" name="submit" value="'.$config["buscar"].'">
 					</form>
 					</li>
 				</ul>
 			</nav>
-	    </header>
-	    <section>
+	    	</header>';
+
+	    	//carousel
+	    	$BODY .= '
+	    		<section>
 				<div id="plantilla-estudiante" style="display: none;">
 					<li class="carousel-item" >
 						<div class="col-lg-2 col-md-6 estudiante-item">
@@ -63,21 +104,29 @@
 							data-slide="prev">
                     		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     		<span class="sr-only">Previous</span>
-            </button>
-            <button
-              	class="carousel-control-next bg-dark w-auto"
-            		href="#recipeCarousel"
-            		data-slide="next">
+            			</button>
+            	<button class="carousel-control-next bg-dark w-auto" href="#recipeCarousel"	data-slide="next">
                     		<span class="carousel-control-next-icon" aria-hidden="true"></span>
                     		<span class="sr-only">Next</span>
-            </button>
+            		</button>
 						<!--controles avance retroceso-->
 
 					</div> <!--recipeCarousel-->
-				</div> <!--row-->
+					</div> <!--row-->
 
-	    </section>
-	    <footer id="copyright"></footer>
+	    	</section>
+	    	';
+
+	    	$BODY .= '<div class="selected-student">
+	    				<!--muestrar info de estudiante al que se clikea-->
+	    			</div>';
+
+	    	//footer
+	    	$BODY .= '<footer id="copyRight">'.$fechatext.'</footer>';
+	    	echo $BODY;
+		?>
+	    
+	    <!--<footer id="copyright"></footer>-->
 
 	   <!-- jQuery, Bootstrap JS -->
     	<script src="jquery/jquery-3.6.1.slim.min.js"></script>

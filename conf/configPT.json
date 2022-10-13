@@ -1,4 +1,4 @@
-config = {
+{
 	"sitio": ["ATI","[UCV]","2022-1"],
 	"home": "Início",
 	"login": "Sessão",
@@ -12,6 +12,5 @@ config = {
 	"lenguajes":"Linguagems aprendidas",
 	"email":"Se precisar me contatar pode me escrever em [email]",
 	"buscar": "Procurar",
-	"saludo": "Olá",
-	"msj_no_encontrado": "Não há alunos que tenham em seu nome: [query]"
+	"saludo": "Olá"
 }
