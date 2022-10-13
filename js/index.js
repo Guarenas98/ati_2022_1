@@ -94,5 +94,5 @@ function busquedaEstudiante(event)
 /*INICIO SCRIPT*/
 //document.getElementById("input-texto-nombre").onkeyup = busquedaEstudiante;
 document.getElementById("boton-buscar").onclick = busquedaEstudiante;
-cargarTextoInterfaz(config);
-cargarListadoEstudiantes(listado);
+//cargarTextoInterfaz(config);
+//cargarListadoEstudiantes(listado);
