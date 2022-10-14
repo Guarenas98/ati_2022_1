@@ -8,21 +8,34 @@
 		<link rel="stylesheet" href="perfil.css"  type="text/css">
 		<script type="text/javascript" src="perfil.json"> </script>
 		<script type="text/javascript" src="config.json"> </script>
+
+		<!-- Boostrap CSS-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+		<!-- Boostrap JS-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+		<!-- JQuery -->
+
+		<!-- Mode Responsive -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<title></title>
 	</head>
 	<body>
 	    <header>
 			<nav>
-				<ul>
-					<li class="logo"></li>
-					<li class="saludo"></li>
-					<li class="busqueda"></li>
+				<ul class="row">
+					<li class="logo col-xs-5 col-md-4 col-sm-5"></li>
+					<li class="saludo col-xs-4 col-md-4 col-sm-5"></li>
+					<li class="busqueda col-xs-3 col-md-3 col-sm-5 col-md-offset-1"></li>
 				</ul>	
 			</nav> 
 	    </header>
-	    <section class="contenedor-info-estudiante">
-			<img class="foto-estudiante"/>
-			<section class="contenido">
+		<div class="container-fluid">
+	    <section class="contenedor-info-estudiante row m-auto">
+			<img class="foto-estudiante col-xs-8 col-sm-11 col-md-4"/>
+			<section class="contenido col-xs-10 col-sm-11 col-md-7">
 				<h1 id="nombre" ></h1>
 				<p class="introduccion"></p>
 				<div class="biografia">
@@ -44,6 +57,7 @@
 				</div>
 				<p id="comunicacion-email"></p>
 	    </section>
+		</div>
 	    <footer>
 	    </footer>
 	</body>
