@@ -28,10 +28,15 @@ function load() {
 
 
 	let i=0;
+	//console.log(listado[0]);
 	while (i < listado.length) {
 
 		if(imageExists(listado[i].imagen)){
-			document.getElementById("lista").innerHTML+='<div class="item" > <div class="pad15"> <div class="bloc"> <img src= ' + listado[i].imagen + ' alt= '+ "imagen"+ i+ ' width="100" height="100"> <a href=""> ' + listado[i].nombre + ' </a> </div> </div> </div>' ;
+			if(i==0){document.getElementById("lista").innerHTML+='<div class="carousel-item active" ><div class="bloc"> <img src= ' + listado[i].imagen + ' alt= '+ "imagen"+ i+ ' width="100" height="100"> <a href=""> ' + listado[i].nombre + ' </a> </div> </div>' ;}
+			else{document.getElementById("lista").innerHTML+='<div class="carousel-item" ><div class="bloc"> <img src= ' + listado[i].imagen + ' alt= '+ "imagen"+ i+ ' width="100" height="100"> <a href=""> ' + listado[i].nombre + ' </a> </div> </div>' ;}
+			//document.getElementById("lista").innerHTML+='<div class="bloc"> <img src= ' + listado[i].imagen + ' alt= '+ "imagen"+ i+ ' width="100" height="100"> <a href=""> ' + listado[i].nombre + ' </a> </div>' ;
+			//<div class="item" > <div class="pad15"> 
+			//document.getElementById("lista").innerHTML+='</div>';
 		}
 		
 		i=i+1;

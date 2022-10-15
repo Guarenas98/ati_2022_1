@@ -95,10 +95,27 @@ section li a{
 .bloc{
     width:220px;
     height:220px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
     margin: 5px;
     background: #f5f7f9;
     box-shadow: 2px 2px #888888;
 }
+
+
+.bloc a{
+    text-decoration: none;
+    color: #86b1ef;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bloc p{
+    margin: 5px;
+    color: #86b1ef;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 
 
 .bloc:hover{
@@ -129,3 +146,4 @@ footer {
     padding: 5px;
     padding-top: 10px;
  }
+
