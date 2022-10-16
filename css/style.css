@@ -26,8 +26,8 @@ nav ul {
 nav ul li {
   float: left;
   border-right: 1px solid #fff;
-  line-height: 58px;
-  padding: 3px 5px 3px 5px;
+ /* line-height: 58px;*/
+ /* padding: 3px 5px 3px 5px;*/
   color: white;
 }
 
@@ -41,29 +41,39 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
 }
 			
 .logo {
-	margin-left: 2px;
-	font-size: 27pt;
-   font-family: helvetica;
-	width: 30%;
+	/* margin-left: 2px; */
+	font-size: 3rem;
+  font-family: helvetica;
+	/* width: 30%; */
+  text-align: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .logo small {
-	font-size: 14pt;
+	font-size: 0.5em;
 }
 
 .saludo {
-  width: 29%;
+  /* width: 29%; */
   text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 2em;
 }
 
 .busqueda {
-  float: right;
+  /* float: right; */
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1.8rem;
+  font-size: 2em;
 }
 
 section { 
-  width: 95%;
+  /* width: 95%; */
   margin-top:10px;
-  margin-bottom:80px;
+  margin-bottom:10rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -71,11 +81,11 @@ section {
 footer {
   width: 100%;
   position: fixed;	
-  bottom: 0;
+  bottom: 0.3px;
   padding: 1rem;
   background-color: #86b1ef;
   text-align: center;
-  height: 20px;	
-  font-size: 9pt;
+  height: 8rem;	
+  font-size: 1.7em;
 }
 

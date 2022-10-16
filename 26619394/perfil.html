@@ -16,9 +16,30 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 		<!-- JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 		<!-- Mode Responsive -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Script Animacion foto -->
+		<script type="text/javascript">
+		$(document).ready(function () {
+			var counterTmpAnimnNew = 0;
+			$("#img").click(function(){
+			var element = $("#img");
+			counterTmpAnimnNew = counterTmpAnimnNew + 360;
+			
+			$({degrees: counterTmpAnimnNew - 360}).animate({degrees: counterTmpAnimnNew}, {
+				duration: 2000,
+				step: function(now) {
+					element.css({
+						transform: 'rotate(' + now + 'deg)'
+					});
+				}
+			});
+			});
+		});
+		</script>
 
 		<title></title>
 	</head>
@@ -34,7 +55,7 @@
 	    </header>
 		<div class="container-fluid">
 	    <section class="contenedor-info-estudiante row m-auto">
-			<img class="foto-estudiante col-xs-8 col-sm-11 col-md-4"/>
+			<img class="foto-estudiante col-xs-8 col-sm-11 col-md-4" id="img"/>
 			<section class="contenido col-xs-10 col-sm-11 col-md-7">
 				<h1 id="nombre" ></h1>
 				<p class="introduccion"></p>
