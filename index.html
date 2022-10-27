@@ -1,33 +1,98 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<meta charset="UTF-8">
-		<link rel="icon" href="http://www.ciens.ucv.ve/portalasig2/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="css/style.css"  type="text/css">
-		<link rel="stylesheet" href="css/index.css"  type="text/css">
-		<script type="text/javascript" src="conf/configES.json"></script>
-		<script type="text/javascript" src="datos/index.json"></script>
-		
-		<title>ATI[UCV] 2022-1</title>
-	</head>
-	<body>
-	    <header>
-			<nav>
-				<ul>
-					<li class="logo"><span id="conf_sitio1"></span><span id="conf_sitio2"></span> <span id="conf_sitio3"></span></li>
-					<li class="saludo"><span id="conf_saludo"></span>, Luz Rico</li>
-					<li class="busqueda"><input id="config_placeholder" type="text"><input id="config_value" type="button" onclick="mibuscador()"></li>
-				</ul>	
-			</nav> 
-	    </header>
-	    <section>
-			<ul id = "data">	
-			</ul>
-	    </section>
-	    <footer>
-			<span id="conf_copy"></span>
-	    </footer>
-		<script type="text/javascript" src="js/index.js"></script>
-	</body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="http://www.ciens.ucv.ve/portalasig2/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="bootstrap-4.0.0-dist\css\bootstrap.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <link rel="stylesheet" href="css/perfil.css" type="text/css" />
+
+    <title>ATI[UCV] 2022-1</title>
+  </head>
+  <body>
+    <header>
+      <nav class="container-fluid">
+        <div class="row" style="align-items: center; color: #fff">
+          <div class="col-4 logo" style="border-right: 1px solid #fff">
+            <span id="conf_sitio1"></span><span id="conf_sitio2"></span>
+            <span id="conf_sitio3"></span>
+          </div>
+          <div
+            class="col-4 saludo"
+            style="
+              border-right: 1px solid #fff;
+              height: 54px;
+              align-items: center;
+              display: flex;
+              justify-content: center;
+            "
+          >
+            <div><span id="conf_saludo"></span>, Luz Rico</div>
+          </div>
+          <div class="col-4 busqueda d-flex">
+            <span class="ml-auto"
+              ><input id="config_placeholder" type="text" /><input
+                id="config_value"
+                type="button"
+                onclick="mibuscador()"
+            /></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="container-fluid">
+        <div
+          id="carouselExample"
+          class="carousel slide"
+          data-ride="carousel"
+          data-interval="9000"
+        >
+          <div
+            class="carousel-inner row w-100 mx-auto"
+            role="listbox"
+            id="data"
+          ></div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExample"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a
+            class="carousel-control-next text-faded"
+            href="#carouselExample"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <span id="conf_copyRight"></span>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery-3.6.1.js"></script>
+    <script
+      type="text/javascript"
+      src="bootstrap-4.0.0-dist\js\bootstrap.min.js"
+    ></script>
+    <script type="text/javascript" src="conf/configES.json"></script>
+    <script type="text/javascript" src="datos/index.json"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
 </html>
