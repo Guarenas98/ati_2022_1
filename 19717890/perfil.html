@@ -6,41 +6,75 @@
 	<!-- <link rel="stylesheet" href="styles.css">  -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Humberto Campos</title>
+	<style>
+		/* *{
+			border:1px solid black;
+		} */
+		#img_1{
+			float:left;
+			border-radius: 40px 0px 0px 0px;
+			max-width: 16%;
+		}
+		#h1_1{
+			font-size:200%; 
+			margin-left: 17%; 
+			color:orangered;
+		}
+		#p_1
+		{
+			margin-left: 17%; 
+			font-family: Helvetica, sans-serif; 
+			font-style: italic; 
+			font-size: 18px;
+		}
+		#div_1{
+			margin-left: 17%;
+		}
+		#p_2{
+			margin-left: 17%; 
+			width: 50%;
+		}
+
+	  .p_3{
+			padding-left: 1%;
+		}
+
+	</style>
 </head>
-<body>
+<body style="box-sizing:border-box;">
 	<main>
 		<article>
-			<img src="images/Foto3.jpg" id="fotoprincipal" width="16%" alt="No funciona la foto" style="float:left;">
+			<img id="img_1" src="images/Foto3.jpg" id="fotoprincipal" alt="No funciona la foto">
 		</article>
 		<aside>
-			<h1 style="font-size:200%; margin-left: 17%; color:orangered">	Humberto Campos </h1>
-			<p style="margin-left: 17%; font-family: Helvetica, sans-serif; font-style: italic; font-size: 18px;"> Soy estudiante de licenciatura en computación de la UCV </p>
-			<div style="margin-left: 17%;">
+			<h1 id="h1_1" >	Humberto Campos </h1>
+			<p id="p_1"> Soy estudiante de licenciatura en computación de la UCV </p>
+			<div id="div_1">
 				<table>
 						<tr>
 							<td>Mi Color favorito es el:</td>
-							<td>Rojo</td>
+							<td class="p_3">Rojo</td>
 						</tr>
 						<tr>
 							<td>Mi Libro favorito es:</td>
-							<td>Ninguno</td>
+							<td class="p_3">Ninguno</td>
 						</tr>
 						<tr>
 							<td>Mi estilo de música favorita es el:</td>
-							<td>Trance</td>
+							<td class="p_3">Trance</td>
 						</tr>
 						<tr>
 							<td><b> Mis lenguajes aprendidos son:</b></td>
-							<td><b>C, C++ y Java</b></td>
+							<td class="p_3"><b>C, C++ y Java</b></td>
 						</tr>
 						<tr>
 							<td>Video juegos favoritos:</td>
-							<td>Los del estilo Shooter y RTS</td>
+							<td class="p_3">Los del estilo Shooter y RTS</td>
 						</tr>
 				</table>
 			</div>
 			<div>
-				<p style="margin-left: 17%; width: 50%;"> Si se necesita comunicarse conmigo me pueden escribir al correo: <a href = "mailto: humberto.j.c.g@gmail.com">humberto.j.c.g@gmail.com</a></p>
+				<p id="p_2"> Si se necesita comunicarse conmigo me pueden escribir al correo: <a href = "mailto: humberto.j.c.g@gmail.com">humberto.j.c.g@gmail.com</a></p>
 			</div>
 		</aside>
 		
