@@ -1,0 +1,13 @@
+{
+	"nombre": "Hadaya Hadaya",
+	"descripción": "Estudiante de Ciencias de la Computación en la Universidad Central de Venezuela. Me apasionan los videojuegos y la Realidad Virtual. Competente en los lenguajes de programación Python, Java, C/C++ & JavaScript. Experienca con los manejadores de Bases de Datos MySQL y Oracle SQL Developer. Nivel avanzado de lectura, escritura y habla en Inglés como mi segundo lenguaje. Nivel básico de lectura, escritura y habla en Alemán. Español es mi lenguaje materno.",
+	"color": "Verde",
+	"libro": "100 Años de Soledad",
+	"música": "Nightcore",
+	"video_juego": ["VRChat", "Legends Of Runeterra (LOR)"],
+	"lenguajes": ["Python", "Java", "C/C++", "JavaScript"],
+	"email": "leonardo.rafael.mendoza@gmail.com",
+	"CI": "27254317",
+	"genero": "masculino",
+	"fecha_nacimiento": "21/01/2000"
+}

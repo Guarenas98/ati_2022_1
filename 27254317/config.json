@@ -1,0 +1,14 @@
+{
+	"logo": ["ATI","[UCV]","2020-U"],
+	"saludo": "Hola, ",
+	"busqueda": "Inicio",
+	"nombre":"",
+	"descripcion":"",
+	"color_favorito": "Mi color favorito es: ",
+	"libro_favorito": "Mi libro favorito es: ",
+	"musica_preferida": "Estilo de música preferida es: ",
+	"video_juegos_favoritos": "Video juegos favoritos: ",
+	"lenguajes_aprendidos": "Lenguajes aprendidos: ",
+	"como_comunicarse": "Si necesitan comunicarse conmigo me pueden escribir a: [email]",
+	"pie_de_pagina": "Copyright © 2022 Escuela de computación - ATI. Todos los derechos reservados"
+}
