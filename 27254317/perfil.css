@@ -1,0 +1,58 @@
+h1 {
+  color: #00AF20;
+}
+
+div {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#profile-desc {
+  font-family: "Arial";
+  font-style: italic;
+}
+
+#lenguajes {
+  font-weight: bold;
+}
+
+img {
+  border-radius: 90px 0px 0px 0px;
+  margin-right: 8px;
+}
+
+#pfp {
+  height: 490px;
+  /*weight: 300px;*/
+  border: 5px;
+  border-left-style: outset;
+  border-top-style: outset;
+  float: inline-end;
+
+}
+
+#outside-box {
+  border: 5px;
+  border-right-style: outset;
+  border-bottom-style: outset;
+}
+
+#inside-box {
+  border: 1px solid;
+  padding-left: 8px;
+  height: 250px;
+}
+
+a {
+  text-decoration: none;
+  color: orange;
+}
+
+a:focus {
+  color: red;
+}
+
+a:visited {
+  color: red;
+}
