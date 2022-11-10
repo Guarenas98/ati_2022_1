@@ -1,0 +1,14 @@
+{
+	"nombre": "Aaron Morillo",
+	"descripcion": "Soy un estudiante de la escuela de computacion del sexto semestre. Inicie esta carrera en el año 2018 y estoy antusiasmado por aprender sobre este mundo cada vez más. Actualmente estoy en el proceso y con el interes de aprender sobre tecnologias destacadas en la web, especificamente sobre frameworks como Laravel o Angular 10.",
+	"color":"Verde",
+	"libro":"The lord of the rings",
+	"musica":"Progressive House",
+	"video_juego":["Battlefield 1"],
+	"lenguajes":["Javascript", " Java", " C", " C++", " PHP", " HTML", " CSS", " Prolog", " Haskell", " UML"],
+	"email":"aaronmorillo7@gmail.com",
+	"ci": "27449007",
+	"genero": "masculino", 
+	"fecha_nacimiento": "16/01/1999",
+	"imagen": "27449007.jpg"
+}
