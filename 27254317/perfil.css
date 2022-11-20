@@ -1,58 +1,128 @@
 h1 {
-  color: #00AF20;
+  font-size: 3.5rem;
+  color: #7b1182;
+  padding-top: 3%; 
+  padding-bottom: 3%;
+  font-family: 'Times New Roman';
 }
 
-div {
-
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
-#profile-desc {
-  font-family: "Arial";
+#descrip {
+  font-family: Verdana;
   font-style: italic;
+  padding-top: 1%; 
+  padding-bottom: 2%;
+  font-size: 1.1rem;
 }
 
-#lenguajes {
-  font-weight: bold;
+img {  
+  border-top-left-radius: 3.125rem;
 }
 
-img {
-  border-radius: 90px 0px 0px 0px;
-  margin-right: 8px;
+#foto{
+  margin-top: 4%;
+  display: flex; 
+  justify-content: center;
+  margin-bottom: 15%;
 }
 
-#pfp {
-  height: 490px;
-  /*weight: 300px;*/
-  border: 5px;
-  border-left-style: outset;
-  border-top-style: outset;
-  float: inline-end;
-
+#perfil{
+  border: black;
+  border-style: solid;
+  display: inline-block;
+  box-shadow:0.625rem 0.313rem 0.313rem rgb(125, 122, 122);
+  padding-left: 0.5%;
+  margin-top: 4%;
+  margin-bottom: 15%;
 }
 
-#outside-box {
-  border: 5px;
-  border-right-style: outset;
-  border-bottom-style: outset;
+#mail{
+  padding-top: 1%;
 }
-
-#inside-box {
-  border: 1px solid;
-  padding-left: 8px;
-  height: 250px;
-}
-
-a {
-  text-decoration: none;
+a:link{
   color: orange;
 }
 
-a:focus {
+a:focus{ 
   color: red;
 }
 
-a:visited {
-  color: red;
+.grid {
+  
+margin: 2.5rem auto 7.5rem;	
+width: 100%;
+}
+
+.grid figure {
+position: relative;
+overflow: hidden;
+margin: 0.313rem;
+  border-top-left-radius: 3.125rem;
+}
+
+.grid figure img {
+position: relative;
+width: 100%;
+opacity: 0.7;
+transition: opacity 0.3s;
+
+  margin-top: 4%;
+  display: flex; 
+  justify-content: center;
+  margin-bottom: 15%;
+}
+
+.grid figcaption {
+position: absolute;
+top: 0;
+z-index: 11;
+padding: 0.625rem;
+width: 100%;
+height: 100%;
+text-align: center;
+}
+
+.grid figcaption h3 {
+color: black;
+font-weight: 300;
+font-size: 130%;
+transition: transform 0.3s;
+}
+
+.grid figcaption h3{
+transform: translateY(50px);
+}
+
+.grid figcaption h3{
+backface-visibility: hidden;
+}
+
+.grid svg {
+position: absolute;
+top: -1px; 
+z-index: 10;
+width: 100%;
+height: 100%;
+}
+
+.grid svg path {
+fill: #86b1ef;
+}
+
+.grid a:hover figure img {
+opacity: 1;
+}
+
+.grid a:hover figcaption h3{
+transform: translateY(0);
+}
+
+.grid a:hover figure img {
+opacity: 1;
+}
+
+/* Viewports <= 600px*/
+@media only screen and (max-width: 600px) { 
+  #saludo, #busqueda {
+      font-size: 0.7rem; 
+  }
 }
