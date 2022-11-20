@@ -1,0 +1,2 @@
+FROM ubuntu:16.04
+RUN apt-get update -y && apt-get upgrade -y && apt-get install nano && apt install net-tools && apt-get install apache2 && apt-get install php7.2 && apt-get install php-pear php7.2-dev php7.2-zip php7.2-curl && apt-get install php7.2-gd php7.2-mysql php7.2-xml
