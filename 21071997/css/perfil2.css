@@ -1,0 +1,39 @@
+img {
+  border-top-left-radius: 20%;
+  /*width: 360px;
+  height: 360px;
+  float: left;
+  */
+}
+
+h1 {
+  color: #a115e2;
+  font-size: 35pt;
+  font-weight: 600 !important;
+}
+
+.container-fluid span {
+  font-family: Georgia;
+  line-height: 19px;
+}
+#caja {
+  border: 2px solid #000;
+  box-shadow: 5px 5px gray;
+}
+/*#caja {
+    padding: 10px;
+    margin-left: 5px;
+    float: left;
+    width: 580px;
+    height: 336px;
+    border: 2px solid #000;
+    box-shadow: 5px 5px gray;
+}*/
+
+a:link {
+  color: orange;
+}
+
+a:visited {
+  color: red;
+}

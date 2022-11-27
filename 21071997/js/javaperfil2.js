@@ -4,10 +4,11 @@ document.getElementById("conf_sitio3").innerHTML = config.sitio[2]
 document.getElementById("conf_saludo").innerHTML = config.saludo
 
 var elements = document.getElementsByClassName('perfil_nombre')
-Array.prototype.forEach.call(elements, function(element) {
-    element.innerHTML = perfil.nombre;
+Array.prototype.forEach.call(elements, function (element) {
+  element.innerHTML = perfil.nombre;
 })
-document.getElementById('imagen').src= perfil.imagen
+document.getElementById('perfil_nombre1').innerHTML = perfil.nombre
+document.getElementById('imagen').src = perfil.imagen
 
 document.getElementById("conf_home").innerHTML = config.home;
 
@@ -39,3 +40,30 @@ document.getElementById("conf_email").innerHTML = config.email;
 document.getElementById("perfil_email").innerHTML = perfil.email;
 
 document.getElementById("conf_copyRight").innerHTML = config.copyRight;
+
+(function () {
+
+  function init() {
+    var speed = 250,
+      easing = mina.easeinout;
+
+    [].slice.call(document.querySelectorAll('#grid > a')).forEach(function (el) {
+      var s = Snap(el.querySelector('svg')), path = s.select('path'),
+        pathConfig = {
+          from: path.attr('d'),
+          to: el.getAttribute('data-path-hover')
+        };
+
+      el.addEventListener('mouseenter', function () {
+        path.animate({ 'path': pathConfig.to }, speed, easing);
+      });
+
+      el.addEventListener('mouseleave', function () {
+        path.animate({ 'path': pathConfig.from }, speed, easing);
+      });
+    });
+  }
+
+  init();
+
+})();
