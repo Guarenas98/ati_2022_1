@@ -1,0 +1,14 @@
+let perfil = {	
+	"nombre":"Luis Fernando Peña",
+	"descripcion":"Soy un estudiante de la carrera de Computación en la Facultad de Ciencias de la UCV. Actualmente me encuentro cursando las materias: Aplicaciones Con Tecnología Internet, Inteligencia Artificial, Introducción a Ciencias de Datos, Cálculo Científico y Emprendimiento Universitario. En mis tiempos libres suelo jugar video juegos, ver series de televisión, realizar actividad física y tocar la guitarra.",
+	"color":"Azul",
+	"libro":"Harry Potter y la cámara secreta",
+	"musica":"Música electrónica",
+	"video_juego": ["GTA V", "FIFA", "Call of Duty"],
+	"lenguajes":["C", "C++", "Python", "Java", "Javascript", "PHP"],
+	"email":"lfernandopg26@gmail.com",
+	"ci":"27377309",
+	"genero": "masculino",
+	"fecha_nacimiento":"26/04/2000",
+	"imagen": "27377309.jpg"
+}
