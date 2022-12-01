@@ -29,9 +29,13 @@ table {
 }
 
 
+p a:visited {
+	color: red;
+}
 
-
-
+#lenguajes td {
+	font-weight: bold;
+}
 
 .grid {
 	margin: 40px auto 120px;
@@ -155,14 +159,10 @@ img {
 	font-size: 13pt;
 }
 
-#lenguajes td {
-	font-weight: bold;
-}
+
 
 #contacto {
 	margin-top: 5px;
 }
 
-a:visited {
-	color: red;
-}*/
+*/
