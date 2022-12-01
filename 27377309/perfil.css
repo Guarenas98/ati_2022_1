@@ -1,4 +1,123 @@
-nav ul {
+
+h1 {
+	color: #3357FF;
+	font-size: 16pt;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+
+main {
+	border: 2px solid black;
+	box-shadow: 5px 5px gray;
+	box-sizing: border-box;
+}
+
+#descripcion {
+	margin-bottom: 10px;
+	font-family: "Times New Roman";
+	font-style: italic;
+	font-size: 13pt;
+}
+
+img {
+	border-radius: 80px 0 0 0 ;
+}
+
+table {
+	margin-bottom: 20px;
+}
+
+
+
+
+
+
+.grid {
+	margin: 40px auto 120px;
+	max-width: 1000px;
+	width: 100%;
+}
+
+.grid a {
+	float: left;
+	max-width: 300px;
+	color: #333;
+}
+
+.grid a:nth-child(odd) {
+	margin: 0px 0 -30px 0;
+}
+
+.grid figure {
+	position: relative;
+	overflow: hidden;
+	margin: 5px;
+	background: #fff;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	opacity: 0.7;
+	transition: opacity 0.3s;
+
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	z-index: 11;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.grid figcaption h2 {
+	margin: 0 0 50px 0;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: 300;
+	font-size: 130%;
+	transition: transform 0.3s;
+}
+
+.grid figcaption h2{
+	transform: translateY(50px);
+}
+
+.grid figcaption,
+.grid figcaption h2{
+	backface-visibility: hidden;
+}
+
+.grid svg {
+	position: absolute;
+	top: -1px; /* fixes rendering issue in FF */
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+
+.grid svg path {
+	fill: #86b1ef;
+}
+
+.grid a:hover figure img {
+	opacity: 1;
+}
+
+.grid a:hover figcaption h2{
+	transform: translateY(0);
+}
+
+.demo-1 body {
+	background: #3498db;
+}
+
+
+/*nav ul {
 	margin-top: 0;
 }
 
@@ -46,4 +165,4 @@ img {
 
 a:visited {
 	color: red;
-}
+}*/

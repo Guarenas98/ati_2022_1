@@ -22,6 +22,8 @@ function llenar() {
     a.textContent = perfil.email;
     document.querySelector("#contacto").appendChild(a);
     document.querySelector("footer").textContent = config.copyRight
+    document.querySelector("h2").textContent = perfil.nombre;
 }
 
 window.addEventListener("load", llenar);
+
