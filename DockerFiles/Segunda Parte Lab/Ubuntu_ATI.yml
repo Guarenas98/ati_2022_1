@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  ATI:
+    container_name: 'miUbuntu'
+    image: carlosdraftx/ubuntu_ati
+    ports:
+      - 8080:80
+    stdin_open: true
+    tty: true
+    command: "apachectl -D FOREGROUND"
