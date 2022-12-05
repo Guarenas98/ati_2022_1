@@ -1,3 +1,6 @@
+import data from '../data/index.json' assert { type: 'json' };
+load();
+
 function imageExists(image_url){
 
     var http = new XMLHttpRequest();
@@ -14,7 +17,7 @@ function imageExists(image_url){
 
 
 function load() {
-	
+	var listado= data;
 
     //console.log(listado[0]);
 
